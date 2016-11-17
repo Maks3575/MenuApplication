@@ -67,6 +67,7 @@
       <DependentUpon>AddIngredientDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
+    <Compile Include="DataAccess\DB\DishController.cs" />
     <Compile Include="DataAccess\DB\ItemDishController.cs" />
     <Compile Include="DataAccess\DB\IngredientsController.cs" />
     <Compile Include="DataAccess\DB\SubdivisionController.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Domain\Interfaces\IMenu.cs" />
     <Compile Include="Domain\Ingredient.cs" />
     <Compile Include="Domain\Menu.cs" />
+    <Compile Include="ModelDB\Dish.Part.cs" />
     <Compile Include="ModelDB\ItemDish.Part.cs" />
     <Compile Include="ModelDB\Product.Part.cs" />
     <Compile Include="Form1.cs">

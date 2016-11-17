@@ -9,7 +9,7 @@ namespace MenuApplication.ModelDB
 {
     partial class Product : IIngredient
     {
-        public double CalorificValue => Protein * 4 + Carbohydrate * 4 + Fat * 9;
+        public double CalorificValue => (double)Ingredient.CalorificValue; // Protein * 4 + Carbohydrate * 4 + Fat * 9;
 
         public double Carbohydrate
         {

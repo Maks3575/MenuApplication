@@ -9,7 +9,7 @@ namespace MenuApplication.Domain
     /// <summary>
     /// Класс позиции в калькуляционной карточке
     /// </summary>
-    internal class DishItem : IDishItem
+    public class DishItem : IDishItem
     {
         /// <summary>
         /// Ингредиент 
