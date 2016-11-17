@@ -1,0 +1,57 @@
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe.config
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.pdb
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csprojResolveAssemblyReference.cache
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.Properties.Resources.resources
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.GenerateResource.Cache
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.exe
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.pdb
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.MainForm.resources
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.AddIngredientDialog.resources
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.ResolveComReference.cache
+C:\Users\Пользователь\Desktop\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\Interop.otkloadr.dll
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe.config
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\Interop.otkloadr.dll
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.ResolveComReference.cache
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.exe
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.pdb
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.pdb
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csprojResolveAssemblyReference.cache
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.AddIngredientDialog.resources
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.MainForm.resources
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.Properties.Resources.resources
+C:\Users\Пользователь\Desktop\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.GenerateResource.Cache
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe.config
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\Interop.otkloadr.dll
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.ResolveComReference.cache
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.exe
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.pdb
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.pdb
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csprojResolveAssemblyReference.cache
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.AddIngredientDialog.resources
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.MainForm.resources
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.Properties.Resources.resources
+C:\Users\maksi\Desktop\Учеба\Сданные курсовые, экзамены и практики\АРХИС\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.GenerateResource.Cache
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe.config
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\Interop.otkloadr.dll
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.ResolveComReference.cache
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.exe
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.pdb
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\MenuApplication.pdb
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csprojResolveAssemblyReference.cache
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.AddIngredientDialog.resources
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.MainForm.resources
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.Properties.Resources.resources
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.GenerateResource.Cache
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\EntityFramework.dll
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\EntityFramework.xml
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Мисписит курсовая работа 2\Курсовая работа\Программа\MenuApplication\MenuApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Курсовик GIT\MenuApplication\MenuApplication\bin\Debug\MenuApplication.exe.config
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Курсовик GIT\MenuApplication\MenuApplication\obj\Debug\Interop.otkloadr.dll
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Курсовик GIT\MenuApplication\MenuApplication\obj\Debug\MenuApplication.csproj.ResolveComReference.cache
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Курсовик GIT\MenuApplication\MenuApplication\obj\Debug\MenuApplication.exe
+C:\Users\maksi\Desktop\Учеба\Учёба\Курсовой проект ТОИ МИСПИСИТ\МИСПИСИТ\Курсовик GIT\MenuApplication\MenuApplication\obj\Debug\MenuApplication.pdb

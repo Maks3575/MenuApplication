@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MenuApplication.Domain.Dish">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAABAAAAAAAAAIAQECAAAAAQAEAAAAAAAQUBCAAAA=</HashCode>
+      <FileName>Domain\Dish.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="1.053" />
+  </Class>
+  <Class Name="MenuApplication.Domain.DishItem">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAIAAAAECCACAAAAAAAAAAAAAAAAKAgIAAA=</HashCode>
+      <FileName>Domain\DishItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="1.136" />
+  </Class>
+  <Class Name="MenuApplication.Domain.Ingredient">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAkAAAAAAEACAAAAggAEAAAIAAAAAIAAQACBA=</HashCode>
+      <FileName>Domain\Ingredient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.557" />
+  </Class>
+  <Class Name="MenuApplication.Domain.Menu">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Menu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.615" />
+  </Class>
+  <Interface Name="MenuApplication.Domain.IDish">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAABAAAAAAAAAIAQECAAAAAQAEAAAAAAAQUBCAAAA=</HashCode>
+      <FileName>Domain\IDish.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MenuApplication.Domain.IDishItem">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAIAAAAACCACAAAAAAAAAAAAAAAAKAgIAAA=</HashCode>
+      <FileName>Domain\IDishItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MenuApplication.Domain.IIngredient">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAkAAAAAAAACAAAAggAEAAAIAAAAAIAAQACBA=</HashCode>
+      <FileName>Domain\IIngredient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MenuApplication.Domain.IMenu">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\IMenu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

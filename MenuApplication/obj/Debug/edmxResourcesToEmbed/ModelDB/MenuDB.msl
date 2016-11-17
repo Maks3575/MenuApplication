@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_MenuModelStoreContainer" CdmEntityContainer="DB_MenuEntities">
+    <EntitySetMapping Name="Dishes">
+      <EntityTypeMapping TypeName="DB_MenuModel.Dish">
+        <MappingFragment StoreEntitySet="Dish">
+          <ScalarProperty Name="IDDish" ColumnName="IDDish" />
+          <ScalarProperty Name="NameDish" ColumnName="NameDish" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="NumberInCollectionOfRecipes" ColumnName="NumberInCollectionOfRecipes" />
+          <ScalarProperty Name="IDTypeDish" ColumnName="IDTypeDish" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DB_MenuModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+          <ScalarProperty Name="SurnameEmployee" ColumnName="SurnameEmployee" />
+          <ScalarProperty Name="NameEmployee" ColumnName="NameEmployee" />
+          <ScalarProperty Name="PatronymicEmloyee" ColumnName="PatronymicEmloyee" />
+          <ScalarProperty Name="IDPosition" ColumnName="IDPosition" />
+          <ScalarProperty Name="ShortNameEmployee" ColumnName="ShortNameEmployee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingredients">
+      <EntityTypeMapping TypeName="DB_MenuModel.Ingredient">
+        <MappingFragment StoreEntitySet="Ingredient">
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="IDTypeIngredient" ColumnName="IDTypeIngredient" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ScalarProperty Name="Fat" ColumnName="Fat" />
+          <ScalarProperty Name="Carbohydrate" ColumnName="Carbohydrate" />
+          <ScalarProperty Name="CalorificValue" ColumnName="CalorificValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemDishes">
+      <EntityTypeMapping TypeName="DB_MenuModel.ItemDish">
+        <MappingFragment StoreEntitySet="ItemDish">
+          <ScalarProperty Name="IDDish" ColumnName="IDDish" />
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NormOn100Portion" ColumnName="NormOn100Portion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="DB_MenuModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+          <ScalarProperty Name="UseDate" ColumnName="UseDate" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="IDChiefCooker" ColumnName="IDChiefCooker" />
+          <ScalarProperty Name="IDCalculator" ColumnName="IDCalculator" />
+          <ScalarProperty Name="IDTypeMenu" ColumnName="IDTypeMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizations">
+      <EntityTypeMapping TypeName="DB_MenuModel.Organization">
+        <MappingFragment StoreEntitySet="Organization">
+          <ScalarProperty Name="IDOrganization" ColumnName="IDOrganization" />
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="DB_MenuModel.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="IDPosition" ColumnName="IDPosition" />
+          <ScalarProperty Name="NamePosition" ColumnName="NamePosition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DB_MenuModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mass" ColumnName="Mass" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subdivisions">
+      <EntityTypeMapping TypeName="DB_MenuModel.Subdivision">
+        <MappingFragment StoreEntitySet="Subdivision">
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+          <ScalarProperty Name="IDOrganization" ColumnName="IDOrganization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_MenuModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeDishes">
+      <EntityTypeMapping TypeName="DB_MenuModel.TypeDish">
+        <MappingFragment StoreEntitySet="TypeDish">
+          <ScalarProperty Name="IDTypeDish" ColumnName="IDTypeDish" />
+          <ScalarProperty Name="NameTypeDish" ColumnName="NameTypeDish" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeIngredients">
+      <EntityTypeMapping TypeName="DB_MenuModel.TypeIngredient">
+        <MappingFragment StoreEntitySet="TypeIngredient">
+          <ScalarProperty Name="IDTypeIngredient" ColumnName="IDTypeIngredient" />
+          <ScalarProperty Name="NameTypeIngredient" ColumnName="NameTypeIngredient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeMenus">
+      <EntityTypeMapping TypeName="DB_MenuModel.TypeMenu">
+        <MappingFragment StoreEntitySet="TypeMenu">
+          <ScalarProperty Name="IDTypeMenu" ColumnName="IDTypeMenu" />
+          <ScalarProperty Name="NameTypeMenu" ColumnName="NameTypeMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_EmployeePosition">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_EmployeePosition">
+        <MappingFragment StoreEntitySet="VIEW_EmployeePosition">
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+          <ScalarProperty Name="NameEmployee" ColumnName="NameEmployee" />
+          <ScalarProperty Name="SurnameEmployee" ColumnName="SurnameEmployee" />
+          <ScalarProperty Name="PatronymicEmloyee" ColumnName="PatronymicEmloyee" />
+          <ScalarProperty Name="ShortNameEmployee" ColumnName="ShortNameEmployee" />
+          <ScalarProperty Name="IDPosition" ColumnName="IDPosition" />
+          <ScalarProperty Name="NamePosition" ColumnName="NamePosition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_IngredientProduct">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_IngredientProduct">
+        <MappingFragment StoreEntitySet="VIEW_IngredientProduct">
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="NameTypeIngredient" ColumnName="NameTypeIngredient" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ScalarProperty Name="Fat" ColumnName="Fat" />
+          <ScalarProperty Name="Carbohydrate" ColumnName="Carbohydrate" />
+          <ScalarProperty Name="CalorificValue" ColumnName="CalorificValue" />
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mass" ColumnName="Mass" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_ListDishes">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_ListDishes">
+        <MappingFragment StoreEntitySet="VIEW_ListDishes">
+          <ScalarProperty Name="NameDish" ColumnName="NameDish" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="NumberInCollectionOfRecipes" ColumnName="NumberInCollectionOfRecipes" />
+          <ScalarProperty Name="IDTypeDish" ColumnName="IDTypeDish" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_MenuDishIngredient">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_MenuDishIngredient">
+        <MappingFragment StoreEntitySet="VIEW_MenuDishIngredient">
+          <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+          <ScalarProperty Name="UseDate" ColumnName="UseDate" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="IDChiefCooker" ColumnName="IDChiefCooker" />
+          <ScalarProperty Name="IDCalculator" ColumnName="IDCalculator" />
+          <ScalarProperty Name="IDTypeMenu" ColumnName="IDTypeMenu" />
+          <ScalarProperty Name="IDDish" ColumnName="IDDish" />
+          <ScalarProperty Name="NameDish" ColumnName="NameDish" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="NumberInCollectionOfRecipes" ColumnName="NumberInCollectionOfRecipes" />
+          <ScalarProperty Name="IDTypeDish" ColumnName="IDTypeDish" />
+          <ScalarProperty Name="NormOn100Portion" ColumnName="NormOn100Portion" />
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="IDTypeIngredient" ColumnName="IDTypeIngredient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_MenuEmployeePosition">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_MenuEmployeePosition">
+        <MappingFragment StoreEntitySet="VIEW_MenuEmployeePosition">
+          <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="IDTypeMenu" ColumnName="IDTypeMenu" />
+          <ScalarProperty Name="UseDate" ColumnName="UseDate" />
+          <ScalarProperty Name="IDChiefCooker" ColumnName="IDChiefCooker" />
+          <ScalarProperty Name="NameChiefCooker" ColumnName="NameChiefCooker" />
+          <ScalarProperty Name="SurnameChiefCooker" ColumnName="SurnameChiefCooker" />
+          <ScalarProperty Name="PatronymicChiefCooker" ColumnName="PatronymicChiefCooker" />
+          <ScalarProperty Name="ShortNameChiefCooker" ColumnName="ShortNameChiefCooker" />
+          <ScalarProperty Name="IDPositionChiefCooker" ColumnName="IDPositionChiefCooker" />
+          <ScalarProperty Name="NamePositionChiefCooker" ColumnName="NamePositionChiefCooker" />
+          <ScalarProperty Name="IDCalculator" ColumnName="IDCalculator" />
+          <ScalarProperty Name="NameCalculator" ColumnName="NameCalculator" />
+          <ScalarProperty Name="SurnameCalculator" ColumnName="SurnameCalculator" />
+          <ScalarProperty Name="PatronymicCalculator" ColumnName="PatronymicCalculator" />
+          <ScalarProperty Name="ShortNameCalculator" ColumnName="ShortNameCalculator" />
+          <ScalarProperty Name="IDPositionCalculator" ColumnName="IDPositionCalculator" />
+          <ScalarProperty Name="NamePositionCalculator" ColumnName="NamePositionCalculator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_MenuSubdivision">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_MenuSubdivision">
+        <MappingFragment StoreEntitySet="VIEW_MenuSubdivision">
+          <ScalarProperty Name="IDCalculator" ColumnName="IDCalculator" />
+          <ScalarProperty Name="IDChiefCooker" ColumnName="IDChiefCooker" />
+          <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+          <ScalarProperty Name="IDTypeMenu" ColumnName="IDTypeMenu" />
+          <ScalarProperty Name="UseDate" ColumnName="UseDate" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_OrganizationSubdivision">
+      <EntityTypeMapping TypeName="DB_MenuModel.VIEW_OrganizationSubdivision">
+        <MappingFragment StoreEntitySet="VIEW_OrganizationSubdivision">
+          <ScalarProperty Name="IDOrganization" ColumnName="IDOrganization" />
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+          <ScalarProperty Name="IDSubdivision" ColumnName="IDSubdivision" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ItemMenu" TypeName="DB_MenuModel.ItemMenu" StoreEntitySet="ItemMenu">
+      <EndProperty Name="Dish">
+        <ScalarProperty Name="IDDish" ColumnName="IDDish" />
+      </EndProperty>
+      <EndProperty Name="Menu">
+        <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionName="DB_MenuModel.Store.Get_CalculateDish" FunctionImportName="Get_CalculateDish">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.Get_CalculateDish_Result">
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+          <ScalarProperty Name="IDDish" ColumnName="IDDish" />
+          <ScalarProperty Name="NameDish" ColumnName="NameDish" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="NumberInCollectionOfRecipes" ColumnName="NumberInCollectionOfRecipes" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="NameTypeDish" ColumnName="NameTypeDish" />
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="NameTypeIngredient" ColumnName="NameTypeIngredient" />
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="NormOn100Portion" ColumnName="NormOn100Portion" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+          <ScalarProperty Name="SummForIngredient" ColumnName="SummForIngredient" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="Cost100Portion" ColumnName="Cost100Portion" />
+          <ScalarProperty Name="Cost1Portion" ColumnName="Cost1Portion" />
+          <ScalarProperty Name="ProteinValueOn1Dish" ColumnName="ProteinValueOn1Dish" />
+          <ScalarProperty Name="FatValueOn1Dish" ColumnName="FatValueOn1Dish" />
+          <ScalarProperty Name="CarbohydrateValueOn1Dish" ColumnName="CarbohydrateValueOn1Dish" />
+          <ScalarProperty Name="CalorificValueOn1Dish" ColumnName="CalorificValueOn1Dish" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_MenuModel.Store.Get_CalculationCart" FunctionImportName="Get_CalculationCart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.Get_CalculationCart_Result">
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+          <ScalarProperty Name="NameDish" ColumnName="NameDish" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="NumberInCollectionOfRecipes" ColumnName="NumberInCollectionOfRecipes" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="NormOn100Portion" ColumnName="NormOn100Portion" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+          <ScalarProperty Name="SummForIngredient" ColumnName="SummForIngredient" />
+          <ScalarProperty Name="Cost100Portion" ColumnName="Cost100Portion" />
+          <ScalarProperty Name="Cost1Portion" ColumnName="Cost1Portion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_MenuModel.Store.Get_HistoryIngredient" FunctionImportName="Get_HistoryIngredient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.Get_HistoryIngredient_Result">
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="NameTypeIngredient" ColumnName="NameTypeIngredient" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ScalarProperty Name="Fat" ColumnName="Fat" />
+          <ScalarProperty Name="Carbohydrate" ColumnName="Carbohydrate" />
+          <ScalarProperty Name="CalorificValue" ColumnName="CalorificValue" />
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mass" ColumnName="Mass" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_MenuModel.Store.Get_Menu" FunctionImportName="Get_Menu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.Get_Menu_Result">
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+          <ScalarProperty Name="UseDate" ColumnName="UseDate" />
+          <ScalarProperty Name="NameTypeMenu" ColumnName="NameTypeMenu" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="Cost1Portion" ColumnName="Cost1Portion" />
+          <ScalarProperty Name="ProteinValueOn1Dish" ColumnName="ProteinValueOn1Dish" />
+          <ScalarProperty Name="FatValueOn1Dish" ColumnName="FatValueOn1Dish" />
+          <ScalarProperty Name="CarbohydrateValueOn1Dish" ColumnName="CarbohydrateValueOn1Dish" />
+          <ScalarProperty Name="CalorificValueOn1Dish" ColumnName="CalorificValueOn1Dish" />
+          <ScalarProperty Name="NameTypeDish" ColumnName="NameTypeDish" />
+          <ScalarProperty Name="ShortNameChiefCooker" ColumnName="ShortNameChiefCooker" />
+          <ScalarProperty Name="ShortNameChiefCalculator" ColumnName="ShortNameChiefCalculator" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_MenuModel.Store.Get_ReceptDish" FunctionImportName="Get_ReceptDish">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.Get_ReceptDish_Result">
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+          <ScalarProperty Name="IDDish" ColumnName="IDDish" />
+          <ScalarProperty Name="NameDish" ColumnName="NameDish" />
+          <ScalarProperty Name="ExpandedNameDish" ColumnName="ExpandedNameDish" />
+          <ScalarProperty Name="NumberInCollectionOfRecipes" ColumnName="NumberInCollectionOfRecipes" />
+          <ScalarProperty Name="WeightDish" ColumnName="WeightDish" />
+          <ScalarProperty Name="IDTypeDish" ColumnName="IDTypeDish" />
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="NameTypeIngredient" ColumnName="NameTypeIngredient" />
+          <ScalarProperty Name="ProteinIn100Portion" ColumnName="ProteinIn100Portion" />
+          <ScalarProperty Name="FatIn100Portion" ColumnName="FatIn100Portion" />
+          <ScalarProperty Name="CarbohydrateIn100Portion" ColumnName="CarbohydrateIn100Portion" />
+          <ScalarProperty Name="CalorificValueIn100Portion" ColumnName="CalorificValueIn100Portion" />
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="NormOn100Portion" ColumnName="NormOn100Portion" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+          <ScalarProperty Name="SummForIngredient" ColumnName="SummForIngredient" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_MenuModel.Store.Get_RegisterProduct" FunctionImportName="Get_RegisterProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.Get_RegisterProduct_Result">
+          <ScalarProperty Name="IDIngredient" ColumnName="IDIngredient" />
+          <ScalarProperty Name="NameIngredient" ColumnName="NameIngredient" />
+          <ScalarProperty Name="NameTypeIngredient" ColumnName="NameTypeIngredient" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ScalarProperty Name="Fat" ColumnName="Fat" />
+          <ScalarProperty Name="Carbohydrate" ColumnName="Carbohydrate" />
+          <ScalarProperty Name="CalorificValue" ColumnName="CalorificValue" />
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mass" ColumnName="Mass" />
+          <ScalarProperty Name="PriceFor1Kg" ColumnName="PriceFor1Kg" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="NameSubdivision" ColumnName="NameSubdivision" />
+          <ScalarProperty Name="NameOrganization" ColumnName="NameOrganization" />
+          <ScalarProperty Name="DateCreateRegister" ColumnName="DateCreateRegister" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertDish" FunctionName="DB_MenuModel.Store.InsertDish" />
+    <FunctionImportMapping FunctionImportName="InsertIngredient" FunctionName="DB_MenuModel.Store.InsertIngredient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.InsertIngredient_Result">
+          <ScalarProperty Name="ErrorNumber" ColumnName="ErrorNumber" />
+          <ScalarProperty Name="ErrorSeverity" ColumnName="ErrorSeverity" />
+          <ScalarProperty Name="ErrorState" ColumnName="ErrorState" />
+          <ScalarProperty Name="ErrorProcedure" ColumnName="ErrorProcedure" />
+          <ScalarProperty Name="ErrorLine" ColumnName="ErrorLine" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertMenu" FunctionName="DB_MenuModel.Store.InsertMenu" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_MenuModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_MenuModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_MenuModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_MenuModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_MenuModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_MenuModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_MenuModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_MenuModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

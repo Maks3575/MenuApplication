@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_MenuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="Get_CalculateDish_Result">
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDDish" Type="Int32" Nullable="false" />
+    <Property Name="NameDish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberInCollectionOfRecipes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameTypeDish" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameTypeIngredient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDProduct" Type="Int32" Nullable="false" />
+    <Property Name="NormOn100Portion" Type="Single" Nullable="false" />
+    <Property Name="PriceFor1Kg" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="SummForIngredient" Type="Single" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+    <Property Name="Cost100Portion" Type="Double" />
+    <Property Name="Cost1Portion" Type="Double" />
+    <Property Name="ProteinValueOn1Dish" Type="Double" />
+    <Property Name="FatValueOn1Dish" Type="Double" />
+    <Property Name="CarbohydrateValueOn1Dish" Type="Double" />
+    <Property Name="CalorificValueOn1Dish" Type="Double" />
+  </ComplexType>
+  <ComplexType Name="Get_CalculationCart_Result">
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameDish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NumberInCollectionOfRecipes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NormOn100Portion" Type="Single" />
+    <Property Name="PriceFor1Kg" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="SummForIngredient" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="Cost100Portion" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="Cost1Portion" Type="Decimal" Precision="9" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="Get_HistoryIngredient_Result">
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameTypeIngredient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Protein" Type="Single" Nullable="false" />
+    <Property Name="Fat" Type="Single" Nullable="false" />
+    <Property Name="Carbohydrate" Type="Single" Nullable="false" />
+    <Property Name="CalorificValue" Type="Single" />
+    <Property Name="IDProduct" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="6" Scale="3" Nullable="false" />
+    <Property Name="Mass" Type="Single" Nullable="false" />
+    <Property Name="PriceFor1Kg" Type="Single" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Get_Menu_Result">
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UseDate" Type="DateTime" />
+    <Property Name="NameTypeMenu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cost1Portion" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="ProteinValueOn1Dish" Type="Single" />
+    <Property Name="FatValueOn1Dish" Type="Single" />
+    <Property Name="CarbohydrateValueOn1Dish" Type="Single" />
+    <Property Name="CalorificValueOn1Dish" Type="Single" />
+    <Property Name="NameTypeDish" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ShortNameChiefCooker" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ShortNameChiefCalculator" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="Get_ReceptDish_Result">
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDDish" Type="Int32" Nullable="false" />
+    <Property Name="NameDish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberInCollectionOfRecipes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTypeDish" Type="Int32" Nullable="false" />
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameTypeIngredient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProteinIn100Portion" Type="Single" />
+    <Property Name="FatIn100Portion" Type="Single" />
+    <Property Name="CarbohydrateIn100Portion" Type="Single" />
+    <Property Name="CalorificValueIn100Portion" Type="Single" />
+    <Property Name="IDProduct" Type="Int32" Nullable="false" />
+    <Property Name="NormOn100Portion" Type="Single" Nullable="false" />
+    <Property Name="PriceFor1Kg" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="SummForIngredient" Type="Single" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Get_RegisterProduct_Result">
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameTypeIngredient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Protein" Type="Single" Nullable="false" />
+    <Property Name="Fat" Type="Single" Nullable="false" />
+    <Property Name="Carbohydrate" Type="Single" Nullable="false" />
+    <Property Name="CalorificValue" Type="Single" />
+    <Property Name="IDProduct" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="6" Scale="3" Nullable="false" />
+    <Property Name="Mass" Type="Single" Nullable="false" />
+    <Property Name="PriceFor1Kg" Type="Single" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreateRegister" Type="DateTime" />
+  </ComplexType>
+  <EntityType Name="Dish">
+    <Key>
+      <PropertyRef Name="IDDish" />
+    </Key>
+    <Property Name="IDDish" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameDish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberInCollectionOfRecipes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTypeDish" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TypeDish" Relationship="Self.FK_Dish_TypeDish" FromRole="Dish" ToRole="TypeDish" />
+    <NavigationProperty Name="ItemDishes" Relationship="Self.FK_ItemDish_Dish" FromRole="Dish" ToRole="ItemDish" />
+    <NavigationProperty Name="Menus" Relationship="Self.ItemMenu" FromRole="Dish" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="IDEmployee" />
+    </Key>
+    <Property Name="IDEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SurnameEmployee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameEmployee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PatronymicEmloyee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IDPosition" Type="Int32" Nullable="false" />
+    <Property Name="ShortNameEmployee" Type="String" MaxLength="25" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Position" Relationship="Self.FK_Employee_Position" FromRole="Employee" ToRole="Position" />
+    <NavigationProperty Name="Menus" Relationship="Self.FK_Menu_Employee_ForCalculator" FromRole="Employee" ToRole="Menu" />
+    <NavigationProperty Name="Menus1" Relationship="Self.FK_Menu_Employee_ForChiefCooker" FromRole="Employee" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="IDIngredient" />
+    </Key>
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTypeIngredient" Type="Int32" Nullable="false" />
+    <Property Name="Protein" Type="Single" Nullable="false" />
+    <Property Name="Fat" Type="Single" Nullable="false" />
+    <Property Name="Carbohydrate" Type="Single" Nullable="false" />
+    <Property Name="CalorificValue" Type="Single" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="TypeIngredient" Relationship="Self.FK_Ingredient_TypeIngredient" FromRole="Ingredient" ToRole="TypeIngredient" />
+    <NavigationProperty Name="ItemDishes" Relationship="Self.FK_ItemDish_Ingredient" FromRole="Ingredient" ToRole="ItemDish" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_Ingredient" FromRole="Ingredient" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="ItemDish">
+    <Key>
+      <PropertyRef Name="IDDish" />
+      <PropertyRef Name="IDIngredient" />
+    </Key>
+    <Property Name="IDDish" Type="Int32" Nullable="false" />
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NormOn100Portion" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Dish" Relationship="Self.FK_ItemDish_Dish" FromRole="ItemDish" ToRole="Dish" />
+    <NavigationProperty Name="Ingredient" Relationship="Self.FK_ItemDish_Ingredient" FromRole="ItemDish" ToRole="Ingredient" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IDMenu" />
+    </Key>
+    <Property Name="IDMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+    <Property Name="IDChiefCooker" Type="Int32" Nullable="false" />
+    <Property Name="IDCalculator" Type="Int32" />
+    <Property Name="IDTypeMenu" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_Menu_Employee_ForCalculator" FromRole="Menu" ToRole="Employee" />
+    <NavigationProperty Name="Employee1" Relationship="Self.FK_Menu_Employee_ForChiefCooker" FromRole="Menu" ToRole="Employee" />
+    <NavigationProperty Name="Subdivision" Relationship="Self.FK_Menu_Subdivision" FromRole="Menu" ToRole="Subdivision" />
+    <NavigationProperty Name="TypeMenu" Relationship="Self.FK_Menu_TypeMenu" FromRole="Menu" ToRole="TypeMenu" />
+    <NavigationProperty Name="Dishes" Relationship="Self.ItemMenu" FromRole="Menu" ToRole="Dish" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="IDOrganization" />
+    </Key>
+    <Property Name="IDOrganization" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Subdivisions" Relationship="Self.FK_Subdivision_Organization" FromRole="Organization" ToRole="Subdivision" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="IDPosition" />
+    </Key>
+    <Property Name="IDPosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NamePosition" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Position" FromRole="Position" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="IDProduct" />
+    </Key>
+    <Property Name="IDProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Decimal" Precision="9" Scale="3" Nullable="false" />
+    <Property Name="Mass" Type="Single" Nullable="false" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+    <Property Name="PriceFor1Kg" Type="Single" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Ingredient" Relationship="Self.FK_Product_Ingredient" FromRole="Product" ToRole="Ingredient" />
+    <NavigationProperty Name="Subdivision" Relationship="Self.FK_Product_Subdivision" FromRole="Product" ToRole="Subdivision" />
+  </EntityType>
+  <EntityType Name="Subdivision">
+    <Key>
+      <PropertyRef Name="IDSubdivision" />
+    </Key>
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDOrganization" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menus" Relationship="Self.FK_Menu_Subdivision" FromRole="Subdivision" ToRole="Menu" />
+    <NavigationProperty Name="Organization" Relationship="Self.FK_Subdivision_Organization" FromRole="Subdivision" ToRole="Organization" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_Subdivision" FromRole="Subdivision" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TypeDish">
+    <Key>
+      <PropertyRef Name="IDTypeDish" />
+    </Key>
+    <Property Name="IDTypeDish" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameTypeDish" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Dishes" Relationship="Self.FK_Dish_TypeDish" FromRole="TypeDish" ToRole="Dish" />
+  </EntityType>
+  <EntityType Name="TypeIngredient">
+    <Key>
+      <PropertyRef Name="IDTypeIngredient" />
+    </Key>
+    <Property Name="IDTypeIngredient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameTypeIngredient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Ingredients" Relationship="Self.FK_Ingredient_TypeIngredient" FromRole="TypeIngredient" ToRole="Ingredient" />
+  </EntityType>
+  <EntityType Name="TypeMenu">
+    <Key>
+      <PropertyRef Name="IDTypeMenu" />
+    </Key>
+    <Property Name="IDTypeMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameTypeMenu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Menus" Relationship="Self.FK_Menu_TypeMenu" FromRole="TypeMenu" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="VIEW_EmployeePosition">
+    <Key>
+      <PropertyRef Name="IDEmployee" />
+      <PropertyRef Name="NameEmployee" />
+      <PropertyRef Name="SurnameEmployee" />
+      <PropertyRef Name="IDPosition" />
+      <PropertyRef Name="NamePosition" />
+    </Key>
+    <Property Name="IDEmployee" Type="Int32" Nullable="false" />
+    <Property Name="NameEmployee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SurnameEmployee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PatronymicEmloyee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ShortNameEmployee" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IDPosition" Type="Int32" Nullable="false" />
+    <Property Name="NamePosition" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIEW_IngredientProduct">
+    <Key>
+      <PropertyRef Name="IDIngredient" />
+      <PropertyRef Name="NameIngredient" />
+      <PropertyRef Name="NameTypeIngredient" />
+      <PropertyRef Name="Protein" />
+      <PropertyRef Name="Fat" />
+      <PropertyRef Name="Carbohydrate" />
+      <PropertyRef Name="IDProduct" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Mass" />
+      <PropertyRef Name="BeginDate" />
+      <PropertyRef Name="IDSubdivision" />
+    </Key>
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameTypeIngredient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Protein" Type="Single" Nullable="false" />
+    <Property Name="Fat" Type="Single" Nullable="false" />
+    <Property Name="Carbohydrate" Type="Single" Nullable="false" />
+    <Property Name="CalorificValue" Type="Single" />
+    <Property Name="IDProduct" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="6" Scale="3" Nullable="false" />
+    <Property Name="Mass" Type="Single" Nullable="false" />
+    <Property Name="PriceFor1Kg" Type="Single" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIEW_ListDishes">
+    <Key>
+      <PropertyRef Name="NameDish" />
+      <PropertyRef Name="ExpandedNameDish" />
+      <PropertyRef Name="WeightDish" />
+      <PropertyRef Name="NumberInCollectionOfRecipes" />
+      <PropertyRef Name="IDTypeDish" />
+      <PropertyRef Name="NameIngredient" />
+    </Key>
+    <Property Name="NameDish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberInCollectionOfRecipes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTypeDish" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIEW_MenuDishIngredient">
+    <Key>
+      <PropertyRef Name="IDMenu" />
+      <PropertyRef Name="UseDate" />
+      <PropertyRef Name="IDSubdivision" />
+      <PropertyRef Name="IDChiefCooker" />
+      <PropertyRef Name="IDTypeMenu" />
+      <PropertyRef Name="IDDish" />
+      <PropertyRef Name="NameDish" />
+      <PropertyRef Name="ExpandedNameDish" />
+      <PropertyRef Name="WeightDish" />
+      <PropertyRef Name="NumberInCollectionOfRecipes" />
+      <PropertyRef Name="IDTypeDish" />
+      <PropertyRef Name="NormOn100Portion" />
+      <PropertyRef Name="IDIngredient" />
+      <PropertyRef Name="NameIngredient" />
+      <PropertyRef Name="IDTypeIngredient" />
+    </Key>
+    <Property Name="IDMenu" Type="Int32" Nullable="false" />
+    <Property Name="UseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+    <Property Name="IDChiefCooker" Type="Int32" Nullable="false" />
+    <Property Name="IDCalculator" Type="Int32" />
+    <Property Name="IDTypeMenu" Type="Int32" Nullable="false" />
+    <Property Name="IDDish" Type="Int32" Nullable="false" />
+    <Property Name="NameDish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExpandedNameDish" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeightDish" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberInCollectionOfRecipes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTypeDish" Type="Int32" Nullable="false" />
+    <Property Name="NormOn100Portion" Type="Single" Nullable="false" />
+    <Property Name="IDIngredient" Type="Int32" Nullable="false" />
+    <Property Name="NameIngredient" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTypeIngredient" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIEW_MenuEmployeePosition">
+    <Key>
+      <PropertyRef Name="IDMenu" />
+      <PropertyRef Name="IDSubdivision" />
+      <PropertyRef Name="IDTypeMenu" />
+      <PropertyRef Name="UseDate" />
+      <PropertyRef Name="IDChiefCooker" />
+      <PropertyRef Name="NameChiefCooker" />
+      <PropertyRef Name="SurnameChiefCooker" />
+      <PropertyRef Name="IDPositionChiefCooker" />
+      <PropertyRef Name="NamePositionChiefCooker" />
+      <PropertyRef Name="NameCalculator" />
+      <PropertyRef Name="SurnameCalculator" />
+      <PropertyRef Name="IDPositionCalculator" />
+      <PropertyRef Name="NamePositionCalculator" />
+    </Key>
+    <Property Name="IDMenu" Type="Int32" Nullable="false" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+    <Property Name="IDTypeMenu" Type="Int32" Nullable="false" />
+    <Property Name="UseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDChiefCooker" Type="Int32" Nullable="false" />
+    <Property Name="NameChiefCooker" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SurnameChiefCooker" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PatronymicChiefCooker" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ShortNameChiefCooker" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IDPositionChiefCooker" Type="Int32" Nullable="false" />
+    <Property Name="NamePositionChiefCooker" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCalculator" Type="Int32" />
+    <Property Name="NameCalculator" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SurnameCalculator" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PatronymicCalculator" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ShortNameCalculator" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IDPositionCalculator" Type="Int32" Nullable="false" />
+    <Property Name="NamePositionCalculator" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIEW_MenuSubdivision">
+    <Key>
+      <PropertyRef Name="IDChiefCooker" />
+      <PropertyRef Name="IDMenu" />
+      <PropertyRef Name="IDTypeMenu" />
+      <PropertyRef Name="UseDate" />
+      <PropertyRef Name="IDSubdivision" />
+      <PropertyRef Name="NameSubdivision" />
+    </Key>
+    <Property Name="IDCalculator" Type="Int32" />
+    <Property Name="IDChiefCooker" Type="Int32" Nullable="false" />
+    <Property Name="IDMenu" Type="Int32" Nullable="false" />
+    <Property Name="IDTypeMenu" Type="Int32" Nullable="false" />
+    <Property Name="UseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIEW_OrganizationSubdivision">
+    <Key>
+      <PropertyRef Name="IDOrganization" />
+      <PropertyRef Name="NameOrganization" />
+      <PropertyRef Name="IDSubdivision" />
+      <PropertyRef Name="NameSubdivision" />
+    </Key>
+    <Property Name="IDOrganization" Type="Int32" Nullable="false" />
+    <Property Name="NameOrganization" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDSubdivision" Type="Int32" Nullable="false" />
+    <Property Name="NameSubdivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Dish_TypeDish">
+    <End Role="TypeDish" Type="Self.TypeDish" Multiplicity="1" />
+    <End Role="Dish" Type="Self.Dish" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeDish">
+        <PropertyRef Name="IDTypeDish" />
+      </Principal>
+      <Dependent Role="Dish">
+        <PropertyRef Name="IDTypeDish" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemDish_Dish">
+    <End Role="Dish" Type="Self.Dish" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ItemDish" Type="Self.ItemDish" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dish">
+        <PropertyRef Name="IDDish" />
+      </Principal>
+      <Dependent Role="ItemDish">
+        <PropertyRef Name="IDDish" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Position">
+    <End Role="Position" Type="Self.Position" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="IDPosition" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="IDPosition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Employee_ForCalculator">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IDCalculator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Employee_ForChiefCooker">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IDChiefCooker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ingredient_TypeIngredient">
+    <End Role="TypeIngredient" Type="Self.TypeIngredient" Multiplicity="1" />
+    <End Role="Ingredient" Type="Self.Ingredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeIngredient">
+        <PropertyRef Name="IDTypeIngredient" />
+      </Principal>
+      <Dependent Role="Ingredient">
+        <PropertyRef Name="IDTypeIngredient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemDish_Ingredient">
+    <End Role="Ingredient" Type="Self.Ingredient" Multiplicity="1" />
+    <End Role="ItemDish" Type="Self.ItemDish" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredient">
+        <PropertyRef Name="IDIngredient" />
+      </Principal>
+      <Dependent Role="ItemDish">
+        <PropertyRef Name="IDIngredient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Ingredient">
+    <End Role="Ingredient" Type="Self.Ingredient" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredient">
+        <PropertyRef Name="IDIngredient" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="IDIngredient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Subdivision">
+    <End Role="Subdivision" Type="Self.Subdivision" Multiplicity="1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subdivision">
+        <PropertyRef Name="IDSubdivision" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IDSubdivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_TypeMenu">
+    <End Role="TypeMenu" Type="Self.TypeMenu" Multiplicity="1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeMenu">
+        <PropertyRef Name="IDTypeMenu" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IDTypeMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subdivision_Organization">
+    <End Role="Organization" Type="Self.Organization" Multiplicity="1" />
+    <End Role="Subdivision" Type="Self.Subdivision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="IDOrganization" />
+      </Principal>
+      <Dependent Role="Subdivision">
+        <PropertyRef Name="IDOrganization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Subdivision">
+    <End Role="Subdivision" Type="Self.Subdivision" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subdivision">
+        <PropertyRef Name="IDSubdivision" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="IDSubdivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ItemMenu">
+    <End Role="Dish" Type="Self.Dish" Multiplicity="*" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DB_MenuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Dishes" EntityType="Self.Dish" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Ingredients" EntityType="Self.Ingredient" />
+    <EntitySet Name="ItemDishes" EntityType="Self.ItemDish" />
+    <EntitySet Name="Menus" EntityType="Self.Menu" />
+    <EntitySet Name="Organizations" EntityType="Self.Organization" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="Subdivisions" EntityType="Self.Subdivision" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TypeDishes" EntityType="Self.TypeDish" />
+    <EntitySet Name="TypeIngredients" EntityType="Self.TypeIngredient" />
+    <EntitySet Name="TypeMenus" EntityType="Self.TypeMenu" />
+    <EntitySet Name="VIEW_EmployeePosition" EntityType="Self.VIEW_EmployeePosition" />
+    <EntitySet Name="VIEW_IngredientProduct" EntityType="Self.VIEW_IngredientProduct" />
+    <EntitySet Name="VIEW_ListDishes" EntityType="Self.VIEW_ListDishes" />
+    <EntitySet Name="VIEW_MenuDishIngredient" EntityType="Self.VIEW_MenuDishIngredient" />
+    <EntitySet Name="VIEW_MenuEmployeePosition" EntityType="Self.VIEW_MenuEmployeePosition" />
+    <EntitySet Name="VIEW_MenuSubdivision" EntityType="Self.VIEW_MenuSubdivision" />
+    <EntitySet Name="VIEW_OrganizationSubdivision" EntityType="Self.VIEW_OrganizationSubdivision" />
+    <AssociationSet Name="FK_Dish_TypeDish" Association="Self.FK_Dish_TypeDish">
+      <End Role="TypeDish" EntitySet="TypeDishes" />
+      <End Role="Dish" EntitySet="Dishes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemDish_Dish" Association="Self.FK_ItemDish_Dish">
+      <End Role="Dish" EntitySet="Dishes" />
+      <End Role="ItemDish" EntitySet="ItemDishes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Position" Association="Self.FK_Employee_Position">
+      <End Role="Position" EntitySet="Positions" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Employee_ForCalculator" Association="Self.FK_Menu_Employee_ForCalculator">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Employee_ForChiefCooker" Association="Self.FK_Menu_Employee_ForChiefCooker">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ingredient_TypeIngredient" Association="Self.FK_Ingredient_TypeIngredient">
+      <End Role="TypeIngredient" EntitySet="TypeIngredients" />
+      <End Role="Ingredient" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemDish_Ingredient" Association="Self.FK_ItemDish_Ingredient">
+      <End Role="Ingredient" EntitySet="Ingredients" />
+      <End Role="ItemDish" EntitySet="ItemDishes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Ingredient" Association="Self.FK_Product_Ingredient">
+      <End Role="Ingredient" EntitySet="Ingredients" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Subdivision" Association="Self.FK_Menu_Subdivision">
+      <End Role="Subdivision" EntitySet="Subdivisions" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_TypeMenu" Association="Self.FK_Menu_TypeMenu">
+      <End Role="TypeMenu" EntitySet="TypeMenus" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subdivision_Organization" Association="Self.FK_Subdivision_Organization">
+      <End Role="Organization" EntitySet="Organizations" />
+      <End Role="Subdivision" EntitySet="Subdivisions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Subdivision" Association="Self.FK_Product_Subdivision">
+      <End Role="Subdivision" EntitySet="Subdivisions" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="ItemMenu" Association="Self.ItemMenu">
+      <End Role="Dish" EntitySet="Dishes" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <FunctionImport Name="Get_CalculateDish" IsComposable="true" ReturnType="Collection(DB_MenuModel.Get_CalculateDish_Result)">
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+      <Parameter Name="IDDish" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Get_CalculationCart" IsComposable="true" ReturnType="Collection(DB_MenuModel.Get_CalculationCart_Result)">
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+      <Parameter Name="IDDish" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Get_HistoryIngredient" IsComposable="true" ReturnType="Collection(DB_MenuModel.Get_HistoryIngredient_Result)">
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+      <Parameter Name="IDIngredient" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Get_Menu" IsComposable="true" ReturnType="Collection(DB_MenuModel.Get_Menu_Result)">
+      <Parameter Name="IDMenu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Get_ReceptDish" IsComposable="true" ReturnType="Collection(DB_MenuModel.Get_ReceptDish_Result)">
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+      <Parameter Name="IDDish" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Get_RegisterProduct" IsComposable="true" ReturnType="Collection(DB_MenuModel.Get_RegisterProduct_Result)">
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="InsertDish">
+      <Parameter Name="NameDish" Mode="In" Type="String" />
+      <Parameter Name="ExpandedNameDish" Mode="In" Type="String" />
+      <Parameter Name="WeightDish" Mode="In" Type="String" />
+      <Parameter Name="NumberInCollectionOfRecipes" Mode="In" Type="String" />
+      <Parameter Name="IDTypeDish" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertIngredient" ReturnType="Collection(DB_MenuModel.InsertIngredient_Result)">
+      <Parameter Name="NameIngredient" Mode="In" Type="String" />
+      <Parameter Name="IDTypeIngredient" Mode="In" Type="Int32" />
+      <Parameter Name="Protein" Mode="In" Type="Single" />
+      <Parameter Name="Fat" Mode="In" Type="Single" />
+      <Parameter Name="Carbohydrate" Mode="In" Type="Single" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="Mass" Mode="In" Type="Single" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertMenu">
+      <Parameter Name="UseDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IDSubdivision" Mode="In" Type="Int32" />
+      <Parameter Name="IDChiefCooker" Mode="In" Type="Int32" />
+      <Parameter Name="IDCalculator" Mode="In" Type="Int32" />
+      <Parameter Name="IDTypeMenu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DB_MenuModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DB_MenuModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="InsertIngredient_Result">
+    <Property Type="Int32" Name="ErrorNumber" Nullable="true" />
+    <Property Type="Int32" Name="ErrorSeverity" Nullable="true" />
+    <Property Type="Int32" Name="ErrorState" Nullable="true" />
+    <Property Type="String" Name="ErrorProcedure" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="ErrorLine" Nullable="true" />
+    <Property Type="String" Name="ErrorMessage" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
