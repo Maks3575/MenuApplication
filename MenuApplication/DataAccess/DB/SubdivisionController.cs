@@ -9,7 +9,7 @@ namespace MenuApplication.DataAccess.DB
 {
     internal class SubdivisionController
     {
-        DB_MenuEntities context = new DB_MenuEntities();
+        DB_MenuEntities context;// = new DB_MenuEntities();
         public static ModelDB.Subdivision CurrentSubdivision { get; set; } //= new DB_MenuEntities().Subdivisions.First();
 
         public SubdivisionController()
