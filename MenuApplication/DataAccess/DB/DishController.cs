@@ -19,7 +19,22 @@ namespace MenuApplication.DataAccess.DB
 
         public void Add(IDish newDish)
         {
-            throw new NotImplementedException();
+            var Dish = context.Dishes.Add(new ModelDB.Dish()
+            {
+                NameDish = newDish.NameDish,
+                ExpandedNameDish = newDish.ExpandedNameDish,
+                WeightDish = newDish.WeightDish,
+                NumberInCollectionOfRecipes = newDish.NumberInCollectionOfRecipes,
+                TypeDish = newDish.TypeDish//надо добавить в IDish поле TypeDish
+            });
+
+            context.ItemDishes.AddRange(newDish.DishItems.Select(x => new ModelDB.ItemDish()
+            {
+                Dish = Dish,
+                IDIngredient = x.Ingredient.IdIngredient,
+                NormOn100Portion = (float)x.NormOn100Portions
+            }));
+
         }
 
         public bool CheckOnContain(IDish dish) => context.Dishes
@@ -28,17 +43,27 @@ namespace MenuApplication.DataAccess.DB
         public bool CheckOnExpandedNameDish(string ExpandedNameDish)=>context.Dishes
             .Select(x => x.ExpandedNameDish).Contains(ExpandedNameDish);
 
-        public IEnumerable<IDish> Fetch() => context.Dishes;
+        public IEnumerable<IDish> Fetch()
+        {
+            throw new NotImplementedException();
+        }
 
-        public IDish GetDishByName(string ExpandedNameDish) => context.Dishes
-            .FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish);
+        public IDish GetDishByName(string ExpandedNameDish)
+        {
+            throw new NotImplementedException();
+        }
+        //=> context.Dishes
+        //    .FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish);
 
         public IDish GetDishByName(string ExpandedNameDish, DateTime DT)
         {
-            Dish Dish = context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish);
-            Dish.DishItems= context.Dishes
-            .FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish)
-            return 
+            {
+                throw new NotImplementedException();
+            }
+            //Dish Dish = context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish);
+            //Dish.DishItems= context.Dishes
+            //.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish)
+            //return 
         }
 
         public IEnumerable<IDish> HistoryDish(string ExpandedNamedish)

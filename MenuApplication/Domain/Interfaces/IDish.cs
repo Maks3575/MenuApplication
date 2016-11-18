@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MenuApplication.ModelDB;
 namespace MenuApplication.Domain
 {   
     /// <summary>
@@ -15,6 +15,11 @@ namespace MenuApplication.Domain
         /// Список ингредиентов блюда
         /// </summary>
         IList<DishItem> DishItems { get; set; }
+
+        /// <summary>
+        /// Тип блюда
+        /// </summary>
+        TypeDish TypeDish { get; set; }
 
         /// <summary>
         /// Номер документа
