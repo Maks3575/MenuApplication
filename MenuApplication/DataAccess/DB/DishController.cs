@@ -123,7 +123,8 @@ namespace MenuApplication.DataAccess.DB
             {
                 return new Domain.Dish()
                 {
-                    DateCreate = CalculationDishDate(DishDB, DT),
+                    //DateCreate = CalculationDishDate(DishDB, DT), заменил так как перед ее вызовом дата всегда уже найдена
+                    DateCreate = DT,
                     NumberDish = DishDB.IDDish,
                     NameDish = DishDB.NameDish,
                     ExpandedNameDish = DishDB.ExpandedNameDish,
