@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MenuApplication.ModelDB;
 
 namespace MenuApplication.Domain
 {   
@@ -116,5 +117,7 @@ namespace MenuApplication.Domain
         /// Возвращает количество калорийности в одной порции
         /// </summary>
         public double CalorificValueOnOnePortion => DishItems.Sum(x => x.CalorificValueOn100Portion) / 100;
+
+        public TypeDish TypeDish { get; set; }
     }
 }

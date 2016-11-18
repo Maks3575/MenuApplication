@@ -45,12 +45,12 @@ namespace MenuApplication.DataAccess.DB
 
         public IEnumerable<IDish> Fetch()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//не используется
         }
 
         public IDish GetDishByName(string ExpandedNameDish)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//не используется
         }
         //=> context.Dishes
         //    .FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish);
@@ -58,7 +58,7 @@ namespace MenuApplication.DataAccess.DB
         public IDish GetDishByName(string ExpandedNameDish, DateTime DT)
         {
             {
-                throw new NotImplementedException();
+                throw new NotImplementedException();//не используется
             }
             //Dish Dish = context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNameDish);
             //Dish.DishItems= context.Dishes
@@ -66,9 +66,70 @@ namespace MenuApplication.DataAccess.DB
             //return 
         }
 
+        /// <summary>
+        /// Возвращает историю обновлений указанного блюда
+        /// </summary>
+        /// <param name="ExpandedNamedish">Расширенное имя блюда</param>
+        /// <returns>Список со всеми обновлениями для данного блюда</returns>
         public IEnumerable<IDish> HistoryDish(string ExpandedNamedish)
         {
+            //IDish d = new Domain.Dish();
+            //var L = SubdivisionController.CurrentSubdivision.Menus.Where(x => x.Dishes.Where(;
             throw new NotImplementedException();
+        }
+
+        public IDish FillingDish(ModelDB.Dish DishDB, DateTime DT)
+        {
+            List<DishItem> DI = DishDB.ItemDishes.Select(x => new DishItem()
+            {
+                Ingredient = x.Ingredient.Products
+                .Where(y => y.BeginDate <= DT && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                .OrderByDescending(y => y.BeginDate).FirstOrDefault(),
+                NormOn100Portions = x.NormOn100Portion
+            }).ToList();
+            if (DI.Select(x => x.Ingredient).Any(x => x == null)) 
+            {
+                return null;
+            }
+            else
+            {
+                DateTime CreateDate;
+                List<DateTime> CreateDates = SubdivisionController.CurrentSubdivision.Menus
+                    .Where(x => x.UseDate <= DT && x.Dishes.Any(y => y == DishDB))
+                    .OrderByDescending(x => x.UseDate).Select(x => x.UseDate).ToList();
+                if (CreateDates == null)
+                {
+                    CreateDate = DT;
+                }
+                else
+                {
+                    List<Product> Products = DishDB.ItemDishes.Select(x => x.Ingredient.Products
+                        .Where(y => y.BeginDate <= DT && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                        .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList();
+                    CreateDate = DT;
+                    foreach (var Date in CreateDates)
+                    {
+                        
+                        if (!DishDB.ItemDishes.Select(x => x.Ingredient.Products
+                        .Where(y => y.BeginDate <= Date && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                        .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList().SequenceEqual(Products)) break;
+                        CreateDate = Date;
+                    }
+
+                }
+
+                return new Domain.Dish()
+                {
+                    DateCreate = CreateDate,
+                    NumberDish = DishDB.IDDish,
+                    NameDish = DishDB.NameDish,
+                    ExpandedNameDish = DishDB.ExpandedNameDish,
+                    WeightDish = DishDB.WeightDish,
+                    NumberInCollectionOfRecipes = DishDB.NumberInCollectionOfRecipes,
+                    TypeDish = DishDB.TypeDish,
+                    DishItems = DI
+                };
+            }            
         }
 
         public IEnumerable<IDish> LatestDish()
