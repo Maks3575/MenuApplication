@@ -67,17 +67,6 @@ namespace MenuApplication.DataAccess.DB
         }
 
         /// <summary>
-        /// Возвращает историю обновлений указанного блюда
-        /// </summary>
-        /// <param name="ExpandedNamedish">Расширенное имя блюда</param>
-        /// <returns>Список со всеми обновлениями для данного блюда</returns>
-        public IEnumerable<IDish> HistoryDish(string ExpandedNamedish)
-        {
-            //IDish d = new Domain.Dish();
-            //var L = SubdivisionController.CurrentSubdivision.Menus.Where(x => x.Dishes.Where(;
-            throw new NotImplementedException();
-        }
-        /// <summary>
         /// Поиск даты калькуляции блюда (первого использования)
         /// </summary>
         /// <param name="DishDB">Блюдо</param>
@@ -87,7 +76,7 @@ namespace MenuApplication.DataAccess.DB
         {
             DateTime CreateDate;
             List<DateTime> CreateDates = SubdivisionController.CurrentSubdivision.Menus
-                .Where(x => x.UseDate <= DT && x.Dishes.Any(y => y == DishDB))
+                .Where(x => x.UseDate <= DT && x.Dishes.Any(y => y.ExpandedNameDish == DishDB.ExpandedNameDish))
                 .OrderByDescending(x => x.UseDate).Select(x => x.UseDate).ToList();
             if (CreateDates == null)
             {
@@ -144,6 +133,36 @@ namespace MenuApplication.DataAccess.DB
                     DishItems = DI
                 };
             }            
+        }
+
+        /// <summary>
+        /// Возвращает историю обновлений указанного блюда
+        /// </summary>
+        /// <param name="ExpandedNamedish">Расширенное имя блюда</param>
+        /// <returns>Список со всеми обновлениями для данного блюда</returns>
+        public IEnumerable<IDish> HistoryDish(string ExpandedNamedish)
+        {
+            ModelDB.Dish dish = context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNamedish);
+            List<DateTime> HistoryDates = SubdivisionController.CurrentSubdivision.Menus
+                .Where(x => x.Dishes.Any(y => y.ExpandedNameDish == ExpandedNamedish))
+                .Select(x => CalculationDishDate(dish, x.UseDate)).Distinct().ToList();
+            
+            if (HistoryDates == null)
+            {
+                Domain.Dish d = FillingDish(dish, DateTime.Now) as Domain.Dish;
+                if (d == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return new List<IDish>() { d };
+                }
+            }
+            else
+            {
+                return HistoryDates.Select(x => FillingDish(dish, x));
+            }
         }
 
         public IEnumerable<IDish> LatestDish()
