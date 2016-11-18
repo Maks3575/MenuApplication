@@ -77,7 +77,12 @@ namespace MenuApplication.DataAccess.DB
             //var L = SubdivisionController.CurrentSubdivision.Menus.Where(x => x.Dishes.Where(;
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Поиск даты калькуляции блюда (первого использования)
+        /// </summary>
+        /// <param name="DishDB">Блюдо</param>
+        /// <param name="DT">Дата</param>
+        /// <returns>Дата калькуляции блюда</returns>
         public DateTime CalculationDishDate(ModelDB.Dish DishDB, DateTime DT)
         {
             DateTime CreateDate;
@@ -106,6 +111,12 @@ namespace MenuApplication.DataAccess.DB
             return CreateDate;
         }
 
+        /// <summary>
+        /// Создание калькуляции блюда, которое реализует IDish
+        /// </summary>
+        /// <param name="DishDB">Блюдо из контекста</param>
+        /// <param name="DT">Дата</param>
+        /// <returns>Калькуляция блюда</returns>
         public IDish FillingDish(ModelDB.Dish DishDB, DateTime DT)
         {
             List<DishItem> DI = DishDB.ItemDishes.Select(x => new DishItem()
