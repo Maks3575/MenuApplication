@@ -78,6 +78,34 @@ namespace MenuApplication.DataAccess.DB
             throw new NotImplementedException();
         }
 
+        public DateTime CalculationDishDate(ModelDB.Dish DishDB, DateTime DT)
+        {
+            DateTime CreateDate;
+            List<DateTime> CreateDates = SubdivisionController.CurrentSubdivision.Menus
+                .Where(x => x.UseDate <= DT && x.Dishes.Any(y => y == DishDB))
+                .OrderByDescending(x => x.UseDate).Select(x => x.UseDate).ToList();
+            if (CreateDates == null)
+            {
+                CreateDate = DT;
+            }
+            else
+            {
+                List<Product> Products = DishDB.ItemDishes.Select(x => x.Ingredient.Products
+                    .Where(y => y.BeginDate <= DT && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                    .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList();
+                CreateDate = DT;
+                foreach (var Date in CreateDates)
+                {
+
+                    if (!DishDB.ItemDishes.Select(x => x.Ingredient.Products
+                    .Where(y => y.BeginDate <= Date && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                    .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList().SequenceEqual(Products)) break;
+                    CreateDate = Date;
+                }
+            }
+            return CreateDate;
+        }
+
         public IDish FillingDish(ModelDB.Dish DishDB, DateTime DT)
         {
             List<DishItem> DI = DishDB.ItemDishes.Select(x => new DishItem()
@@ -93,34 +121,9 @@ namespace MenuApplication.DataAccess.DB
             }
             else
             {
-                DateTime CreateDate;
-                List<DateTime> CreateDates = SubdivisionController.CurrentSubdivision.Menus
-                    .Where(x => x.UseDate <= DT && x.Dishes.Any(y => y == DishDB))
-                    .OrderByDescending(x => x.UseDate).Select(x => x.UseDate).ToList();
-                if (CreateDates == null)
-                {
-                    CreateDate = DT;
-                }
-                else
-                {
-                    List<Product> Products = DishDB.ItemDishes.Select(x => x.Ingredient.Products
-                        .Where(y => y.BeginDate <= DT && y.Subdivision == SubdivisionController.CurrentSubdivision)
-                        .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList();
-                    CreateDate = DT;
-                    foreach (var Date in CreateDates)
-                    {
-                        
-                        if (!DishDB.ItemDishes.Select(x => x.Ingredient.Products
-                        .Where(y => y.BeginDate <= Date && y.Subdivision == SubdivisionController.CurrentSubdivision)
-                        .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList().SequenceEqual(Products)) break;
-                        CreateDate = Date;
-                    }
-
-                }
-
                 return new Domain.Dish()
                 {
-                    DateCreate = CreateDate,
+                    DateCreate = CalculationDishDate(DishDB, DT),
                     NumberDish = DishDB.IDDish,
                     NameDish = DishDB.NameDish,
                     ExpandedNameDish = DishDB.ExpandedNameDish,
