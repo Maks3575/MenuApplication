@@ -86,10 +86,10 @@ namespace MenuApplication.DataAccess
         /// <returns>Список со всеми обновлениями для данного блюда</returns>
         public IEnumerable<IDish> HistoryDish(string ExpandedNamedish) =>_DishsInRepository.Where(x => x.ExpandedNameDish == ExpandedNamedish).OrderByDescending(x => x.DateCreate);
 
-        /// <summary>
-        /// Возвращает список в котором находятся все блюда в единственном самом новом экземпляре
-        /// </summary>
-        /// <returns>Список самых новых блюд</returns>       
+            /// <summary>
+            /// Возвращает список в котором находятся все блюда в единственном самом новом экземпляре
+            /// </summary>
+            /// <returns>Список самых новых блюд</returns>       
         public IEnumerable<IDish> LatestDish() =>_DishsInRepository.Where(y => y.DateCreate == _DishsInRepository.Where(x => x.ExpandedNameDish == y.ExpandedNameDish).Max(z => z.DateCreate)).OrderBy(x=>x.ExpandedNameDish);
 
         /// <summary>

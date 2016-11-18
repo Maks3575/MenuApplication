@@ -165,9 +165,15 @@ namespace MenuApplication.DataAccess.DB
             }
         }
 
+        /// <summary>
+        /// Возвращает список в котором находятся все блюда в единственном самом новом экземпляре
+        /// </summary>
+        /// <returns>Список самых новых блюд</returns>
         public IEnumerable<IDish> LatestDish()
         {
-            throw new NotImplementedException();
+            return SubdivisionController.CurrentSubdivision.Menus.SelectMany(Menu => Menu.Dishes)
+                .Distinct().Select(Dish => FillingDish(Dish, DateTime.Now));
+            //throw new NotImplementedException();
         }
 
         public int NumberDocNext()
