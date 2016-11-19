@@ -75,25 +75,37 @@ namespace MenuApplication.DataAccess.DB
         public DateTime CalculationDishDate(ModelDB.Dish DishDB, DateTime DT)
         {
             DateTime CreateDate;
+
+            //находим все даты использования данного блюда
             List<DateTime> CreateDates = SubdivisionController.CurrentSubdivision.Menus
-                .Where(x => x.UseDate <= DT && x.Dishes.Any(y => y.ExpandedNameDish == DishDB.ExpandedNameDish))
+                .Where(Menu => Menu.UseDate <= DT && Menu.Dishes.Any(dish => dish.ExpandedNameDish == DishDB.ExpandedNameDish))
                 .OrderByDescending(x => x.UseDate).Select(x => x.UseDate).ToList();
-            if (CreateDates == null)
+
+            if (CreateDates == null)//если блюдо не использовалось
             {
-                CreateDate = DT;
+                if (FillingDish(DishDB, DT) == null)//если на переданную дату нельзя создать блюдо
+                {
+                    CreateDate = new DateTime(0001, 1, 1, 0, 0, 0);//указываем минимально воможную дату
+                }
+                else//иначе высылаем переданную дату
+                {
+                    CreateDate = DT;
+                }
             }
-            else
+            else //если блюдо использовалось
             {
+                //создаем список продуктов на переданную дату
                 List<Product> Products = DishDB.ItemDishes.Select(x => x.Ingredient.Products
-                    .Where(y => y.BeginDate <= DT && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                    .Where(y => y.BeginDate <= DT && y.Subdivision.IDSubdivision == SubdivisionController.CurrentSubdivision.IDSubdivision)
                     .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList();
                 CreateDate = DT;
+                //перебираем даты использования до тех пор, пока не найдется последовательность продуктов отличная от той что на текущую дату
                 foreach (var Date in CreateDates)
                 {
-
                     if (!DishDB.ItemDishes.Select(x => x.Ingredient.Products
-                    .Where(y => y.BeginDate <= Date && y.Subdivision == SubdivisionController.CurrentSubdivision)
-                    .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList().SequenceEqual(Products)) break;
+                    .Where(y => y.BeginDate <= Date && y.Subdivision.IDSubdivision == SubdivisionController.CurrentSubdivision.IDSubdivision)
+                    .OrderByDescending(y => y.BeginDate).FirstOrDefault()).ToList().SequenceEqual(Products))
+                        break;
                     CreateDate = Date;
                 }
             }
@@ -108,22 +120,26 @@ namespace MenuApplication.DataAccess.DB
         /// <returns>Калькуляция блюда</returns>
         public IDish FillingDish(ModelDB.Dish DishDB, DateTime DT)
         {
+            //создаем список DishItem для выбранного блюда
             List<DishItem> DI = DishDB.ItemDishes.Select(x => new DishItem()
             {
                 Ingredient = x.Ingredient.Products
-                .Where(y => y.BeginDate <= DT && y.Subdivision == SubdivisionController.CurrentSubdivision)
+                .Where(y => y.BeginDate <= DT && y.Subdivision.IDSubdivision == SubdivisionController.CurrentSubdivision.IDSubdivision)
                 .OrderByDescending(y => y.BeginDate).FirstOrDefault(),
+
                 NormOn100Portions = x.NormOn100Portion
             }).ToList();
-            if (DI.Select(x => x.Ingredient).Any(x => x == null)) 
+            //проверяем существуют ли все необходимые продукты на заданную дату в нужном подразделении
+            if (DI.Select(x => x.Ingredient).Any(x => x == null))
             {
+                //если не сущетвуют возвращаем null
                 return null;
             }
             else
             {
                 return new Domain.Dish()
                 {
-                    //DateCreate = CalculationDishDate(DishDB, DT), заменил так как перед ее вызовом дата всегда уже найдена
+                    //DateCreate = CalculationDishDate(DishDB, DT), //заменил так как перед ее вызовом дата всегда уже найдена
                     DateCreate = DT,
                     NumberDish = DishDB.IDDish,
                     NameDish = DishDB.NameDish,
@@ -143,26 +159,29 @@ namespace MenuApplication.DataAccess.DB
         /// <returns>Список со всеми обновлениями для данного блюда</returns>
         public IEnumerable<IDish> HistoryDish(string ExpandedNamedish)
         {
+            //получаем нужное блюдо
             ModelDB.Dish dish = context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNamedish);
+
+            //находим все даты его калькуляции
             List<DateTime> HistoryDates = SubdivisionController.CurrentSubdivision.Menus
                 .Where(x => x.Dishes.Any(y => y.ExpandedNameDish == ExpandedNamedish))
-                .Select(x => CalculationDishDate(dish, x.UseDate)).Distinct().ToList();
+                .Select(x => CalculationDishDate(dish, x.UseDate)).ToList();//.Distinct().ToList();
             
-            if (HistoryDates == null)
+            if (HistoryDates == null)//если блюдо не использовалось
             {
                 Domain.Dish d = FillingDish(dish, DateTime.Now) as Domain.Dish;
-                if (d == null)
+                if (d == null)//проверяем на существование всех необходимых ингредиентов для данного блюда
                 {
-                    return null;
+                    return null;// если не существует выводим null
                 }
                 else
                 {
-                    return new List<IDish>() { d };
+                    return new List<IDish>() { d };//если существует выводим калькуляцию текущим числом
                 }
             }
-            else
+            else//если блюдо использовалось создаем список блюд на каждую дату калькуляции
             {
-                return HistoryDates.Select(x => FillingDish(dish, x));
+                return HistoryDates.Select(x => FillingDish(dish, x)).Where(x => x != null).OrderByDescending(d=>d.DateCreate);
             }
         }
 
@@ -173,7 +192,8 @@ namespace MenuApplication.DataAccess.DB
         public IEnumerable<IDish> LatestDish()
         {
             return SubdivisionController.CurrentSubdivision.Menus.SelectMany(Menu => Menu.Dishes)
-                .Distinct().Select(Dish => FillingDish(Dish, DateTime.Now));
+                .Distinct().Select(Dish => FillingDish(Dish, CalculationDishDate(Dish, DateTime.Now)))
+                .Where(dish => dish != null);
             //throw new NotImplementedException();
         }
 

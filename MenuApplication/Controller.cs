@@ -20,7 +20,7 @@ namespace MenuApplication
         private DB_MenuEntities context;
         private readonly SubdivisionController _SubdivisionsController;
         private readonly IIngredientRepositopy _IngredientController;
-        private readonly IDishRepository _DishRepository;
+        private readonly IDishRepository _DishController;
         private readonly IMenuRepository _MenuRepository;
         private Report _Report;
 
@@ -32,14 +32,15 @@ namespace MenuApplication
         /// <param name="DishRepository">Репозиторий кальлкуляционных карточек</param>
         /// <param name="MenuRepository">Репозиторий меню</param>
         public Controller (//IIngredientRepositopy IngredientRepository,// IDishItemRepository DishItemRepository,
-IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRepositoryPlug SubdivisionInRepository)
+                //IDishRepository DishRepository, 
+                IMenuRepository MenuRepository)//, SubdivisionRepositoryPlug SubdivisionInRepository)
         {
             _SubdivisionsController = new SubdivisionController();
             _IngredientController = new IngredientsController();//IngredientRepository;
-            _DishRepository= DishRepository;
+            _DishController = new DishController();//DishRepository;
             _MenuRepository= MenuRepository;
             //_SubdivisionsController = new SubdivisionController();
-            DishDataTest();
+            //DishDataTest();
             _Report = new Report();
             context = new DB_MenuEntities();     
         }
@@ -76,7 +77,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// <param name="dish">Воводимое блюдо</param>
         public void DishInExcel(IDish dish)
         {
-            IDish prevDish = _DishRepository.HistoryDish(dish.ExpandedNameDish).Where(d => d.DateCreate < dish.DateCreate).FirstOrDefault();
+            IDish prevDish = _DishController.HistoryDish(dish.ExpandedNameDish).Where(d => d.DateCreate < dish.DateCreate).FirstOrDefault();
             if (prevDish==null)
             {
                 _Report.CalculationInExcel(dish, dish);
@@ -167,7 +168,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
             */
         }
 
-        public int NextNumberDocDish() => _DishRepository.NumberDocNext();
+        public int NextNumberDocDish() => _DishController.NumberDocNext();
         //Работа с ингредиентами
 
         /// <summary>
@@ -262,7 +263,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// <returns>Список всех блюд из репозитория</returns>
         public IEnumerable<IDish> GetAllDishAsBindingList()
         {
-            return _DishRepository.Fetch();
+            return _DishController.Fetch();
         }
 
         /// <summary>
@@ -271,7 +272,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// <returns>Список актуальных блюд</returns>
         public IEnumerable<IDish> GetFreshDish()
         {
-            return _DishRepository.LatestDish();
+            return _DishController.LatestDish();
         }
 
         /// <summary>
@@ -280,7 +281,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// <param name="NewDish">Добавляемое блюдо</param>
         public void AddDishInRepository(IDish NewDish)
         {
-            _DishRepository.Add(NewDish);
+            _DishController.Add(NewDish);
 
         }
 
@@ -300,7 +301,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// <returns></returns>
         public IDish SearchDishByName(string Name)
         {
-            return _DishRepository.GetDishByName(Name);
+            return _DishController.GetDishByName(Name);
         }
 
         /// <summary>
@@ -320,7 +321,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// <returns>История обновлений блюда</returns>
         public IEnumerable<IDish> GetHistoryDish(string ExpandedNameDish)
         {
-            return _DishRepository.HistoryDish(ExpandedNameDish).OrderByDescending(x=>x.DateCreate);//as IEnumerable<Dish>;
+            return _DishController.HistoryDish(ExpandedNameDish);//.Where(x=>x!=null).OrderByDescending(x=>x.DateCreate);//as IEnumerable<Dish>;
         }
 
         /// <summary>
@@ -367,7 +368,7 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
         /// </summary>
         /// <param name="ExpNameDish">Расширенное наименование проверяемого блюда</param>
         /// <returns> TRUE если не уникально</returns>
-        public bool CheckExpandedNameDish(string ExpNameDish) => _DishRepository.CheckOnExpandedNameDish(ExpNameDish);
+        public bool CheckExpandedNameDish(string ExpNameDish) => _DishController.CheckOnExpandedNameDish(ExpNameDish);
 
         ////РАБОТА С МЕНЮ
         /// <summary>
@@ -390,9 +391,9 @@ IDishRepository DishRepository, IMenuRepository MenuRepository)//, SubdivisionRe
             _MenuRepository.Add(menu);
             foreach (Domain.Dish dish in menu.Dishs)
             {
-                if (!_DishRepository.CheckOnContain(dish))
+                if (!_DishController.CheckOnContain(dish))
                 {
-                    _DishRepository.Add(dish);
+                    _DishController.Add(dish);
 
                 }
             }

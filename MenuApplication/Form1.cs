@@ -16,7 +16,8 @@ namespace MenuApplication
     {
         int PositionDish;
         Controller _controller = new Controller(//IngredientRepositoryPlug.CreateInstance(),
-        DishRepositoryPlug.CreateInstance(), MenuRepositoryPlug.CreateInstance());//,SubdivisionRepositoryPlug.CreateInstance());
+        //DishRepositoryPlug.CreateInstance(), 
+        MenuRepositoryPlug.CreateInstance());//,SubdivisionRepositoryPlug.CreateInstance());
 
         public MainForm()
         {
@@ -88,9 +89,6 @@ namespace MenuApplication
 
             //_controller.ChangeSubdivisionInReport(subdivisionBindingSource.Current as Subdivision)
 
-
-            
-
             subdivisionBindingSource.DataSource = _controller.GetSubdivisionAsBindingList();
 
             ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x => x.NameIngredient);
@@ -108,15 +106,13 @@ namespace MenuApplication
         }
 
         //действия при смене калькуляционной карточки
-        
-
         private void dishBindingSource_PositionChanged(object sender, EventArgs e)
         {
             dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;
 
-            if (dishBindingSource.Count != 0)
-            {
-            }
+            //if (dishBindingSource.Count != 0)
+            //{
+            //}
         }
 
         //Добавление ингредиента
