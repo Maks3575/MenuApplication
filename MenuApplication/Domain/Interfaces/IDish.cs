@@ -9,7 +9,7 @@ namespace MenuApplication.Domain
     /// <summary>
     /// Интерфейс для блюда
     /// </summary>
-    interface IDish
+    public interface IDish
     {   
         /// <summary>
         /// Список ингредиентов блюда

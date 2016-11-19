@@ -17,7 +17,8 @@ namespace MenuApplication
         int PositionDish;
         Controller _controller = new Controller(//IngredientRepositoryPlug.CreateInstance(),
         //DishRepositoryPlug.CreateInstance(), 
-        MenuRepositoryPlug.CreateInstance());//,SubdivisionRepositoryPlug.CreateInstance());
+        //MenuRepositoryPlug.CreateInstance()
+            );//,SubdivisionRepositoryPlug.CreateInstance());
 
         public MainForm()
         {

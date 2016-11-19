@@ -70,6 +70,7 @@
     <Compile Include="DataAccess\DB\DishController.cs" />
     <Compile Include="DataAccess\DB\ItemDishController.cs" />
     <Compile Include="DataAccess\DB\IngredientsController.cs" />
+    <Compile Include="DataAccess\DB\MenuController.cs" />
     <Compile Include="DataAccess\DB\SubdivisionController.cs" />
     <Compile Include="DataAccess\Plug\DishRepositoryPlug.cs" />
     <Compile Include="DataAccess\Interface\IDishItemRepository.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Domain\Ingredient.cs" />
     <Compile Include="Domain\Menu.cs" />
     <Compile Include="ModelDB\Dish.Part.cs" />
+    <Compile Include="ModelDB\Menu.Part.cs" />
     <Compile Include="ModelDB\Product.Part.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

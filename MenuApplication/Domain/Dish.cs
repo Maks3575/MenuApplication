@@ -10,7 +10,7 @@ namespace MenuApplication.Domain
     /// <summary>
     /// Класс калькуляционная каточка (блюдо)
     /// </summary>
-    class Dish:IDish
+     public class Dish:IDish
     {
         /// <summary>
         /// Список ингредиентов блюда

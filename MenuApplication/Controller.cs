@@ -21,7 +21,7 @@ namespace MenuApplication
         private readonly SubdivisionController _SubdivisionsController;
         private readonly IIngredientRepositopy _IngredientController;
         private readonly IDishRepository _DishController;
-        private readonly IMenuRepository _MenuRepository;
+        private readonly IMenuRepository _MenuController;
         private Report _Report;
 
         /// <summary>
@@ -33,12 +33,13 @@ namespace MenuApplication
         /// <param name="MenuRepository">Репозиторий меню</param>
         public Controller (//IIngredientRepositopy IngredientRepository,// IDishItemRepository DishItemRepository,
                 //IDishRepository DishRepository, 
-                IMenuRepository MenuRepository)//, SubdivisionRepositoryPlug SubdivisionInRepository)
+                //IMenuRepository MenuRepository
+            )//, SubdivisionRepositoryPlug SubdivisionInRepository)
         {
             _SubdivisionsController = new SubdivisionController();
             _IngredientController = new IngredientsController();//IngredientRepository;
             _DishController = new DishController();//DishRepository;
-            _MenuRepository= MenuRepository;
+            _MenuController = new MenuController();//MenuRepository;
             //_SubdivisionsController = new SubdivisionController();
             //DishDataTest();
             _Report = new Report();
@@ -388,7 +389,7 @@ namespace MenuApplication
         {
             if (menu==null)
                 throw new ArgumentNullException("NewMenu");
-            _MenuRepository.Add(menu);
+            _MenuController.Add(menu);
             foreach (Domain.Dish dish in menu.Dishs)
             {
                 if (!_DishController.CheckOnContain(dish))
@@ -405,7 +406,7 @@ namespace MenuApplication
         /// <returns>Список всех меню из репозитория</returns>
         public IEnumerable<IMenu> GetAllMenuAsBindingList()
         {
-            return _MenuRepository.Fetch();
+            return _MenuController.Fetch();
         }
 
         //работа с подразделениями и отчетностью
