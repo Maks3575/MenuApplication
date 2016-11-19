@@ -102,7 +102,7 @@ namespace MenuApplication
             dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
             dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;
 
-            menuBindingSource.DataSource = _controller.GetAllMenuAsBindingList();
+            menuBindingSource.DataSource = _controller.GetAllMenuAsBindingList();//
             DishBindingSourceForMenu.DataSource = (menuBindingSource.Current as IMenu).Dishs;
         }
 
