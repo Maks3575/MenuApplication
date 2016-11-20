@@ -19,7 +19,21 @@ namespace MenuApplication.DataAccess.DB
 
         public void Add(IMenu NewMenu)
         {
-            throw new NotImplementedException();
+            List<ModelDB.Dish> dishes = new List<ModelDB.Dish>();
+            foreach (var i in NewMenu.Dishs)
+            {
+                dishes.Add(context.Dishes.FirstOrDefault(dish => dish.ExpandedNameDish == i.ExpandedNameDish));
+            }
+            context.Menus.Add(new ModelDB.Menu()
+            {
+                UseDate = NewMenu.DateCreateMenu,
+                Subdivision = NewMenu.Subdivision,
+                Employee = NewMenu.Calculator,
+                Employee1 = NewMenu.ChiefCooker,
+                TypeMenu = NewMenu.TypeMenu,
+                Dishes = dishes
+            });
+            context.SaveChanges();
         }
 
         public IEnumerable<IMenu> Fetch()

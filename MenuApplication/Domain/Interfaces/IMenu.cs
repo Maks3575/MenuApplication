@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MenuApplication.ModelDB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,13 @@ namespace MenuApplication.Domain
         /// Id меню
         /// </summary>
         int IdMenu { get; }
+
+        ModelDB.Subdivision Subdivision { get; set; }
+
+        Employee ChiefCooker { get; set; }
+
+        Employee Calculator { get; set; }
+
+        TypeMenu TypeMenu { get; set; }
     }
 }

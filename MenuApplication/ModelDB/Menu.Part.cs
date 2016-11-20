@@ -9,6 +9,32 @@ namespace MenuApplication.ModelDB
 {
     partial class Menu : IMenu
     {
+        public Employee Calculator
+        {
+            get
+            {
+                return Employee;
+            }
+
+            set
+            {
+                Employee = value;
+            }
+        }
+
+        public Employee ChiefCooker
+        {
+            get
+            {
+                return Employee1;
+            }
+
+            set
+            {
+                Employee1 = value;
+            }
+        }
+
         public DateTime DateCreateMenu
         {
             get

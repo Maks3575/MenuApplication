@@ -34,6 +34,7 @@ namespace MenuApplication.DataAccess.DB
                 IDIngredient = x.Ingredient.IdIngredient,
                 NormOn100Portion = (float)x.NormOn100Portions
             }));
+            context.SaveChanges();
 
         }
 
