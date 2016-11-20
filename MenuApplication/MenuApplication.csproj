@@ -230,8 +230,10 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MenuApplication.Domain.Dish.datasource" />
     <None Include="Properties\DataSources\MenuApplication.Domain.DishItem.datasource" />
+    <None Include="Properties\DataSources\MenuApplication.Domain.IIngredient.datasource" />
     <None Include="Properties\DataSources\MenuApplication.Domain.Ingredient.datasource" />
     <None Include="Properties\DataSources\MenuApplication.Domain.Menu.datasource" />
+    <None Include="Properties\DataSources\MenuApplication.ModelDB.Product.datasource" />
     <None Include="Properties\DataSources\Subdivision.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -267,7 +269,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ModelDB\MenuDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

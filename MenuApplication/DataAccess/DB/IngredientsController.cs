@@ -70,7 +70,7 @@ namespace MenuApplication.DataAccess.DB
         }
 
         public IEnumerable<IIngredient> Fetch() => SubdivisionController.CurrentSubdivision.Products.ToList();
-                                                 
+
 
         public IIngredient GetIngrByName(string Object) => SubdivisionController.CurrentSubdivision.Products
             .FirstOrDefault(x => x.Ingredient.NameIngredient == Object);

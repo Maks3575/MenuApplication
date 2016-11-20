@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace MenuApplication.ModelDB
 {
-    public partial class Dish : IEqualityComparer<Dish>
+    public partial class Dish :IEquatable<Dish>, IEqualityComparer<Dish>
     {
+        public bool Equals(Dish other) => other != null && other.ExpandedNameDish == ExpandedNameDish;
+
         public bool Equals(Dish x, Dish y) => x != null && y != null && x.ExpandedNameDish == ExpandedNameDish;
 
         public int GetHashCode(Dish obj) => obj.IDDish == null ? 0 : obj.IDDish.GetHashCode()^obj.IDTypeDish.GetHashCode();

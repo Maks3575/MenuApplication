@@ -119,6 +119,8 @@ namespace MenuApplication
         {
             dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;//мб
 
+            var x = 4;
+
             //if (dishBindingSource.Count != 0)
             //{
             //}
@@ -160,7 +162,7 @@ namespace MenuApplication
         //Завершение редактирования реестра цен, сохранением результатов 
         private void btEndEditing_Click(object sender, EventArgs e)
         {         
-            if((ingredientBindingSource.List as IList<Ingredient>).Where(x => x.MassInKg == 0).Count() > 0)
+            if((ingredientBindingSource.List as IList<ModelDB.Product>).Where(x => x.MassInKg == 0).Count() > 0)
             {
 
                 MessageBox.Show("В столбце Масса не может быть нулевого значения");
@@ -508,6 +510,11 @@ namespace MenuApplication
         }
 
         private void cbExpandedNameDish_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCalculation_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

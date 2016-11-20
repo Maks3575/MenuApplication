@@ -7,7 +7,7 @@ using MenuApplication.Domain;
 
 namespace MenuApplication.ModelDB
 {
-    partial class Product : IIngredient, IEqualityComparer<Product>
+    partial class Product : IIngredient, IEquatable<Product> //IEqualityComparer<Product>
     {
         public double CalorificValue => (double)Ingredient.CalorificValue; // Protein * 4 + Carbohydrate * 4 + Fat * 9;
 
@@ -155,11 +155,27 @@ namespace MenuApplication.ModelDB
 
         public IIngredient Clone()
         {
-            return (Product)MemberwiseClone();
+            return new Product() {
+                Price = Price,
+                Mass = Mass,
+                BeginDate = BeginDate,
+                Ingredient = Ingredient,
+                Subdivision = Subdivision,
+                Protein = Protein,
+                Fat = Fat,
+                Carbohydrate = Carbohydrate,
+                TypeIngredient = TypeIngredient
+            };
         }
 
-        public bool Equals(Product x, Product y) => x != null && y != null && x.IDProduct == IDProduct;
+        public bool Equals(Product other) => other != null && IDProduct == other.IDProduct;
 
-        public int GetHashCode(Product obj) => obj.IDProduct == null ? 0 : obj.IDProduct.GetHashCode();
+        //public bool Equals(Product x, Product y) => x != null && y != null && x.IDProduct == IDProduct;
+
+        //public int GetHashCode(Product obj) => obj == null ? 0 : obj.IDProduct.GetHashCode();
+
+        public override bool Equals(object obj) => Equals(obj as Product);
+
+        public override int GetHashCode() => IDProduct.GetHashCode();
     }
 }
