@@ -14,6 +14,7 @@ namespace MenuApplication
 {
     public partial class MainForm : Form
     {
+
         int PositionDish;
         Controller _controller = new Controller(//IngredientRepositoryPlug.CreateInstance(),
         //DishRepositoryPlug.CreateInstance(), 
@@ -93,12 +94,19 @@ namespace MenuApplication
             subdivisionBindingSource.DataSource = _controller.GetSubdivisionAsBindingList();
 
             ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x => x.NameIngredient);
-            ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList();
+            ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList().OrderBy(x => x.NameIngredient);
 
 
+            //CalculationChangeMode(true);
+            //ALLDishBindingSource.DataSource = _controller.GetFreshDish();
+            //dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
+            //dishItemBindingSource.DataSource = (ALLDishBindingSource.Current as IDish).DishItems;
+            //CalculationChangeMode(true);
+            //ALLDishBindingSource.DataSource = _controller.GetFreshDish();
+            //dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
+            //dishItemBindingSource.DataSource = (ALLDishBindingSource.Current as IDish).DishItems;
 
             ALLDishBindingSource.DataSource = _controller.GetFreshDish();
-
             dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
             dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;
 
@@ -109,7 +117,7 @@ namespace MenuApplication
         //действия при смене калькуляционной карточки
         private void dishBindingSource_PositionChanged(object sender, EventArgs e)
         {
-            dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;
+            dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;//мб
 
             //if (dishBindingSource.Count != 0)
             //{
@@ -485,6 +493,21 @@ namespace MenuApplication
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dishItemBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ingredientBindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbExpandedNameDish_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

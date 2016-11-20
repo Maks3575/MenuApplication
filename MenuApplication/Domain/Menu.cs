@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MenuApplication.ModelDB;
 
 namespace MenuApplication.Domain
 {   
@@ -24,6 +25,58 @@ namespace MenuApplication.Domain
         /// Id меню
         /// </summary>
         public int IdMenu { get; }
+
+        public ModelDB.Subdivision Subdivision
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public Employee ChiefCooker
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public Employee Calculator
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public TypeMenu TypeMenu
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         public Menu() { }
         

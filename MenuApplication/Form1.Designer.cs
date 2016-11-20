@@ -35,9 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,6 +42,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcMenu = new System.Windows.Forms.TabControl();
             this.tpMenu = new System.Windows.Forms.TabPage();
             this.btBrokerashInExcel = new System.Windows.Forms.Button();
@@ -95,16 +95,7 @@
             this.tbNameDish = new System.Windows.Forms.TextBox();
             this.dtpRecord = new System.Windows.Forms.DateTimePicker();
             this.dgvCalculation = new System.Windows.Forms.DataGridView();
-            this.ingredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ingredientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.normOn100PortionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pricePerOneKgDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalInItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getNameIngredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydrateOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calorificValueOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbExpandedNameDish = new System.Windows.Forms.ComboBox();
             this.ALLDishBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -130,6 +121,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.subdivisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ingredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.getNameIngredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pricePerOneKgDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.normOn100PortionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalInItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydrateOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calorificValueOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcMenu.SuspendLayout();
             this.tpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dishBindingSourceForCreateMenu)).BeginInit();
@@ -682,10 +682,10 @@
             this.dgvCalculation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCalculation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ingredientDataGridViewTextBoxColumn,
-            this.normOn100PortionsDataGridViewTextBoxColumn,
-            this.pricePerOneKgDataGridViewTextBoxColumn1,
-            this.totalInItemDataGridViewTextBoxColumn,
             this.getNameIngredientDataGridViewTextBoxColumn,
+            this.pricePerOneKgDataGridViewTextBoxColumn1,
+            this.normOn100PortionsDataGridViewTextBoxColumn,
+            this.totalInItemDataGridViewTextBoxColumn,
             this.proteinOn100PortionDataGridViewTextBoxColumn,
             this.fatOn100PortionDataGridViewTextBoxColumn,
             this.carbohydrateOn100PortionDataGridViewTextBoxColumn,
@@ -699,95 +699,15 @@
             this.dgvCalculation.TabIndex = 2;
             this.dgvCalculation.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvCalculation_DataError);
             // 
-            // ingredientDataGridViewTextBoxColumn
-            // 
-            this.ingredientDataGridViewTextBoxColumn.DataPropertyName = "Ingredient";
-            this.ingredientDataGridViewTextBoxColumn.DataSource = this.ingredientBindingSource1;
-            this.ingredientDataGridViewTextBoxColumn.DisplayMember = "NameIngredient";
-            this.ingredientDataGridViewTextBoxColumn.HeaderText = "Наименование ингредиента";
-            this.ingredientDataGridViewTextBoxColumn.Name = "ingredientDataGridViewTextBoxColumn";
-            this.ingredientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ingredientDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ingredientDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ingredientDataGridViewTextBoxColumn.ValueMember = "GetThis";
-            // 
             // ingredientBindingSource1
             // 
             this.ingredientBindingSource1.DataSource = typeof(MenuApplication.Domain.Ingredient);
-            // 
-            // normOn100PortionsDataGridViewTextBoxColumn
-            // 
-            this.normOn100PortionsDataGridViewTextBoxColumn.DataPropertyName = "NormOn100Portions";
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.normOn100PortionsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.normOn100PortionsDataGridViewTextBoxColumn.HeaderText = "Норма, кг";
-            this.normOn100PortionsDataGridViewTextBoxColumn.Name = "normOn100PortionsDataGridViewTextBoxColumn";
-            this.normOn100PortionsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pricePerOneKgDataGridViewTextBoxColumn1
-            // 
-            this.pricePerOneKgDataGridViewTextBoxColumn1.DataPropertyName = "PricePerOneKg";
-            dataGridViewCellStyle8.Format = "C2";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.pricePerOneKgDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.pricePerOneKgDataGridViewTextBoxColumn1.HeaderText = "Цена за один кг";
-            this.pricePerOneKgDataGridViewTextBoxColumn1.Name = "pricePerOneKgDataGridViewTextBoxColumn1";
-            this.pricePerOneKgDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // totalInItemDataGridViewTextBoxColumn
-            // 
-            this.totalInItemDataGridViewTextBoxColumn.DataPropertyName = "TotalInItem";
-            dataGridViewCellStyle9.Format = "C2";
-            dataGridViewCellStyle9.NullValue = "0";
-            this.totalInItemDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.totalInItemDataGridViewTextBoxColumn.HeaderText = "Сумма";
-            this.totalInItemDataGridViewTextBoxColumn.Name = "totalInItemDataGridViewTextBoxColumn";
-            this.totalInItemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getNameIngredientDataGridViewTextBoxColumn
-            // 
-            this.getNameIngredientDataGridViewTextBoxColumn.DataPropertyName = "GetNameIngredient";
-            this.getNameIngredientDataGridViewTextBoxColumn.HeaderText = "Наименование ингредиента";
-            this.getNameIngredientDataGridViewTextBoxColumn.Name = "getNameIngredientDataGridViewTextBoxColumn";
-            this.getNameIngredientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.getNameIngredientDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // proteinOn100PortionDataGridViewTextBoxColumn
-            // 
-            this.proteinOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "ProteinOn100Portion";
-            this.proteinOn100PortionDataGridViewTextBoxColumn.HeaderText = "ProteinOn100Portion";
-            this.proteinOn100PortionDataGridViewTextBoxColumn.Name = "proteinOn100PortionDataGridViewTextBoxColumn";
-            this.proteinOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.proteinOn100PortionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fatOn100PortionDataGridViewTextBoxColumn
-            // 
-            this.fatOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "FatOn100Portion";
-            this.fatOn100PortionDataGridViewTextBoxColumn.HeaderText = "FatOn100Portion";
-            this.fatOn100PortionDataGridViewTextBoxColumn.Name = "fatOn100PortionDataGridViewTextBoxColumn";
-            this.fatOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fatOn100PortionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // carbohydrateOn100PortionDataGridViewTextBoxColumn
-            // 
-            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "CarbohydrateOn100Portion";
-            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.HeaderText = "CarbohydrateOn100Portion";
-            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.Name = "carbohydrateOn100PortionDataGridViewTextBoxColumn";
-            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // calorificValueOn100PortionDataGridViewTextBoxColumn
-            // 
-            this.calorificValueOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "CalorificValueOn100Portion";
-            this.calorificValueOn100PortionDataGridViewTextBoxColumn.HeaderText = "CalorificValueOn100Portion";
-            this.calorificValueOn100PortionDataGridViewTextBoxColumn.Name = "calorificValueOn100PortionDataGridViewTextBoxColumn";
-            this.calorificValueOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.calorificValueOn100PortionDataGridViewTextBoxColumn.Visible = false;
+            this.ingredientBindingSource1.CurrentChanged += new System.EventHandler(this.ingredientBindingSource1_CurrentChanged);
             // 
             // dishItemBindingSource
             // 
             this.dishItemBindingSource.DataSource = typeof(MenuApplication.Domain.DishItem);
+            this.dishItemBindingSource.CurrentChanged += new System.EventHandler(this.dishItemBindingSource_CurrentChanged);
             // 
             // cbExpandedNameDish
             // 
@@ -799,6 +719,7 @@
             this.cbExpandedNameDish.Name = "cbExpandedNameDish";
             this.cbExpandedNameDish.Size = new System.Drawing.Size(736, 21);
             this.cbExpandedNameDish.TabIndex = 15;
+            this.cbExpandedNameDish.SelectedIndexChanged += new System.EventHandler(this.cbExpandedNameDish_SelectedIndexChanged);
             // 
             // ALLDishBindingSource
             // 
@@ -1048,6 +969,87 @@
             this.subdivisionBindingSource.DataSource = typeof(MenuApplication.Subdivision);
             this.subdivisionBindingSource.CurrentChanged += new System.EventHandler(this.subdivisionBindingSource_CurrentChanged);
             // 
+            // ingredientDataGridViewTextBoxColumn
+            // 
+            this.ingredientDataGridViewTextBoxColumn.DataPropertyName = "Ingredient";
+            this.ingredientDataGridViewTextBoxColumn.DataSource = this.ingredientBindingSource1;
+            this.ingredientDataGridViewTextBoxColumn.DisplayMember = "NameIngredient";
+            this.ingredientDataGridViewTextBoxColumn.HeaderText = "Наименование ингредиента";
+            this.ingredientDataGridViewTextBoxColumn.Name = "ingredientDataGridViewTextBoxColumn";
+            this.ingredientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ingredientDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ingredientDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ingredientDataGridViewTextBoxColumn.ValueMember = "GetThis";
+            // 
+            // getNameIngredientDataGridViewTextBoxColumn
+            // 
+            this.getNameIngredientDataGridViewTextBoxColumn.DataPropertyName = "GetNameIngredient";
+            this.getNameIngredientDataGridViewTextBoxColumn.HeaderText = "Наименование ингредиента";
+            this.getNameIngredientDataGridViewTextBoxColumn.Name = "getNameIngredientDataGridViewTextBoxColumn";
+            this.getNameIngredientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pricePerOneKgDataGridViewTextBoxColumn1
+            // 
+            this.pricePerOneKgDataGridViewTextBoxColumn1.DataPropertyName = "PricePerOneKg";
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.pricePerOneKgDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.pricePerOneKgDataGridViewTextBoxColumn1.HeaderText = "Цена за один кг";
+            this.pricePerOneKgDataGridViewTextBoxColumn1.Name = "pricePerOneKgDataGridViewTextBoxColumn1";
+            this.pricePerOneKgDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // normOn100PortionsDataGridViewTextBoxColumn
+            // 
+            this.normOn100PortionsDataGridViewTextBoxColumn.DataPropertyName = "NormOn100Portions";
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.normOn100PortionsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.normOn100PortionsDataGridViewTextBoxColumn.HeaderText = "Норма, кг";
+            this.normOn100PortionsDataGridViewTextBoxColumn.Name = "normOn100PortionsDataGridViewTextBoxColumn";
+            this.normOn100PortionsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalInItemDataGridViewTextBoxColumn
+            // 
+            this.totalInItemDataGridViewTextBoxColumn.DataPropertyName = "TotalInItem";
+            dataGridViewCellStyle9.Format = "C2";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.totalInItemDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.totalInItemDataGridViewTextBoxColumn.HeaderText = "Сумма";
+            this.totalInItemDataGridViewTextBoxColumn.Name = "totalInItemDataGridViewTextBoxColumn";
+            this.totalInItemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // proteinOn100PortionDataGridViewTextBoxColumn
+            // 
+            this.proteinOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "ProteinOn100Portion";
+            this.proteinOn100PortionDataGridViewTextBoxColumn.HeaderText = "ProteinOn100Portion";
+            this.proteinOn100PortionDataGridViewTextBoxColumn.Name = "proteinOn100PortionDataGridViewTextBoxColumn";
+            this.proteinOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.proteinOn100PortionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // fatOn100PortionDataGridViewTextBoxColumn
+            // 
+            this.fatOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "FatOn100Portion";
+            this.fatOn100PortionDataGridViewTextBoxColumn.HeaderText = "FatOn100Portion";
+            this.fatOn100PortionDataGridViewTextBoxColumn.Name = "fatOn100PortionDataGridViewTextBoxColumn";
+            this.fatOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fatOn100PortionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // carbohydrateOn100PortionDataGridViewTextBoxColumn
+            // 
+            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "CarbohydrateOn100Portion";
+            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.HeaderText = "CarbohydrateOn100Portion";
+            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.Name = "carbohydrateOn100PortionDataGridViewTextBoxColumn";
+            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.carbohydrateOn100PortionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // calorificValueOn100PortionDataGridViewTextBoxColumn
+            // 
+            this.calorificValueOn100PortionDataGridViewTextBoxColumn.DataPropertyName = "CalorificValueOn100Portion";
+            this.calorificValueOn100PortionDataGridViewTextBoxColumn.HeaderText = "CalorificValueOn100Portion";
+            this.calorificValueOn100PortionDataGridViewTextBoxColumn.Name = "calorificValueOn100PortionDataGridViewTextBoxColumn";
+            this.calorificValueOn100PortionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.calorificValueOn100PortionDataGridViewTextBoxColumn.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1147,15 +1149,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dishItemsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberDocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ingredientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn normOn100PortionsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pricePerOneKgDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalInItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn getNameIngredientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proteinOn100PortionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fatOn100PortionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carbohydrateOn100PortionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calorificValueOn100PortionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameIngredientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn massInKgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startingPriceDataGridViewTextBoxColumn;
@@ -1172,6 +1165,15 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource subdivisionBindingSource;
         private System.Windows.Forms.Button btBrokerashInExcel;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ingredientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn getNameIngredientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pricePerOneKgDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn normOn100PortionsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalInItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proteinOn100PortionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fatOn100PortionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carbohydrateOn100PortionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calorificValueOn100PortionDataGridViewTextBoxColumn;
     }
 }
 

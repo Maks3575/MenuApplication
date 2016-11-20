@@ -38,7 +38,7 @@ namespace MenuApplication.DataAccess.DB
 
         public IEnumerable<IMenu> Fetch()
         {
-            var menus = context.Menus.ToList();
+            var menus = SubdivisionController.CurrentSubdivision.Menus.ToList();
             foreach (var menu in menus)
             {
                 menu.Dishs = menu.Dishes.Select(dish => DishController.FillingDish(dish, menu.UseDate)).ToList();

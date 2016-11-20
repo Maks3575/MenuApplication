@@ -69,13 +69,13 @@ namespace MenuApplication.DataAccess.DB
             }
         }
 
-        public IEnumerable<IIngredient> Fetch() => SubdivisionController.CurrentSubdivision.Products;
+        public IEnumerable<IIngredient> Fetch() => SubdivisionController.CurrentSubdivision.Products.ToList();
                                                  
 
         public IIngredient GetIngrByName(string Object) => SubdivisionController.CurrentSubdivision.Products
             .FirstOrDefault(x => x.Ingredient.NameIngredient == Object);
 
-        public IEnumerable<IIngredient> GetRegistry() => Fetch()
+        public IEnumerable<IIngredient> GetRegistry() => SubdivisionController.CurrentSubdivision.Products
             .Where(x => x.RecordDate == Fetch().Where(y => y.NameIngredient == x.NameIngredient).Max(z => z.RecordDate))
             .Distinct()
             .OrderByDescending(x => x.NameIngredient);

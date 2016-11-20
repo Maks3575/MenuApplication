@@ -120,7 +120,7 @@ namespace MenuApplication
 
 
             //L.AddRange(_DishRepository.Fetch());// as IList<Dish>);
-            AddMenuInRepository(new Domain.Menu(L, DateTime.Now.AddMinutes(-5), 1));
+            ///AddMenuInRepository(new Domain.Menu(L, DateTime.Now.AddMinutes(-5), 1));
             //AddMenuInRepository(new Domain.Menu(L2, DateTime.Now, 2));
 
 
@@ -378,7 +378,7 @@ namespace MenuApplication
         /// <returns>Новый пустой экземпляр меню</returns>
         public IMenu NewMenu()
         {
-            return new Domain.Menu() { Dishs=new List<IDish>()};
+            return new ModelDB.Menu() { Dishs=new List<IDish>()};
         }
         
         /// <summary>

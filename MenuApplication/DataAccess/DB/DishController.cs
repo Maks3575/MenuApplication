@@ -166,7 +166,7 @@ namespace MenuApplication.DataAccess.DB
             //находим все даты его калькуляции
             List<DateTime> HistoryDates = SubdivisionController.CurrentSubdivision.Menus
                 .Where(x => x.Dishes.Any(y => y.ExpandedNameDish == ExpandedNamedish))
-                .Select(x => CalculationDishDate(dish, x.UseDate)).ToList();//.Distinct().ToList();
+                .Select(x => CalculationDishDate(dish, x.UseDate)).Distinct().ToList();
             
             if (HistoryDates == null)//если блюдо не использовалось
             {
