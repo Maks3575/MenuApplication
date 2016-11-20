@@ -229,7 +229,7 @@
             // 
             // dishBindingSourceForCreateMenu
             // 
-            this.dishBindingSourceForCreateMenu.DataSource = typeof(MenuApplication.Domain.Dish);
+            this.dishBindingSourceForCreateMenu.DataSource = typeof(MenuApplication.Domain.IDish);
             // 
             // btCancleCreatingMenu
             // 
@@ -449,7 +449,7 @@
             // 
             // DishBindingSourceForMenu
             // 
-            this.DishBindingSourceForMenu.DataSource = typeof(MenuApplication.Domain.Dish);
+            this.DishBindingSourceForMenu.DataSource = typeof(MenuApplication.Domain.IDish);
             // 
             // dtpMenu
             // 
@@ -514,7 +514,7 @@
             // 
             // dishBindingSource
             // 
-            this.dishBindingSource.DataSource = typeof(MenuApplication.Domain.Dish);
+            this.dishBindingSource.DataSource = typeof(MenuApplication.Domain.IDish);
             this.dishBindingSource.PositionChanged += new System.EventHandler(this.dishBindingSource_PositionChanged);
             // 
             // btEndRefreshDish
@@ -802,7 +802,7 @@
             // 
             // ALLDishBindingSource
             // 
-            this.ALLDishBindingSource.DataSource = typeof(MenuApplication.Domain.Dish);
+            this.ALLDishBindingSource.DataSource = typeof(MenuApplication.Domain.IDish);
             this.ALLDishBindingSource.PositionChanged += new System.EventHandler(this.ALLDishBindingSource_PositionChanged);
             // 
             // tbExpandedNameDish

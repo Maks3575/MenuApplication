@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MenuApplication.Domain;
-using MenuApplication.ModelDB;
+using MenuApplication.ModelDB; 
 
 namespace MenuApplication.DataAccess.DB
 {
@@ -24,7 +24,12 @@ namespace MenuApplication.DataAccess.DB
 
         public IEnumerable<IMenu> Fetch()
         {
-            return context.Menus;
+            var menus = context.Menus.ToList();
+            foreach (var menu in menus)
+            {
+                menu.Dishs = menu.Dishes.Select(dish => DishController.FillingDish(dish, menu.UseDate)).ToList();
+            }
+            return menus;
         }
 
         public int idMenuNext()

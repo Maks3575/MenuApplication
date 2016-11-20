@@ -22,7 +22,7 @@ namespace MenuApplication.ModelDB
             }
         }
 
-        public IList<Domain.Dish> Dishs { get; set; }
+        public IList<IDish> Dishs { get; set; }
 
         public int IdMenu => IDMenu;
     }

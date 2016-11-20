@@ -72,7 +72,7 @@ namespace MenuApplication.DataAccess.DB
         /// <param name="DishDB">Блюдо</param>
         /// <param name="DT">Дата</param>
         /// <returns>Дата калькуляции блюда</returns>
-        public DateTime CalculationDishDate(ModelDB.Dish DishDB, DateTime DT)
+        public static DateTime CalculationDishDate(ModelDB.Dish DishDB, DateTime DT)
         {
             DateTime CreateDate;
 
@@ -118,7 +118,7 @@ namespace MenuApplication.DataAccess.DB
         /// <param name="DishDB">Блюдо из контекста</param>
         /// <param name="DT">Дата</param>
         /// <returns>Калькуляция блюда</returns>
-        public IDish FillingDish(ModelDB.Dish DishDB, DateTime DT)
+        public static IDish FillingDish(ModelDB.Dish DishDB, DateTime DT)
         {
             //создаем список DishItem для выбранного блюда
             List<DishItem> DI = DishDB.ItemDishes.Select(x => new DishItem()

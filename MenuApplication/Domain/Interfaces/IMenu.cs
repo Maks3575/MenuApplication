@@ -14,7 +14,7 @@ namespace MenuApplication.Domain
         /// <summary>
         /// Список блюд входящих в меню
         /// </summary>
-        IList<Dish> Dishs { get; set; }
+        IList<IDish> Dishs { get; set; }//поменял на IDish
 
 
 

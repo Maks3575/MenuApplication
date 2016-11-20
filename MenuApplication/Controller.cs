@@ -94,7 +94,7 @@ namespace MenuApplication
         /// </summary>
         public void DishDataTest()
         {
-            IList<Domain.Dish> L = new List<Domain.Dish>();
+            IList<IDish> L = new List<IDish>();
             IList<Domain.Dish> L2 = new List<Domain.Dish>();
             Random rand = new Random();
             for (int i = 0; i < 5; i++)
@@ -378,7 +378,7 @@ namespace MenuApplication
         /// <returns>Новый пустой экземпляр меню</returns>
         public IMenu NewMenu()
         {
-            return new Domain.Menu() { Dishs=new List<Domain.Dish>()};
+            return new Domain.Menu() { Dishs=new List<IDish>()};
         }
         
         /// <summary>

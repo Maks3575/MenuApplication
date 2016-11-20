@@ -11,7 +11,7 @@ namespace MenuApplication.Domain
         /// <summary>
         /// Список блюд входящих в меню
         /// </summary>
-        public IList<Dish> Dishs { get; set; }
+        public IList<IDish> Dishs { get; set; }
 
         
 
@@ -33,7 +33,7 @@ namespace MenuApplication.Domain
         /// <param name="_Dishs">Список блюд в меню</param>
         /// <param name="_DateCreateMenu">Дата создания меню</param>
         /// <param name="_IdMenu">Id меню</param>
-        public Menu(IList<Dish> _Dishs, DateTime _DateCreateMenu, int _IdMenu)
+        public Menu(IList<IDish> _Dishs, DateTime _DateCreateMenu, int _IdMenu)
         {
             Dishs = _Dishs;
             DateCreateMenu = _DateCreateMenu;
