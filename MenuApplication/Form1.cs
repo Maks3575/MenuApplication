@@ -31,6 +31,7 @@ namespace MenuApplication
         //настройка формы реестра при разных режимах работы
         public void RegistryChangeMode(bool IngMode)
         {
+            cbSubdivision.Enabled = IngMode;
             dgvRegistry.ReadOnly = IngMode;
             btStartEditing.Visible = IngMode;
             btCancleEditing.Visible = !IngMode;
@@ -55,6 +56,8 @@ namespace MenuApplication
             {
                 ingredientBindingSource1.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x=>x.NameIngredient);
             }
+            cbSubdivision.Enabled = mode;
+
             tbTypeDish.Visible = mode;
             cbTypeDish.Visible = !mode;
 
@@ -96,13 +99,20 @@ namespace MenuApplication
 
             //_controller.ChangeSubdivisionInReport(subdivisionBindingSource.Current as Subdivision)
 
+
+
             TypesDishBindingSource.DataSource = _controller.GetTypeDishtAsBindingList();
             TypesMenuBindingSource.DataSource = _controller.GetTypeMenuAsBindingList();
             CalculatorBindingSource.DataSource = _controller.GetCalculatorAsBindingList();
             ChiefCookerBindingSource.DataSource = _controller.GetChiefCookerAsBindingList();
 
             subdivisionBindingSource.DataSource = _controller.GetSubdivisionAsBindingList();
-            //
+            FillingBaseBindingSource();
+
+        }
+        
+        private void FillingBaseBindingSource()
+        {
             ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x => x.NameIngredient);
             ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList().OrderBy(x => x.NameIngredient);
 
@@ -113,6 +123,7 @@ namespace MenuApplication
             menuBindingSource.DataSource = _controller.GetAllMenuAsBindingList();//
             DishBindingSourceForMenu.DataSource = (menuBindingSource.Current as IMenu).Dishs;
         }
+
 
         //действия при смене калькуляционной карточки
         private void dishBindingSource_PositionChanged(object sender, EventArgs e)
@@ -355,6 +366,7 @@ namespace MenuApplication
         private void MenuChangeMode(bool modeMenu)
         {
             //tcMenu.Enabled = modeMenu;
+            cbSubdivision.Enabled = modeMenu;
 
             tbTypeMenu.Visible = modeMenu;
             cbTypeMenu.Visible = !modeMenu;
@@ -478,11 +490,12 @@ namespace MenuApplication
         {
             _controller.DishInExcel(dishBindingSource.Current as IDish);
         }
-
+        //
         private void subdivisionBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             _controller.ChangeSubdivisionInReport(subdivisionBindingSource.Current as Subdivision);
-            _controller.ChangeCurrentSubdivision(subdivisionBindingSource.Current as ModelDB.Subdivision);
+            _controller.ChangeCurrentSubdivision (subdivisionBindingSource.Current as ModelDB.Subdivision);
+            FillingBaseBindingSource();
         }
 
         private void button1_Click(object sender, EventArgs e)

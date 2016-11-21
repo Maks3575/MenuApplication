@@ -143,7 +143,7 @@
             this.carbohydrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calorificValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSubdivision = new System.Windows.Forms.ComboBox();
             this.subdivisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMenu.SuspendLayout();
             this.tpMenu.SuspendLayout();
@@ -180,7 +180,6 @@
             this.tcMenu.SelectedIndex = 0;
             this.tcMenu.Size = new System.Drawing.Size(959, 464);
             this.tcMenu.TabIndex = 0;
-
             // 
             // tpMenu
             // 
@@ -217,7 +216,7 @@
             this.cbCalculator.DataSource = this.CalculatorBindingSource;
             this.cbCalculator.DisplayMember = "FullName";
             this.cbCalculator.FormattingEnabled = true;
-            this.cbCalculator.Location = new System.Drawing.Point(678, 18);
+            this.cbCalculator.Location = new System.Drawing.Point(713, 17);
             this.cbCalculator.Name = "cbCalculator";
             this.cbCalculator.Size = new System.Drawing.Size(227, 21);
             this.cbCalculator.TabIndex = 19;
@@ -1180,16 +1179,16 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.DataSource = this.subdivisionBindingSource;
-            this.comboBox1.DisplayMember = "NameSubdivision";
-            this.comboBox1.Location = new System.Drawing.Point(730, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.ValueMember = "GetThis";
+            this.cbSubdivision.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSubdivision.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbSubdivision.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbSubdivision.DataSource = this.subdivisionBindingSource;
+            this.cbSubdivision.DisplayMember = "NameSubdivision";
+            this.cbSubdivision.Location = new System.Drawing.Point(730, 7);
+            this.cbSubdivision.Name = "comboBox1";
+            this.cbSubdivision.Size = new System.Drawing.Size(219, 21);
+            this.cbSubdivision.TabIndex = 3;
+            this.cbSubdivision.ValueMember = "GetThis";
             // 
             // subdivisionBindingSource
             // 
@@ -1201,7 +1200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 471);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbSubdivision);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tcMenu);
             this.MinimumSize = new System.Drawing.Size(973, 510);
@@ -1313,7 +1312,7 @@
         private System.Windows.Forms.Button btRegisterInExcel;
         private System.Windows.Forms.Button btDishInExcel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSubdivision;
         private System.Windows.Forms.BindingSource subdivisionBindingSource;
         private System.Windows.Forms.Button btBrokerashInExcel;
         private System.Windows.Forms.ComboBox cbTypeDish;
