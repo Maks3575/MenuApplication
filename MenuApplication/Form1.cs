@@ -493,7 +493,7 @@ namespace MenuApplication
         //
         private void subdivisionBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            _controller.ChangeSubdivisionInReport(subdivisionBindingSource.Current as Subdivision);
+            //_controller.ChangeSubdivisionInReport(subdivisionBindingSource.Current as Subdivision);
             _controller.ChangeCurrentSubdivision (subdivisionBindingSource.Current as ModelDB.Subdivision);
             FillingBaseBindingSource();
         }

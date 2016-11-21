@@ -1,4 +1,5 @@
-﻿using MenuApplication.Domain;
+﻿using MenuApplication.DataAccess.DB;
+using MenuApplication.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,14 @@ namespace MenuApplication
         /// <summary>
         /// Структурное подразделение 
         /// </summary>
-        public Subdivision Subdivision { get; set; }
+        //public Subdivision Subdivision { get; set; }
 
         private Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
         
+        ~Report()
+        {
+            //ExcelApp.Quit();
+        }
         /// <summary>
         /// Создает меню в Excel
         /// </summary>
@@ -53,7 +58,7 @@ namespace MenuApplication
             ExcelApp.Range[ExcelApp.Cells[x, 1], ExcelApp.Cells[x, 5]].Font.Size = "10";
             ExcelApp.Range[ExcelApp.Cells[x, 1], ExcelApp.Cells[x, 5]].Merge();
             ExcelApp.Range[ExcelApp.Cells[x, 1], ExcelApp.Cells[x, 5]].Font.Size = "10";
-            ExcelApp.Range[ExcelApp.Cells[x, 1], ExcelApp.Cells[x, 5]] = "             Шеф - повар:                                                                                              Калькулятор:";
+            ExcelApp.Range[ExcelApp.Cells[x, 1], ExcelApp.Cells[x, 5]] = $"             Шеф - повар: {menu.ChiefCooker.ShortNameEmployee}                                                                  Калькулятор: {menu.Calculator.ShortNameEmployee}";
 
 
             ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[x, 5]].Font.Name = "Arial";
@@ -68,10 +73,10 @@ namespace MenuApplication
             ExcelApp.Range[ExcelApp.Cells[5, 2], ExcelApp.Cells[x-1, 2]].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignLeft;
 
             ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 4]].Merge();
-            ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 4]] = Subdivision.NameSubdivision;
+            ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 4]] = SubdivisionController.CurrentSubdivision.NameSubdivision;
 
             ExcelApp.Range[ExcelApp.Cells[2, 1], ExcelApp.Cells[2, 4]].Merge();
-            ExcelApp.Range[ExcelApp.Cells[2, 1], ExcelApp.Cells[2, 4]] = "АО  \"Транснефть-Север\"";
+            ExcelApp.Range[ExcelApp.Cells[2, 1], ExcelApp.Cells[2, 4]] = SubdivisionController.CurrentSubdivision.Organization.NameOrganization;// "АО  \"Транснефть-Север\"";
 
             ExcelApp.Range[ExcelApp.Cells[3, 1], ExcelApp.Cells[3, 4]].Merge();
             ExcelApp.Range[ExcelApp.Cells[3, 1], ExcelApp.Cells[3, 4]] = $"Меню на {menu.DateCreateMenu.ToShortDateString()}" ;
@@ -120,7 +125,7 @@ namespace MenuApplication
             }
             ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 3]].Merge();
             ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 3]].Font.Size = "11";
-            ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 3]] = $"РЕЕСТР ЦЕН {Subdivision.NameSubdivision}";
+            ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[1, 3]] = $"РЕЕСТР ЦЕН {SubdivisionController.CurrentSubdivision.NameSubdivision}";
 
 
             ExcelApp.Range[ExcelApp.Cells[1, 4], ExcelApp.Cells[1, 5]].Merge();
@@ -205,9 +210,9 @@ namespace MenuApplication
 
             ExcelApp.Range[ExcelApp.Cells[27, 1], ExcelApp.Cells[x - 1, 23]].Borders.ColorIndex = 1;
 
-            ExcelApp.Cells[6,1]= "АО  \"Транснефть-Север\"";
+            ExcelApp.Cells[6, 1] = SubdivisionController.CurrentSubdivision.Organization.NameOrganization; //"АО  \"Транснефть-Север\"";
 
-            ExcelApp.Cells[8, 1] = Subdivision.NameSubdivision;
+            ExcelApp.Cells[8, 1] = SubdivisionController.CurrentSubdivision.NameSubdivision;
 
             ExcelApp.Cells[10, 1] = dishNew.NameDish;
 

@@ -438,9 +438,9 @@ namespace MenuApplication
         /// Меняет значение подразделения в классе отчетов
         /// </summary>
         /// <param name="subdiv">Подразделение на которое меняем</param>
-        public void ChangeSubdivisionInReport(Subdivision subdiv)
+        public void ChangeSubdivisionInReport()//Subdivision subdiv)
         {
-            _Report.Subdivision = subdiv;
+            //_Report.Subdivision = subdiv;
         }
 
         public void ChangeCurrentSubdivision(ModelDB.Subdivision CurrSubdiv)
