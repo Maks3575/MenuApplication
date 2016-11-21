@@ -35,6 +35,9 @@ namespace MenuApplication.DataAccess.DB
                 IDSubdivision = newIngredient.Subdivision.IDSubdivision
             });
             context.SaveChanges();
+
+            //context.Dispose();
+            //context = new DB_MenuEntities();
         }
 
         public bool AddNewIngredient(IIngredient newIngredient)
@@ -53,16 +56,17 @@ namespace MenuApplication.DataAccess.DB
                     Fat = (float)newIngredient.Fat,
                     Carbohydrate = (float)newIngredient.Carbohydrate
                 } );
-                
+                context.SaveChanges();
+
                 //ModelDB.Ingredient ing = context.Ingredients.FirstOrDefault(x => x.NameIngredient == newIngredient.NameIngredient);
                 context.Products.Add(new Product()
                 {
                     Price = newIngredient.StartingPrice,
                     Mass = (float)newIngredient.MassInKg,
                     BeginDate = newIngredient.RecordDate,
-                    Ingredient = ing,
-                    //IDIngredient =//ing.IDIngredient,
-                    Subdivision = newIngredient.Subdivision
+                    //Ingredient = ing,
+                    IDIngredient =ing.IDIngredient,
+                    IDSubdivision = newIngredient.Subdivision.IDSubdivision
                 });
                 context.SaveChanges();
                 return true;

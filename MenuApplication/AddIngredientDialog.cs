@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenuApplication.DataAccess.DB;
 
 namespace MenuApplication
 {
@@ -19,6 +20,8 @@ namespace MenuApplication
 
         private void AddIngredientDialog_Load(object sender, EventArgs e)
         {
+            DirectoryController DC = new DirectoryController();
+            TypeIngredientsBindingSource.DataSource = DC.TypeIngredientFetch();
 
         }
 

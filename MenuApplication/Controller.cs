@@ -248,10 +248,23 @@ namespace MenuApplication
         /// <param name="_Carbohydrate">Количество углеводов на 100 г продукта</param>
         /// <returns>добавилось или нет</returns>
         public bool AddNewIngredientInRepository(string _NameIngredient, double _MassInKg,
-            decimal _StartingPrice, DateTime _RecordDate, double _Protein, double _Fat, double _Carbohydrate)
+            decimal _StartingPrice, DateTime _RecordDate,
+            double _Protein, double _Fat, double _Carbohydrate,TypeIngredient _TypeIngredient)
         {
-            Domain.Ingredient NewIngredient = new Domain.Ingredient(_NameIngredient, _MassInKg,
-            _StartingPrice, _RecordDate, _Protein, _Fat, _Carbohydrate);
+            Product NewIngredient = new Product()
+            {
+                Ingredient = new ModelDB.Ingredient(),
+                NameIngredient = _NameIngredient,
+                MassInKg = _MassInKg,
+                StartingPrice = _StartingPrice,
+                RecordDate = _RecordDate,
+                Protein = _Protein,
+                Fat = _Fat,
+                Carbohydrate = _Carbohydrate,
+                TypeIngredient = _TypeIngredient,
+                Subdivision = SubdivisionController.CurrentSubdivision
+            };
+
             return _IngredientController.AddNewIngredient(NewIngredient);
 
         }

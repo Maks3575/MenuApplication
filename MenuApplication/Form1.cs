@@ -143,7 +143,9 @@ namespace MenuApplication
                 _AddIngredientDialog.dtpRecord.Value,
                 (double)_AddIngredientDialog.nudProtein.Value,
                 (double)_AddIngredientDialog.nudFat.Value,
-                (double)_AddIngredientDialog.nudCarbohydrate.Value) == false)
+                (double)_AddIngredientDialog.nudCarbohydrate.Value,
+                _AddIngredientDialog.TypeIngredientsBindingSource.Current as ModelDB.TypeIngredient
+                ) == false)
             {
                 MessageBox.Show("Ингредиент с таким именем уже существует");
             }

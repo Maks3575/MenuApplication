@@ -67,6 +67,7 @@
       <DependentUpon>AddIngredientDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
+    <Compile Include="DataAccess\DB\DirectoryController.cs" />
     <Compile Include="DataAccess\DB\DishController.cs" />
     <Compile Include="DataAccess\DB\ItemDishController.cs" />
     <Compile Include="DataAccess\DB\IngredientsController.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="ModelDB\TypeIngredient.cs">
       <DependentUpon>MenuDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelDB\TypeIngredient.Part.cs" />
     <Compile Include="ModelDB\TypeMenu.cs">
       <DependentUpon>MenuDB.tt</DependentUpon>
     </Compile>
@@ -234,6 +236,7 @@
     <None Include="Properties\DataSources\MenuApplication.Domain.Ingredient.datasource" />
     <None Include="Properties\DataSources\MenuApplication.Domain.Menu.datasource" />
     <None Include="Properties\DataSources\MenuApplication.ModelDB.Product.datasource" />
+    <None Include="Properties\DataSources\MenuApplication.ModelDB.TypeIngredient.datasource" />
     <None Include="Properties\DataSources\Subdivision.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

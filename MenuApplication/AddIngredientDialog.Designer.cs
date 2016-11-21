@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btOK = new System.Windows.Forms.Button();
             this.btCancle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,17 +45,21 @@
             this.nudCarbohydrate = new System.Windows.Forms.NumericUpDown();
             this.nudMass = new System.Windows.Forms.NumericUpDown();
             this.nudPrice = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbTypeIngredient = new System.Windows.Forms.ComboBox();
+            this.TypeIngredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudProtein)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypeIngredientsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btOK
             // 
             this.btOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btOK.Location = new System.Drawing.Point(263, 199);
+            this.btOK.Location = new System.Drawing.Point(263, 237);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(75, 23);
             this.btOK.TabIndex = 0;
@@ -65,7 +70,7 @@
             // btCancle
             // 
             this.btCancle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btCancle.Location = new System.Drawing.Point(68, 199);
+            this.btCancle.Location = new System.Drawing.Point(115, 237);
             this.btCancle.Name = "btCancle";
             this.btCancle.Size = new System.Drawing.Size(75, 23);
             this.btCancle.TabIndex = 1;
@@ -111,7 +116,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 120);
+            this.label5.Location = new System.Drawing.Point(65, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 13);
             this.label5.TabIndex = 6;
@@ -120,7 +125,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(73, 147);
+            this.label6.Location = new System.Drawing.Point(73, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 13);
             this.label6.TabIndex = 7;
@@ -129,7 +134,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(53, 171);
+            this.label7.Location = new System.Drawing.Point(53, 206);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 13);
             this.label7.TabIndex = 8;
@@ -158,7 +163,7 @@
             0,
             0,
             65536});
-            this.nudProtein.Location = new System.Drawing.Point(218, 118);
+            this.nudProtein.Location = new System.Drawing.Point(218, 153);
             this.nudProtein.Name = "nudProtein";
             this.nudProtein.Size = new System.Drawing.Size(66, 20);
             this.nudProtein.TabIndex = 13;
@@ -171,7 +176,7 @@
             0,
             0,
             65536});
-            this.nudFat.Location = new System.Drawing.Point(218, 139);
+            this.nudFat.Location = new System.Drawing.Point(218, 174);
             this.nudFat.Name = "nudFat";
             this.nudFat.Size = new System.Drawing.Size(66, 20);
             this.nudFat.TabIndex = 14;
@@ -184,7 +189,7 @@
             0,
             0,
             65536});
-            this.nudCarbohydrate.Location = new System.Drawing.Point(218, 163);
+            this.nudCarbohydrate.Location = new System.Drawing.Point(218, 198);
             this.nudCarbohydrate.Name = "nudCarbohydrate";
             this.nudCarbohydrate.Size = new System.Drawing.Size(66, 20);
             this.nudCarbohydrate.TabIndex = 15;
@@ -220,11 +225,37 @@
             this.nudPrice.Size = new System.Drawing.Size(120, 20);
             this.nudPrice.TabIndex = 17;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(92, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Тип ингредиента";
+            // 
+            // cbTypeIngredient
+            // 
+            this.cbTypeIngredient.DataSource = this.TypeIngredientsBindingSource;
+            this.cbTypeIngredient.DisplayMember = "NameTypeIngredient";
+            this.cbTypeIngredient.FormattingEnabled = true;
+            this.cbTypeIngredient.Location = new System.Drawing.Point(218, 126);
+            this.cbTypeIngredient.Name = "cbTypeIngredient";
+            this.cbTypeIngredient.Size = new System.Drawing.Size(121, 21);
+            this.cbTypeIngredient.TabIndex = 19;
+            this.cbTypeIngredient.ValueMember = "NameTypeIngredient";
+            // 
+            // TypeIngredientsBindingSource
+            // 
+            this.TypeIngredientsBindingSource.DataSource = typeof(MenuApplication.ModelDB.TypeIngredient);
+            // 
             // AddIngredientDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 234);
+            this.ClientSize = new System.Drawing.Size(354, 273);
+            this.Controls.Add(this.cbTypeIngredient);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.nudPrice);
             this.Controls.Add(this.nudMass);
             this.Controls.Add(this.nudCarbohydrate);
@@ -249,6 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypeIngredientsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +304,8 @@
         internal System.Windows.Forms.NumericUpDown nudCarbohydrate;
         internal System.Windows.Forms.NumericUpDown nudMass;
         internal System.Windows.Forms.NumericUpDown nudPrice;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbTypeIngredient;
+        public System.Windows.Forms.BindingSource TypeIngredientsBindingSource;
     }
 }
