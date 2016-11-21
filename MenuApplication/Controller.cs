@@ -395,7 +395,7 @@ namespace MenuApplication
         /// <returns>Новый пустой экземпляр меню</returns>
         public IMenu NewMenu()
         {
-            return new ModelDB.Menu() { Dishs=new List<IDish>()};
+            return new ModelDB.Menu() { Dishs = new List<IDish>()};
         }
         
         /// <summary>
@@ -407,14 +407,14 @@ namespace MenuApplication
             if (menu==null)
                 throw new ArgumentNullException("NewMenu");
             _MenuController.Add(menu);
-            foreach (Domain.Dish dish in menu.Dishs)
-            {
-                if (!_DishController.CheckOnContain(dish))
-                {
-                    _DishController.Add(dish);
+            //foreach (Domain.Dish dish in menu.Dishs)
+            //{
+            //    if (!_DishController.CheckOnContain(dish))
+            //    {
+            //        _DishController.Add(dish);
 
-                }
-            }
+            //    }
+            //}
         }
 
         /// <summary>

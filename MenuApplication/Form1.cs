@@ -405,15 +405,19 @@ namespace MenuApplication
                 MessageBox.Show("В меню нет ни одного блюда");
                 return;
             }
-            MenuChangeMode(true);
-            var c = (menuBindingSource.Current as IMenu);
-            c.DateCreateMenu = dtpMenu.Value;
-            _controller.AddMenuInRepository(menuBindingSource.Current as IMenu);
 
-            menuBindingSource.DataSource = _controller.GetAllMenuAsBindingList().OrderByDescending(x=>x.DateCreateMenu);
+            MenuChangeMode(true);
+            var menu = menuBindingSource.Current as IMenu;
+            menu.DateCreateMenu = dtpMenu.Value;
+            menu.Calculator = CalculatorBindingSource.Current as ModelDB.Employee;
+            menu.ChiefCooker = ChiefCookerBindingSource.Current as ModelDB.Employee;
+            menu.TypeMenu = TypesMenuBindingSource.Current as ModelDB.TypeMenu;
+            _controller.AddMenuInRepository(menu);
+
+            menuBindingSource.DataSource = _controller.GetAllMenuAsBindingList().OrderByDescending(x => x.DateCreateMenu);
             DishBindingSourceForMenu.DataSource = (menuBindingSource.Current as IMenu).Dishs;
 
-            ALLDishBindingSource.DataSource = _controller.GetFreshDish().OrderBy(x=>x.NameDish);// dishBindingSource.DataSource = _controller.GetFreshDish();
+            ALLDishBindingSource.DataSource = _controller.GetFreshDish().OrderBy(x => x.NameDish);// dishBindingSource.DataSource = _controller.GetFreshDish();
             dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
             dishItemBindingSource.DataSource = (ALLDishBindingSource.Current as IDish).DishItems;
         }
@@ -443,21 +447,21 @@ namespace MenuApplication
         private void btAddDishInMenu_Click(object sender, EventArgs e)
         {
             var Dish = dishBindingSourceForCreateMenu.Current as Dish;
-
-            if ((DishBindingSourceForMenu.DataSource as IList<Dish>).Select(x => x.ExpandedNameDish).Contains(Dish.ExpandedNameDish))
+            //ошибка
+            if ((DishBindingSourceForMenu.DataSource as IList<IDish>).Select(x => x.ExpandedNameDish).Contains(Dish.ExpandedNameDish))
             {
                 MessageBox.Show("Данное блюдо присутствует в меню");
                 return;
             }
 
-            if (_controller.TestOnRelevanceDish(Dish))
-            {
-                DishBindingSourceForMenu.Add(Dish);
-            }else
-            {
-                DishBindingSourceForMenu.Add(_controller.RefreshDish(Dish, DateTime.Now));
-            }         
-            
+            DishBindingSourceForMenu.Add(Dish);
+            //if (_controller.TestOnRelevanceDish(Dish))
+            //{
+            //    DishBindingSourceForMenu.Add(Dish);
+            //}else
+            //{
+            //    DishBindingSourceForMenu.Add(_controller.RefreshDish(Dish, DateTime.Now));
+            //}            
         }
 
         private void btMenuInExcel_Click(object sender, EventArgs e)

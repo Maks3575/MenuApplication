@@ -27,10 +27,10 @@ namespace MenuApplication.DataAccess.DB
             context.Menus.Add(new ModelDB.Menu()
             {
                 UseDate = NewMenu.DateCreateMenu,
-                Subdivision = NewMenu.Subdivision,
-                Employee = NewMenu.Calculator,
-                Employee1 = NewMenu.ChiefCooker,
-                TypeMenu = NewMenu.TypeMenu,
+                IDSubdivision = SubdivisionController.CurrentSubdivision.IDSubdivision,
+                IDCalculator = NewMenu.Calculator.IDEmployee,
+                IDChiefCooker = NewMenu.ChiefCooker.IDEmployee,
+                IDTypeMenu = NewMenu.TypeMenu.IDTypeMenu,
                 Dishes = dishes
             });
             context.SaveChanges();
