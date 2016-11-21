@@ -10,14 +10,13 @@ namespace MenuApplication.DataAccess.DB
 {
     internal class IngredientsController : IIngredientRepositopy
     {
-        DB_MenuEntities context;
 
         /// <summary>
         /// Конструктор
         /// </summary>
         public IngredientsController()
         {
-            context = new DB_MenuEntities();
+
         }
 
         /// <summary>
@@ -26,7 +25,7 @@ namespace MenuApplication.DataAccess.DB
         /// <param name="newIngredient">Добавляемый ингредиент</param>
         public void Add(IIngredient newIngredient)
         {
-            context.Products.Add(new Product()
+            Context.context.Products.Add(new Product()
             {
                 Price = newIngredient.StartingPrice,
                 Mass = (float)newIngredient.MassInKg,
@@ -34,7 +33,9 @@ namespace MenuApplication.DataAccess.DB
                 IDIngredient = newIngredient.IdIngredient,
                 IDSubdivision = newIngredient.Subdivision.IDSubdivision
             });
-            context.SaveChanges();
+            Context.context.SaveChanges();
+            Context.context.Dispose();
+            Context.context = new DB_MenuEntities();
 
             //context.Dispose();
             //context = new DB_MenuEntities();
@@ -42,13 +43,13 @@ namespace MenuApplication.DataAccess.DB
 
         public bool AddNewIngredient(IIngredient newIngredient)
         {
-            if (context.Ingredients.Select(x => x.NameIngredient).Contains(newIngredient.NameIngredient))
+            if (Context.context.Ingredients.Select(x => x.NameIngredient).Contains(newIngredient.NameIngredient))
             {
                 return false;
             }
             else
             {
-                var ing = context.Ingredients.Add(new ModelDB.Ingredient()
+                var ing = Context.context.Ingredients.Add(new ModelDB.Ingredient()
                 {
                     NameIngredient = newIngredient.NameIngredient,
                     IDTypeIngredient = newIngredient.TypeIngredient.IDTypeIngredient,
@@ -56,10 +57,10 @@ namespace MenuApplication.DataAccess.DB
                     Fat = (float)newIngredient.Fat,
                     Carbohydrate = (float)newIngredient.Carbohydrate
                 } );
-                context.SaveChanges();
+                //Context.context.SaveChanges();
 
                 //ModelDB.Ingredient ing = context.Ingredients.FirstOrDefault(x => x.NameIngredient == newIngredient.NameIngredient);
-                context.Products.Add(new Product()
+                Context.context.Products.Add(new Product()
                 {
                     Price = newIngredient.StartingPrice,
                     Mass = (float)newIngredient.MassInKg,
@@ -68,7 +69,9 @@ namespace MenuApplication.DataAccess.DB
                     IDIngredient =ing.IDIngredient,
                     IDSubdivision = newIngredient.Subdivision.IDSubdivision
                 });
-                context.SaveChanges();
+                Context.context.SaveChanges();
+                Context.context.Dispose();
+                Context.context = new DB_MenuEntities();
                 return true;
             }
         }
@@ -80,9 +83,10 @@ namespace MenuApplication.DataAccess.DB
             .FirstOrDefault(x => x.Ingredient.NameIngredient == Object);
 
         public IEnumerable<IIngredient> GetRegistry() => SubdivisionController.CurrentSubdivision.Products
+            //context.Products.Where(p => p.IDSubdivision == SubdivisionController.CurrentSubdivision.IDSubdivision)
             .Where(x => x.RecordDate == Fetch().Where(y => y.NameIngredient == x.NameIngredient).Max(z => z.RecordDate))
             .Distinct()
-            .OrderByDescending(x => x.NameIngredient);
+            .OrderByDescending(x => x.NameIngredient).ToList();
 
         public bool TestOnChangeIngredient(IIngredient ingr)=> SubdivisionController.CurrentSubdivision.Products
             .Where(x => x.NameIngredient == ingr.NameIngredient)

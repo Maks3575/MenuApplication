@@ -9,17 +9,17 @@ namespace MenuApplication.DataAccess.DB
 {
     internal class SubdivisionController
     {
-        DB_MenuEntities context;// = new DB_MenuEntities();
+        //DB_MenuEntities context;// = new DB_MenuEntities();
         public static ModelDB.Subdivision CurrentSubdivision { get; set; } //= new DB_MenuEntities().Subdivisions.First();
 
         public SubdivisionController()
         {
-            context = new DB_MenuEntities();
-            CurrentSubdivision = context.Subdivisions.First();
+            //context = Context.context;
+            CurrentSubdivision = Context.context.Subdivisions.First();
 
         }
 
-        public IEnumerable<ModelDB.Subdivision> Fetch() => context.Subdivisions;
+        public IEnumerable<ModelDB.Subdivision> Fetch() => Context.context.Subdivisions;
 
 
         //internal static SubdivisionRepositoryPlug CreateInstance()

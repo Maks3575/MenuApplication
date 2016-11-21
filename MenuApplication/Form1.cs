@@ -18,9 +18,9 @@ namespace MenuApplication
 
         int PositionDish;
         Controller _controller = new Controller(//IngredientRepositoryPlug.CreateInstance(),
-        //DishRepositoryPlug.CreateInstance(), 
+        //DishRepositoryPlug.CreateInstance(),
         //MenuRepositoryPlug.CreateInstance()
-            );//,SubdivisionRepositoryPlug.CreateInstance());
+        );//,SubdivisionRepositoryPlug.CreateInstance());
 
         public MainForm()
         {
@@ -169,7 +169,7 @@ namespace MenuApplication
                 return;
             }
             _controller.EndEditingRegistryIngredients((IEnumerable<IIngredient>)ingredientBindingSource.List);
-            ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x=>x.NameIngredient);
+            ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList();//.OrderBy(x=>x.NameIngredient);
 
             ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList();//.OrderBy(x => x.NameIngredient);
 

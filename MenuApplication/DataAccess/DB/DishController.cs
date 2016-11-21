@@ -10,16 +10,16 @@ namespace MenuApplication.DataAccess.DB
 {
     class DishController : IDishRepository
     {
-        DB_MenuEntities context;
+        
 
         public DishController()
         {
-            context = new DB_MenuEntities();
+            
         }
 
         public void Add(IDish newDish)
         {
-            var Dish = context.Dishes.Add(new ModelDB.Dish()
+            var Dish = Context.context.Dishes.Add(new ModelDB.Dish()
             {
                 NameDish = newDish.NameDish,
                 ExpandedNameDish = newDish.ExpandedNameDish,
@@ -28,20 +28,22 @@ namespace MenuApplication.DataAccess.DB
                 IDTypeDish = newDish.TypeDish.IDTypeDish//надо добавить в IDish поле TypeDish
             });
 
-            context.ItemDishes.AddRange(newDish.DishItems.Select(x => new ModelDB.ItemDish()
+            Context.context.ItemDishes.AddRange(newDish.DishItems.Select(x => new ModelDB.ItemDish()
             {
                 Dish = Dish,
                 IDIngredient = x.Ingredient.IdIngredient,
                 NormOn100Portion = (float)x.NormOn100Portions
             }));
-            context.SaveChanges();
+            Context.context.SaveChanges();
+            Context.context.Dispose();
+            Context.context = new DB_MenuEntities();
 
         }
 
-        public bool CheckOnContain(IDish dish) => context.Dishes
+        public bool CheckOnContain(IDish dish) => Context.context.Dishes
             .Select(x => x.ExpandedNameDish).Contains(dish.ExpandedNameDish);
 
-        public bool CheckOnExpandedNameDish(string ExpandedNameDish)=>context.Dishes
+        public bool CheckOnExpandedNameDish(string ExpandedNameDish)=> Context.context.Dishes
             .Select(x => x.ExpandedNameDish).Contains(ExpandedNameDish);
 
         public IEnumerable<IDish> Fetch()
@@ -161,7 +163,7 @@ namespace MenuApplication.DataAccess.DB
         public IEnumerable<IDish> HistoryDish(string ExpandedNamedish)
         {
             //получаем нужное блюдо
-            ModelDB.Dish dish = context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNamedish);
+            ModelDB.Dish dish = Context.context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNamedish);
 
             //находим все даты его калькуляции
             List<DateTime> HistoryDates = SubdivisionController.CurrentSubdivision.Menus

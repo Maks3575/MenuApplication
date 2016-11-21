@@ -10,11 +10,10 @@ namespace MenuApplication.DataAccess.DB
 {
     class MenuController : IMenuRepository
     {
-        DB_MenuEntities context;
+       
 
         public MenuController()
         {
-            context = new DB_MenuEntities();
         }
 
         public void Add(IMenu NewMenu)
@@ -22,9 +21,9 @@ namespace MenuApplication.DataAccess.DB
             List<ModelDB.Dish> dishes = new List<ModelDB.Dish>();
             foreach (var i in NewMenu.Dishs)
             {
-                dishes.Add(context.Dishes.FirstOrDefault(dish => dish.ExpandedNameDish == i.ExpandedNameDish));
+                dishes.Add(Context.context.Dishes.FirstOrDefault(dish => dish.ExpandedNameDish == i.ExpandedNameDish));
             }
-            context.Menus.Add(new ModelDB.Menu()
+            Context.context.Menus.Add(new ModelDB.Menu()
             {
                 UseDate = NewMenu.DateCreateMenu,
                 IDSubdivision = SubdivisionController.CurrentSubdivision.IDSubdivision,
@@ -33,7 +32,9 @@ namespace MenuApplication.DataAccess.DB
                 IDTypeMenu = NewMenu.TypeMenu.IDTypeMenu,
                 Dishes = dishes
             });
-            context.SaveChanges();
+            Context.context.SaveChanges();
+            Context.context.Dispose();
+            Context.context = new DB_MenuEntities();
         }
 
         public IEnumerable<IMenu> Fetch()

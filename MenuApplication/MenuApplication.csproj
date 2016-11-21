@@ -66,6 +66,7 @@
     <Compile Include="AddIngredientDialog.Designer.cs">
       <DependentUpon>AddIngredientDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="context.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="DataAccess\DB\DirectoryController.cs" />
     <Compile Include="DataAccess\DB\DishController.cs" />
