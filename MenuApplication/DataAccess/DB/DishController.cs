@@ -170,7 +170,7 @@ namespace MenuApplication.DataAccess.DB
                 .Where(x => x.Dishes.Any(y => y.ExpandedNameDish == ExpandedNamedish))
                 .Select(x => CalculationDishDate(dish, x.UseDate)).Distinct().ToList();
             
-            if (HistoryDates == null)//если блюдо не использовалось
+            if (HistoryDates.Count == 0)//если блюдо не использовалось
             {
                 Domain.Dish d = FillingDish(dish, DateTime.Now) as Domain.Dish;
                 if (d == null)//проверяем на существование всех необходимых ингредиентов для данного блюда
@@ -192,13 +192,9 @@ namespace MenuApplication.DataAccess.DB
         /// Возвращает список в котором находятся все блюда в единственном самом новом экземпляре
         /// </summary>
         /// <returns>Список самых новых блюд</returns>
-        public IEnumerable<IDish> LatestDish()//надо переделать!!!!!
-        {
-            return SubdivisionController.CurrentSubdivision.Menus.SelectMany(Menu => Menu.Dishes)
-                .Distinct().Select(Dish => FillingDish(Dish, CalculationDishDate(Dish, DateTime.Now)))
-                .Where(dish => dish != null);
-            //throw new NotImplementedException();
-        }
+        public IEnumerable<IDish> LatestDish() =>Context.context.Dishes.ToList()
+            .Select(dish => FillingDish(dish, CalculationDishDate(dish, DateTime.Now)))
+            .Where(dish => dish != null);
 
         public int NumberDocNext()
         {
