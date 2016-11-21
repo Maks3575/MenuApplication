@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcMenu = new System.Windows.Forms.TabControl();
             this.tpMenu = new System.Windows.Forms.TabPage();
             this.cbCalculator = new System.Windows.Forms.ComboBox();
@@ -180,7 +180,7 @@
             this.tcMenu.SelectedIndex = 0;
             this.tcMenu.Size = new System.Drawing.Size(959, 464);
             this.tcMenu.TabIndex = 0;
-            this.tcMenu.TabIndexChanged += new System.EventHandler(this.tcMenu_TabIndexChanged);
+
             // 
             // tpMenu
             // 
@@ -283,7 +283,6 @@
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 12;
             this.label8.Text = "Тип меню";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // tbCalculator
             // 
@@ -453,9 +452,9 @@
             // weightDishDataGridViewTextBoxColumn
             // 
             this.weightDishDataGridViewTextBoxColumn.DataPropertyName = "WeightDish";
-            dataGridViewCellStyle17.Format = "N2";
-            dataGridViewCellStyle17.NullValue = "0";
-            this.weightDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.weightDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.weightDishDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.weightDishDataGridViewTextBoxColumn.HeaderText = "Выход, г";
             this.weightDishDataGridViewTextBoxColumn.Name = "weightDishDataGridViewTextBoxColumn";
@@ -464,9 +463,9 @@
             // priceDishDataGridViewTextBoxColumn
             // 
             this.priceDishDataGridViewTextBoxColumn.DataPropertyName = "PriceDish";
-            dataGridViewCellStyle18.Format = "C2";
-            dataGridViewCellStyle18.NullValue = "0";
-            this.priceDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.priceDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.priceDishDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.priceDishDataGridViewTextBoxColumn.HeaderText = "Цена";
             this.priceDishDataGridViewTextBoxColumn.Name = "priceDishDataGridViewTextBoxColumn";
@@ -475,9 +474,9 @@
             // proteinOnOnePortionDataGridViewTextBoxColumn
             // 
             this.proteinOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "ProteinOnOnePortion";
-            dataGridViewCellStyle19.Format = "N1";
-            dataGridViewCellStyle19.NullValue = "0";
-            this.proteinOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Format = "N1";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.proteinOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.proteinOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.proteinOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Белки, г";
             this.proteinOnOnePortionDataGridViewTextBoxColumn.Name = "proteinOnOnePortionDataGridViewTextBoxColumn";
@@ -486,9 +485,9 @@
             // fatOnOnePortionDataGridViewTextBoxColumn
             // 
             this.fatOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "FatOnOnePortion";
-            dataGridViewCellStyle20.Format = "N1";
-            dataGridViewCellStyle20.NullValue = "0";
-            this.fatOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Format = "N1";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.fatOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.fatOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.fatOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Жиры, г";
             this.fatOnOnePortionDataGridViewTextBoxColumn.Name = "fatOnOnePortionDataGridViewTextBoxColumn";
@@ -497,9 +496,9 @@
             // carbohydrateOnOnePortionDataGridViewTextBoxColumn
             // 
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "CarbohydrateOnOnePortion";
-            dataGridViewCellStyle21.Format = "N1";
-            dataGridViewCellStyle21.NullValue = "0";
-            this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Format = "N1";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Углеводы, г";
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.Name = "carbohydrateOnOnePortionDataGridViewTextBoxColumn";
@@ -508,9 +507,9 @@
             // calorificValueOnOnePortionDataGridViewTextBoxColumn
             // 
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "CalorificValueOnOnePortion";
-            dataGridViewCellStyle22.Format = "N1";
-            dataGridViewCellStyle22.NullValue = "0";
-            this.calorificValueOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Format = "N1";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.calorificValueOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Калорийность, ккал";
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.Name = "calorificValueOnOnePortionDataGridViewTextBoxColumn";
@@ -854,7 +853,6 @@
             this.dgvCalculation.ReadOnly = true;
             this.dgvCalculation.Size = new System.Drawing.Size(553, 316);
             this.dgvCalculation.TabIndex = 2;
-            this.dgvCalculation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalculation_CellContentClick);
             this.dgvCalculation.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvCalculation_DataError);
             // 
             // Product
@@ -870,7 +868,6 @@
             // ingredientBindingSource1
             // 
             this.ingredientBindingSource1.DataSource = typeof(MenuApplication.Domain.IIngredient);
-            this.ingredientBindingSource1.CurrentChanged += new System.EventHandler(this.ingredientBindingSource1_CurrentChanged);
             // 
             // getNameIngredientDataGridViewTextBoxColumn
             // 
@@ -883,9 +880,9 @@
             // pricePerOneKgDataGridViewTextBoxColumn1
             // 
             this.pricePerOneKgDataGridViewTextBoxColumn1.DataPropertyName = "PricePerOneKg";
-            dataGridViewCellStyle23.Format = "C2";
-            dataGridViewCellStyle23.NullValue = "0";
-            this.pricePerOneKgDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.pricePerOneKgDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
             this.pricePerOneKgDataGridViewTextBoxColumn1.HeaderText = "Цена за один кг";
             this.pricePerOneKgDataGridViewTextBoxColumn1.Name = "pricePerOneKgDataGridViewTextBoxColumn1";
             this.pricePerOneKgDataGridViewTextBoxColumn1.ReadOnly = true;
@@ -893,9 +890,9 @@
             // normOn100PortionsDataGridViewTextBoxColumn
             // 
             this.normOn100PortionsDataGridViewTextBoxColumn.DataPropertyName = "NormOn100Portions";
-            dataGridViewCellStyle24.Format = "N2";
-            dataGridViewCellStyle24.NullValue = "0";
-            this.normOn100PortionsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.normOn100PortionsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.normOn100PortionsDataGridViewTextBoxColumn.HeaderText = "Норма, кг";
             this.normOn100PortionsDataGridViewTextBoxColumn.Name = "normOn100PortionsDataGridViewTextBoxColumn";
             this.normOn100PortionsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -903,9 +900,9 @@
             // totalInItemDataGridViewTextBoxColumn
             // 
             this.totalInItemDataGridViewTextBoxColumn.DataPropertyName = "TotalInItem";
-            dataGridViewCellStyle25.Format = "C2";
-            dataGridViewCellStyle25.NullValue = "0";
-            this.totalInItemDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle9.Format = "C2";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.totalInItemDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.totalInItemDataGridViewTextBoxColumn.HeaderText = "Сумма";
             this.totalInItemDataGridViewTextBoxColumn.Name = "totalInItemDataGridViewTextBoxColumn";
             this.totalInItemDataGridViewTextBoxColumn.ReadOnly = true;
@@ -945,7 +942,6 @@
             // dishItemBindingSource
             // 
             this.dishItemBindingSource.DataSource = typeof(MenuApplication.Domain.DishItem);
-            this.dishItemBindingSource.CurrentChanged += new System.EventHandler(this.dishItemBindingSource_CurrentChanged);
             // 
             // cbExpandedNameDish
             // 
@@ -957,7 +953,6 @@
             this.cbExpandedNameDish.Name = "cbExpandedNameDish";
             this.cbExpandedNameDish.Size = new System.Drawing.Size(736, 21);
             this.cbExpandedNameDish.TabIndex = 15;
-            this.cbExpandedNameDish.SelectedIndexChanged += new System.EventHandler(this.cbExpandedNameDish_SelectedIndexChanged);
             // 
             // tbExpandedNameDish
             // 
@@ -1099,9 +1094,9 @@
             // massInKgDataGridViewTextBoxColumn
             // 
             this.massInKgDataGridViewTextBoxColumn.DataPropertyName = "MassInKg";
-            dataGridViewCellStyle26.Format = "N3";
-            dataGridViewCellStyle26.NullValue = "1";
-            this.massInKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle10.Format = "N3";
+            dataGridViewCellStyle10.NullValue = "1";
+            this.massInKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.massInKgDataGridViewTextBoxColumn.HeaderText = "Масса";
             this.massInKgDataGridViewTextBoxColumn.Name = "massInKgDataGridViewTextBoxColumn";
             this.massInKgDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1109,9 +1104,9 @@
             // startingPriceDataGridViewTextBoxColumn
             // 
             this.startingPriceDataGridViewTextBoxColumn.DataPropertyName = "StartingPrice";
-            dataGridViewCellStyle27.Format = "C2";
-            dataGridViewCellStyle27.NullValue = null;
-            this.startingPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle11.Format = "C2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.startingPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.startingPriceDataGridViewTextBoxColumn.HeaderText = "Цена";
             this.startingPriceDataGridViewTextBoxColumn.Name = "startingPriceDataGridViewTextBoxColumn";
             this.startingPriceDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1119,9 +1114,9 @@
             // pricePerOneKgDataGridViewTextBoxColumn
             // 
             this.pricePerOneKgDataGridViewTextBoxColumn.DataPropertyName = "PricePerOneKg";
-            dataGridViewCellStyle28.Format = "C2";
-            dataGridViewCellStyle28.NullValue = "0";
-            this.pricePerOneKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle12.Format = "C2";
+            dataGridViewCellStyle12.NullValue = "0";
+            this.pricePerOneKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.pricePerOneKgDataGridViewTextBoxColumn.HeaderText = "Цена за 1 кг";
             this.pricePerOneKgDataGridViewTextBoxColumn.Name = "pricePerOneKgDataGridViewTextBoxColumn";
             this.pricePerOneKgDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1136,9 +1131,9 @@
             // proteinDataGridViewTextBoxColumn
             // 
             this.proteinDataGridViewTextBoxColumn.DataPropertyName = "Protein";
-            dataGridViewCellStyle29.Format = "N1";
-            dataGridViewCellStyle29.NullValue = "0";
-            this.proteinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle13.Format = "N1";
+            dataGridViewCellStyle13.NullValue = "0";
+            this.proteinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.proteinDataGridViewTextBoxColumn.HeaderText = "Белок, г";
             this.proteinDataGridViewTextBoxColumn.Name = "proteinDataGridViewTextBoxColumn";
             this.proteinDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1146,9 +1141,9 @@
             // fatDataGridViewTextBoxColumn
             // 
             this.fatDataGridViewTextBoxColumn.DataPropertyName = "Fat";
-            dataGridViewCellStyle30.Format = "N1";
-            dataGridViewCellStyle30.NullValue = "0";
-            this.fatDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle14.Format = "N1";
+            dataGridViewCellStyle14.NullValue = "0";
+            this.fatDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.fatDataGridViewTextBoxColumn.HeaderText = "Жир, г";
             this.fatDataGridViewTextBoxColumn.Name = "fatDataGridViewTextBoxColumn";
             this.fatDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1156,9 +1151,9 @@
             // carbohydrateDataGridViewTextBoxColumn
             // 
             this.carbohydrateDataGridViewTextBoxColumn.DataPropertyName = "Carbohydrate";
-            dataGridViewCellStyle31.Format = "N1";
-            dataGridViewCellStyle31.NullValue = "0";
-            this.carbohydrateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle15.Format = "N1";
+            dataGridViewCellStyle15.NullValue = "0";
+            this.carbohydrateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
             this.carbohydrateDataGridViewTextBoxColumn.HeaderText = "Углеводы, г";
             this.carbohydrateDataGridViewTextBoxColumn.Name = "carbohydrateDataGridViewTextBoxColumn";
             this.carbohydrateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1166,9 +1161,9 @@
             // calorificValueDataGridViewTextBoxColumn
             // 
             this.calorificValueDataGridViewTextBoxColumn.DataPropertyName = "CalorificValue";
-            dataGridViewCellStyle32.Format = "N1";
-            dataGridViewCellStyle32.NullValue = "0";
-            this.calorificValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle16.Format = "N1";
+            dataGridViewCellStyle16.NullValue = "0";
+            this.calorificValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
             this.calorificValueDataGridViewTextBoxColumn.HeaderText = "Калорийность, ккал";
             this.calorificValueDataGridViewTextBoxColumn.Name = "calorificValueDataGridViewTextBoxColumn";
             this.calorificValueDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1195,7 +1190,6 @@
             this.comboBox1.Size = new System.Drawing.Size(219, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.ValueMember = "GetThis";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // subdivisionBindingSource
             // 

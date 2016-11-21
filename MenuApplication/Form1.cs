@@ -102,7 +102,7 @@ namespace MenuApplication
             ChiefCookerBindingSource.DataSource = _controller.GetChiefCookerAsBindingList();
 
             subdivisionBindingSource.DataSource = _controller.GetSubdivisionAsBindingList();
-
+            //
             ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x => x.NameIngredient);
             ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList().OrderBy(x => x.NameIngredient);
 
@@ -501,50 +501,6 @@ namespace MenuApplication
             //btEndRefreshDish.PerformClick();
             //btRefreshDish.PerformClick();
         }
-
-        private void tcMenu_TabIndexChanged(object sender, EventArgs e)
-        {
-            
-            //if ()
-            //{
-
-            //}
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dishItemBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ingredientBindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbExpandedNameDish_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvCalculation_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //public void df()
-        //{
-        //    tcMenu.TabPages[0].
-        //}
 
     }
 }
