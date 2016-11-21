@@ -22,6 +22,7 @@ namespace MenuApplication
         private readonly IIngredientRepositopy _IngredientController;
         private readonly IDishRepository _DishController;
         private readonly IMenuRepository _MenuController;
+        private readonly DirectoryController _DirectoryController;
         private Report _Report;
 
         /// <summary>
@@ -40,6 +41,9 @@ namespace MenuApplication
             _IngredientController = new IngredientsController();//IngredientRepository;
             _DishController = new DishController();//DishRepository;
             _MenuController = new MenuController();//MenuRepository;
+            _DirectoryController = new DirectoryController();
+            
+            
             //_SubdivisionsController = new SubdivisionController();
             //DishDataTest();
             _Report = new Report();
@@ -444,6 +448,8 @@ namespace MenuApplication
             SubdivisionController.CurrentSubdivision = CurrSubdiv;
         }
 
+        //-------------работа с справочниками-------------
+        public IEnumerable<TypeDish> GetTypeDishtAsBindingList() => _DirectoryController.TypeDishFetch();
 
     }
 }

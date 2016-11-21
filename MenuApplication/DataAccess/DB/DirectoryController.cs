@@ -16,8 +16,8 @@ namespace MenuApplication.DataAccess.DB
             context = new DB_MenuEntities();
         }
 
-
         public IEnumerable<TypeIngredient> TypeIngredientFetch() => context.TypeIngredients.ToList();
 
+        public IEnumerable<TypeDish> TypeDishFetch() => context.TypeDishes.ToList();
     }
 }

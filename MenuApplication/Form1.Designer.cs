@@ -131,6 +131,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.subdivisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbTypeDish = new System.Windows.Forms.ComboBox();
+            this.TypesDishBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMenu.SuspendLayout();
             this.tpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dishBindingSourceForCreateMenu)).BeginInit();
@@ -147,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ingredientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesDishBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tcMenu
@@ -462,6 +465,7 @@
             // 
             // tpCalculation
             // 
+            this.tpCalculation.Controls.Add(this.cbTypeDish);
             this.tpCalculation.Controls.Add(this.btDishInExcel);
             this.tpCalculation.Controls.Add(this.lbForHistoryDishes);
             this.tpCalculation.Controls.Add(this.btEndRefreshDish);
@@ -507,9 +511,9 @@
             this.lbForHistoryDishes.DataSource = this.dishBindingSource;
             this.lbForHistoryDishes.DisplayMember = "DateCreate";
             this.lbForHistoryDishes.FormattingEnabled = true;
-            this.lbForHistoryDishes.Location = new System.Drawing.Point(768, 113);
+            this.lbForHistoryDishes.Location = new System.Drawing.Point(768, 152);
             this.lbForHistoryDishes.Name = "lbForHistoryDishes";
-            this.lbForHistoryDishes.Size = new System.Drawing.Size(173, 316);
+            this.lbForHistoryDishes.Size = new System.Drawing.Size(173, 277);
             this.lbForHistoryDishes.TabIndex = 22;
             this.lbForHistoryDishes.SelectedIndexChanged += new System.EventHandler(this.lbForHistoryDishes_SelectedIndexChanged);
             // 
@@ -595,7 +599,7 @@
             // 
             this.tbWeightDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbWeightDish.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishBindingSource, "WeightDish", true));
-            this.tbWeightDish.Location = new System.Drawing.Point(588, 81);
+            this.tbWeightDish.Location = new System.Drawing.Point(593, 81);
             this.tbWeightDish.Name = "tbWeightDish";
             this.tbWeightDish.Size = new System.Drawing.Size(100, 20);
             this.tbWeightDish.TabIndex = 12;
@@ -604,7 +608,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(469, 85);
+            this.label5.Location = new System.Drawing.Point(474, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 13);
             this.label5.TabIndex = 11;
@@ -1063,6 +1067,14 @@
             this.subdivisionBindingSource.DataSource = typeof(MenuApplication.Subdivision);
             this.subdivisionBindingSource.CurrentChanged += new System.EventHandler(this.subdivisionBindingSource_CurrentChanged);
             // 
+            // cbTypeDish
+            // 
+            this.cbTypeDish.FormattingEnabled = true;
+            this.cbTypeDish.Location = new System.Drawing.Point(768, 113);
+            this.cbTypeDish.Name = "cbTypeDish";
+            this.cbTypeDish.Size = new System.Drawing.Size(173, 21);
+            this.cbTypeDish.TabIndex = 24;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1093,6 +1105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ingredientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesDishBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1188,6 +1201,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fatOn100PortionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn carbohydrateOn100PortionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn calorificValueOn100PortionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbTypeDish;
+        private System.Windows.Forms.BindingSource TypesDishBindingSource;
     }
 }
 
