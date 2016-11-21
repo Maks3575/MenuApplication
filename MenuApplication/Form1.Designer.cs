@@ -29,24 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcMenu = new System.Windows.Forms.TabControl();
             this.tpMenu = new System.Windows.Forms.TabPage();
+            this.cbCalculator = new System.Windows.Forms.ComboBox();
+            this.CalculatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbChiefCooker = new System.Windows.Forms.ComboBox();
+            this.ChiefCookerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbTypeMenu = new System.Windows.Forms.ComboBox();
+            this.TypesMenuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbCalculator = new System.Windows.Forms.TextBox();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbChiefCooker = new System.Windows.Forms.TextBox();
+            this.tbTypeMenu = new System.Windows.Forms.TextBox();
             this.btBrokerashInExcel = new System.Windows.Forms.Button();
             this.btMenuInExcel = new System.Windows.Forms.Button();
             this.btAddDishInMenu = new System.Windows.Forms.Button();
@@ -56,7 +69,6 @@
             this.btEndCreatingMenu = new System.Windows.Forms.Button();
             this.btStartEditingMenu = new System.Windows.Forms.Button();
             this.lbMenu = new System.Windows.Forms.ListBox();
-            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.nameDishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weightDishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +87,10 @@
             this.DishBindingSourceForMenu = new System.Windows.Forms.BindingSource(this.components);
             this.dtpMenu = new System.Windows.Forms.DateTimePicker();
             this.tpCalculation = new System.Windows.Forms.TabPage();
+            this.tbTypeDish = new System.Windows.Forms.TextBox();
+            this.ALLDishBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbTypeDish = new System.Windows.Forms.ComboBox();
+            this.TypesDishBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btDishInExcel = new System.Windows.Forms.Button();
             this.lbForHistoryDishes = new System.Windows.Forms.ListBox();
             this.dishBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -95,9 +111,8 @@
             this.tbNameDish = new System.Windows.Forms.TextBox();
             this.dtpRecord = new System.Windows.Forms.DateTimePicker();
             this.dgvCalculation = new System.Windows.Forms.DataGridView();
-            this.ingredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ingredientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Product = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ingredientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.getNameIngredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricePerOneKgDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.normOn100PortionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,7 +123,6 @@
             this.calorificValueOn100PortionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbExpandedNameDish = new System.Windows.Forms.ComboBox();
-            this.ALLDishBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbExpandedNameDish = new System.Windows.Forms.TextBox();
             this.tpRegistry = new System.Windows.Forms.TabPage();
             this.btRegisterInExcel = new System.Windows.Forms.Button();
@@ -131,25 +145,26 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.subdivisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbTypeDish = new System.Windows.Forms.ComboBox();
-            this.TypesDishBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMenu.SuspendLayout();
             this.tpMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dishBindingSourceForCreateMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CalculatorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChiefCookerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesMenuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dishBindingSourceForCreateMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DishBindingSourceForMenu)).BeginInit();
             this.tpCalculation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ALLDishBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesDishBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalculation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishItemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ALLDishBindingSource)).BeginInit();
             this.tpRegistry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypesDishBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tcMenu
@@ -169,6 +184,15 @@
             // 
             // tpMenu
             // 
+            this.tpMenu.Controls.Add(this.cbCalculator);
+            this.tpMenu.Controls.Add(this.cbChiefCooker);
+            this.tpMenu.Controls.Add(this.cbTypeMenu);
+            this.tpMenu.Controls.Add(this.label11);
+            this.tpMenu.Controls.Add(this.label9);
+            this.tpMenu.Controls.Add(this.label8);
+            this.tpMenu.Controls.Add(this.tbCalculator);
+            this.tpMenu.Controls.Add(this.tbChiefCooker);
+            this.tpMenu.Controls.Add(this.tbTypeMenu);
             this.tpMenu.Controls.Add(this.btBrokerashInExcel);
             this.tpMenu.Controls.Add(this.btMenuInExcel);
             this.tpMenu.Controls.Add(this.btAddDishInMenu);
@@ -187,6 +211,108 @@
             this.tpMenu.Text = "Меню";
             this.tpMenu.UseVisualStyleBackColor = true;
             this.tpMenu.Click += new System.EventHandler(this.tpMenu_Click);
+            // 
+            // cbCalculator
+            // 
+            this.cbCalculator.DataSource = this.CalculatorBindingSource;
+            this.cbCalculator.DisplayMember = "FullName";
+            this.cbCalculator.FormattingEnabled = true;
+            this.cbCalculator.Location = new System.Drawing.Point(678, 18);
+            this.cbCalculator.Name = "cbCalculator";
+            this.cbCalculator.Size = new System.Drawing.Size(227, 21);
+            this.cbCalculator.TabIndex = 19;
+            this.cbCalculator.ValueMember = "GetThis";
+            // 
+            // CalculatorBindingSource
+            // 
+            this.CalculatorBindingSource.DataSource = typeof(MenuApplication.ModelDB.Employee);
+            // 
+            // cbChiefCooker
+            // 
+            this.cbChiefCooker.DataSource = this.ChiefCookerBindingSource;
+            this.cbChiefCooker.DisplayMember = "FullName";
+            this.cbChiefCooker.FormattingEnabled = true;
+            this.cbChiefCooker.Location = new System.Drawing.Point(376, 17);
+            this.cbChiefCooker.Name = "cbChiefCooker";
+            this.cbChiefCooker.Size = new System.Drawing.Size(242, 21);
+            this.cbChiefCooker.TabIndex = 17;
+            this.cbChiefCooker.ValueMember = "GetThis";
+            // 
+            // ChiefCookerBindingSource
+            // 
+            this.ChiefCookerBindingSource.DataSource = typeof(MenuApplication.ModelDB.Employee);
+            // 
+            // cbTypeMenu
+            // 
+            this.cbTypeMenu.DataSource = this.TypesMenuBindingSource;
+            this.cbTypeMenu.DisplayMember = "NameTypeMenu";
+            this.cbTypeMenu.FormattingEnabled = true;
+            this.cbTypeMenu.Location = new System.Drawing.Point(71, 18);
+            this.cbTypeMenu.Name = "cbTypeMenu";
+            this.cbTypeMenu.Size = new System.Drawing.Size(124, 21);
+            this.cbTypeMenu.TabIndex = 16;
+            this.cbTypeMenu.ValueMember = "GetThis";
+            // 
+            // TypesMenuBindingSource
+            // 
+            this.TypesMenuBindingSource.DataSource = typeof(MenuApplication.ModelDB.TypeMenu);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(248, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Заведующий столовой";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(635, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Калькулятор";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Тип меню";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // tbCalculator
+            // 
+            this.tbCalculator.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.menuBindingSource, "Calculator", true));
+            this.tbCalculator.Location = new System.Drawing.Point(713, 18);
+            this.tbCalculator.Name = "tbCalculator";
+            this.tbCalculator.Size = new System.Drawing.Size(228, 20);
+            this.tbCalculator.TabIndex = 11;
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataSource = typeof(MenuApplication.Domain.Menu);
+            this.menuBindingSource.PositionChanged += new System.EventHandler(this.menuBindingSource_PositionChanged);
+            // 
+            // tbChiefCooker
+            // 
+            this.tbChiefCooker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.menuBindingSource, "ChiefCooker", true));
+            this.tbChiefCooker.Location = new System.Drawing.Point(376, 18);
+            this.tbChiefCooker.Name = "tbChiefCooker";
+            this.tbChiefCooker.Size = new System.Drawing.Size(174, 20);
+            this.tbChiefCooker.TabIndex = 10;
+            // 
+            // tbTypeMenu
+            // 
+            this.tbTypeMenu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.menuBindingSource, "TypeMenu", true));
+            this.tbTypeMenu.Location = new System.Drawing.Point(71, 18);
+            this.tbTypeMenu.Name = "tbTypeMenu";
+            this.tbTypeMenu.Size = new System.Drawing.Size(124, 20);
+            this.tbTypeMenu.TabIndex = 9;
             // 
             // btBrokerashInExcel
             // 
@@ -212,7 +338,7 @@
             // 
             // btAddDishInMenu
             // 
-            this.btAddDishInMenu.Location = new System.Drawing.Point(849, 20);
+            this.btAddDishInMenu.Location = new System.Drawing.Point(849, 44);
             this.btAddDishInMenu.Name = "btAddDishInMenu";
             this.btAddDishInMenu.Size = new System.Drawing.Size(96, 23);
             this.btAddDishInMenu.TabIndex = 7;
@@ -226,7 +352,7 @@
             this.cbCreateMenu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbCreateMenu.DataSource = this.dishBindingSourceForCreateMenu;
             this.cbCreateMenu.DisplayMember = "ExpandedNameDish";
-            this.cbCreateMenu.Location = new System.Drawing.Point(201, 22);
+            this.cbCreateMenu.Location = new System.Drawing.Point(201, 46);
             this.cbCreateMenu.Name = "cbCreateMenu";
             this.cbCreateMenu.Size = new System.Drawing.Size(642, 21);
             this.cbCreateMenu.TabIndex = 6;
@@ -275,16 +401,11 @@
             this.lbMenu.DataSource = this.menuBindingSource;
             this.lbMenu.DisplayMember = "DateCreateMenu";
             this.lbMenu.FormattingEnabled = true;
-            this.lbMenu.Location = new System.Drawing.Point(9, 47);
+            this.lbMenu.Location = new System.Drawing.Point(9, 80);
             this.lbMenu.Name = "lbMenu";
-            this.lbMenu.Size = new System.Drawing.Size(186, 381);
+            this.lbMenu.Size = new System.Drawing.Size(186, 316);
             this.lbMenu.TabIndex = 2;
             this.lbMenu.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataSource = typeof(MenuApplication.Domain.Menu);
-            this.menuBindingSource.PositionChanged += new System.EventHandler(this.menuBindingSource_PositionChanged);
             // 
             // dgvMenu
             // 
@@ -312,10 +433,10 @@
             this.dateCreateDataGridViewTextBoxColumn,
             this.numberDocDataGridViewTextBoxColumn});
             this.dgvMenu.DataSource = this.DishBindingSourceForMenu;
-            this.dgvMenu.Location = new System.Drawing.Point(201, 47);
+            this.dgvMenu.Location = new System.Drawing.Point(201, 80);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.ReadOnly = true;
-            this.dgvMenu.Size = new System.Drawing.Size(748, 349);
+            this.dgvMenu.Size = new System.Drawing.Size(748, 316);
             this.dgvMenu.TabIndex = 1;
             this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
             // 
@@ -332,9 +453,9 @@
             // weightDishDataGridViewTextBoxColumn
             // 
             this.weightDishDataGridViewTextBoxColumn.DataPropertyName = "WeightDish";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.weightDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Format = "N2";
+            dataGridViewCellStyle17.NullValue = "0";
+            this.weightDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
             this.weightDishDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.weightDishDataGridViewTextBoxColumn.HeaderText = "Выход, г";
             this.weightDishDataGridViewTextBoxColumn.Name = "weightDishDataGridViewTextBoxColumn";
@@ -343,9 +464,9 @@
             // priceDishDataGridViewTextBoxColumn
             // 
             this.priceDishDataGridViewTextBoxColumn.DataPropertyName = "PriceDish";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.priceDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Format = "C2";
+            dataGridViewCellStyle18.NullValue = "0";
+            this.priceDishDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
             this.priceDishDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.priceDishDataGridViewTextBoxColumn.HeaderText = "Цена";
             this.priceDishDataGridViewTextBoxColumn.Name = "priceDishDataGridViewTextBoxColumn";
@@ -354,9 +475,9 @@
             // proteinOnOnePortionDataGridViewTextBoxColumn
             // 
             this.proteinOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "ProteinOnOnePortion";
-            dataGridViewCellStyle3.Format = "N1";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.proteinOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Format = "N1";
+            dataGridViewCellStyle19.NullValue = "0";
+            this.proteinOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
             this.proteinOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.proteinOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Белки, г";
             this.proteinOnOnePortionDataGridViewTextBoxColumn.Name = "proteinOnOnePortionDataGridViewTextBoxColumn";
@@ -365,9 +486,9 @@
             // fatOnOnePortionDataGridViewTextBoxColumn
             // 
             this.fatOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "FatOnOnePortion";
-            dataGridViewCellStyle4.Format = "N1";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.fatOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Format = "N1";
+            dataGridViewCellStyle20.NullValue = "0";
+            this.fatOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
             this.fatOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.fatOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Жиры, г";
             this.fatOnOnePortionDataGridViewTextBoxColumn.Name = "fatOnOnePortionDataGridViewTextBoxColumn";
@@ -376,9 +497,9 @@
             // carbohydrateOnOnePortionDataGridViewTextBoxColumn
             // 
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "CarbohydrateOnOnePortion";
-            dataGridViewCellStyle5.Format = "N1";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle21.Format = "N1";
+            dataGridViewCellStyle21.NullValue = "0";
+            this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Углеводы, г";
             this.carbohydrateOnOnePortionDataGridViewTextBoxColumn.Name = "carbohydrateOnOnePortionDataGridViewTextBoxColumn";
@@ -387,9 +508,9 @@
             // calorificValueOnOnePortionDataGridViewTextBoxColumn
             // 
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.DataPropertyName = "CalorificValueOnOnePortion";
-            dataGridViewCellStyle6.Format = "N1";
-            dataGridViewCellStyle6.NullValue = "0";
-            this.calorificValueOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle22.Format = "N1";
+            dataGridViewCellStyle22.NullValue = "0";
+            this.calorificValueOnOnePortionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.FillWeight = 17.97155F;
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.HeaderText = "Калорийность, ккал";
             this.calorificValueOnOnePortionDataGridViewTextBoxColumn.Name = "calorificValueOnOnePortionDataGridViewTextBoxColumn";
@@ -458,13 +579,14 @@
             // dtpMenu
             // 
             this.dtpMenu.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.menuBindingSource, "DateCreateMenu", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "D"));
-            this.dtpMenu.Location = new System.Drawing.Point(9, 22);
+            this.dtpMenu.Location = new System.Drawing.Point(9, 47);
             this.dtpMenu.Name = "dtpMenu";
             this.dtpMenu.Size = new System.Drawing.Size(186, 20);
             this.dtpMenu.TabIndex = 0;
             // 
             // tpCalculation
             // 
+            this.tpCalculation.Controls.Add(this.tbTypeDish);
             this.tpCalculation.Controls.Add(this.cbTypeDish);
             this.tpCalculation.Controls.Add(this.btDishInExcel);
             this.tpCalculation.Controls.Add(this.lbForHistoryDishes);
@@ -493,6 +615,36 @@
             this.tpCalculation.TabIndex = 2;
             this.tpCalculation.Text = "Калькуляция";
             this.tpCalculation.UseVisualStyleBackColor = true;
+            // 
+            // tbTypeDish
+            // 
+            this.tbTypeDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTypeDish.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ALLDishBindingSource, "TypeDish", true));
+            this.tbTypeDish.Location = new System.Drawing.Point(765, 114);
+            this.tbTypeDish.Name = "tbTypeDish";
+            this.tbTypeDish.Size = new System.Drawing.Size(173, 20);
+            this.tbTypeDish.TabIndex = 25;
+            // 
+            // ALLDishBindingSource
+            // 
+            this.ALLDishBindingSource.DataSource = typeof(MenuApplication.Domain.IDish);
+            this.ALLDishBindingSource.PositionChanged += new System.EventHandler(this.ALLDishBindingSource_PositionChanged);
+            // 
+            // cbTypeDish
+            // 
+            this.cbTypeDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbTypeDish.DataSource = this.TypesDishBindingSource;
+            this.cbTypeDish.DisplayMember = "NameTypeDish";
+            this.cbTypeDish.FormattingEnabled = true;
+            this.cbTypeDish.Location = new System.Drawing.Point(765, 113);
+            this.cbTypeDish.Name = "cbTypeDish";
+            this.cbTypeDish.Size = new System.Drawing.Size(173, 21);
+            this.cbTypeDish.TabIndex = 24;
+            this.cbTypeDish.ValueMember = "GetThis";
+            // 
+            // TypesDishBindingSource
+            // 
+            this.TypesDishBindingSource.DataSource = typeof(MenuApplication.ModelDB.TypeDish);
             // 
             // btDishInExcel
             // 
@@ -686,7 +838,6 @@
             this.dgvCalculation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCalculation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCalculation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ingredientDataGridViewTextBoxColumn,
             this.Product,
             this.getNameIngredientDataGridViewTextBoxColumn,
             this.pricePerOneKgDataGridViewTextBoxColumn1,
@@ -706,31 +857,20 @@
             this.dgvCalculation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalculation_CellContentClick);
             this.dgvCalculation.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvCalculation_DataError);
             // 
-            // ingredientDataGridViewTextBoxColumn
-            // 
-            this.ingredientDataGridViewTextBoxColumn.DataSource = this.ingredientBindingSource1;
-            this.ingredientDataGridViewTextBoxColumn.DisplayMember = "NameIngredient";
-            this.ingredientDataGridViewTextBoxColumn.HeaderText = "Наименование ингредиента";
-            this.ingredientDataGridViewTextBoxColumn.Name = "ingredientDataGridViewTextBoxColumn";
-            this.ingredientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ingredientDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ingredientDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ingredientDataGridViewTextBoxColumn.ValueMember = "GetThis";
-            // 
-            // ingredientBindingSource1
-            // 
-            this.ingredientBindingSource1.DataSource = typeof(MenuApplication.Domain.IIngredient);
-            this.ingredientBindingSource1.CurrentChanged += new System.EventHandler(this.ingredientBindingSource1_CurrentChanged);
-            // 
             // Product
             // 
             this.Product.DataPropertyName = "Ingredient";
             this.Product.DataSource = this.ingredientBindingSource1;
             this.Product.DisplayMember = "NameIngredient";
-            this.Product.HeaderText = "NI";
+            this.Product.HeaderText = "Наименование ингредиента";
             this.Product.Name = "Product";
             this.Product.ReadOnly = true;
             this.Product.ValueMember = "GetThis";
+            // 
+            // ingredientBindingSource1
+            // 
+            this.ingredientBindingSource1.DataSource = typeof(MenuApplication.Domain.IIngredient);
+            this.ingredientBindingSource1.CurrentChanged += new System.EventHandler(this.ingredientBindingSource1_CurrentChanged);
             // 
             // getNameIngredientDataGridViewTextBoxColumn
             // 
@@ -743,9 +883,9 @@
             // pricePerOneKgDataGridViewTextBoxColumn1
             // 
             this.pricePerOneKgDataGridViewTextBoxColumn1.DataPropertyName = "PricePerOneKg";
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.pricePerOneKgDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle23.Format = "C2";
+            dataGridViewCellStyle23.NullValue = "0";
+            this.pricePerOneKgDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle23;
             this.pricePerOneKgDataGridViewTextBoxColumn1.HeaderText = "Цена за один кг";
             this.pricePerOneKgDataGridViewTextBoxColumn1.Name = "pricePerOneKgDataGridViewTextBoxColumn1";
             this.pricePerOneKgDataGridViewTextBoxColumn1.ReadOnly = true;
@@ -753,9 +893,9 @@
             // normOn100PortionsDataGridViewTextBoxColumn
             // 
             this.normOn100PortionsDataGridViewTextBoxColumn.DataPropertyName = "NormOn100Portions";
-            dataGridViewCellStyle8.Format = "N2";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.normOn100PortionsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle24.Format = "N2";
+            dataGridViewCellStyle24.NullValue = "0";
+            this.normOn100PortionsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
             this.normOn100PortionsDataGridViewTextBoxColumn.HeaderText = "Норма, кг";
             this.normOn100PortionsDataGridViewTextBoxColumn.Name = "normOn100PortionsDataGridViewTextBoxColumn";
             this.normOn100PortionsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -763,9 +903,9 @@
             // totalInItemDataGridViewTextBoxColumn
             // 
             this.totalInItemDataGridViewTextBoxColumn.DataPropertyName = "TotalInItem";
-            dataGridViewCellStyle9.Format = "C2";
-            dataGridViewCellStyle9.NullValue = "0";
-            this.totalInItemDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle25.Format = "C2";
+            dataGridViewCellStyle25.NullValue = "0";
+            this.totalInItemDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle25;
             this.totalInItemDataGridViewTextBoxColumn.HeaderText = "Сумма";
             this.totalInItemDataGridViewTextBoxColumn.Name = "totalInItemDataGridViewTextBoxColumn";
             this.totalInItemDataGridViewTextBoxColumn.ReadOnly = true;
@@ -818,11 +958,6 @@
             this.cbExpandedNameDish.Size = new System.Drawing.Size(736, 21);
             this.cbExpandedNameDish.TabIndex = 15;
             this.cbExpandedNameDish.SelectedIndexChanged += new System.EventHandler(this.cbExpandedNameDish_SelectedIndexChanged);
-            // 
-            // ALLDishBindingSource
-            // 
-            this.ALLDishBindingSource.DataSource = typeof(MenuApplication.Domain.IDish);
-            this.ALLDishBindingSource.PositionChanged += new System.EventHandler(this.ALLDishBindingSource_PositionChanged);
             // 
             // tbExpandedNameDish
             // 
@@ -964,9 +1099,9 @@
             // massInKgDataGridViewTextBoxColumn
             // 
             this.massInKgDataGridViewTextBoxColumn.DataPropertyName = "MassInKg";
-            dataGridViewCellStyle10.Format = "N3";
-            dataGridViewCellStyle10.NullValue = "1";
-            this.massInKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle26.Format = "N3";
+            dataGridViewCellStyle26.NullValue = "1";
+            this.massInKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
             this.massInKgDataGridViewTextBoxColumn.HeaderText = "Масса";
             this.massInKgDataGridViewTextBoxColumn.Name = "massInKgDataGridViewTextBoxColumn";
             this.massInKgDataGridViewTextBoxColumn.ReadOnly = true;
@@ -974,9 +1109,9 @@
             // startingPriceDataGridViewTextBoxColumn
             // 
             this.startingPriceDataGridViewTextBoxColumn.DataPropertyName = "StartingPrice";
-            dataGridViewCellStyle11.Format = "C2";
-            dataGridViewCellStyle11.NullValue = null;
-            this.startingPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle27.Format = "C2";
+            dataGridViewCellStyle27.NullValue = null;
+            this.startingPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
             this.startingPriceDataGridViewTextBoxColumn.HeaderText = "Цена";
             this.startingPriceDataGridViewTextBoxColumn.Name = "startingPriceDataGridViewTextBoxColumn";
             this.startingPriceDataGridViewTextBoxColumn.ReadOnly = true;
@@ -984,9 +1119,9 @@
             // pricePerOneKgDataGridViewTextBoxColumn
             // 
             this.pricePerOneKgDataGridViewTextBoxColumn.DataPropertyName = "PricePerOneKg";
-            dataGridViewCellStyle12.Format = "C2";
-            dataGridViewCellStyle12.NullValue = "0";
-            this.pricePerOneKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle28.Format = "C2";
+            dataGridViewCellStyle28.NullValue = "0";
+            this.pricePerOneKgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
             this.pricePerOneKgDataGridViewTextBoxColumn.HeaderText = "Цена за 1 кг";
             this.pricePerOneKgDataGridViewTextBoxColumn.Name = "pricePerOneKgDataGridViewTextBoxColumn";
             this.pricePerOneKgDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1001,9 +1136,9 @@
             // proteinDataGridViewTextBoxColumn
             // 
             this.proteinDataGridViewTextBoxColumn.DataPropertyName = "Protein";
-            dataGridViewCellStyle13.Format = "N1";
-            dataGridViewCellStyle13.NullValue = "0";
-            this.proteinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle29.Format = "N1";
+            dataGridViewCellStyle29.NullValue = "0";
+            this.proteinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
             this.proteinDataGridViewTextBoxColumn.HeaderText = "Белок, г";
             this.proteinDataGridViewTextBoxColumn.Name = "proteinDataGridViewTextBoxColumn";
             this.proteinDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1011,9 +1146,9 @@
             // fatDataGridViewTextBoxColumn
             // 
             this.fatDataGridViewTextBoxColumn.DataPropertyName = "Fat";
-            dataGridViewCellStyle14.Format = "N1";
-            dataGridViewCellStyle14.NullValue = "0";
-            this.fatDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle30.Format = "N1";
+            dataGridViewCellStyle30.NullValue = "0";
+            this.fatDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
             this.fatDataGridViewTextBoxColumn.HeaderText = "Жир, г";
             this.fatDataGridViewTextBoxColumn.Name = "fatDataGridViewTextBoxColumn";
             this.fatDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1021,9 +1156,9 @@
             // carbohydrateDataGridViewTextBoxColumn
             // 
             this.carbohydrateDataGridViewTextBoxColumn.DataPropertyName = "Carbohydrate";
-            dataGridViewCellStyle15.Format = "N1";
-            dataGridViewCellStyle15.NullValue = "0";
-            this.carbohydrateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle31.Format = "N1";
+            dataGridViewCellStyle31.NullValue = "0";
+            this.carbohydrateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle31;
             this.carbohydrateDataGridViewTextBoxColumn.HeaderText = "Углеводы, г";
             this.carbohydrateDataGridViewTextBoxColumn.Name = "carbohydrateDataGridViewTextBoxColumn";
             this.carbohydrateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1031,9 +1166,9 @@
             // calorificValueDataGridViewTextBoxColumn
             // 
             this.calorificValueDataGridViewTextBoxColumn.DataPropertyName = "CalorificValue";
-            dataGridViewCellStyle16.Format = "N1";
-            dataGridViewCellStyle16.NullValue = "0";
-            this.calorificValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle32.Format = "N1";
+            dataGridViewCellStyle32.NullValue = "0";
+            this.calorificValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle32;
             this.calorificValueDataGridViewTextBoxColumn.HeaderText = "Калорийность, ккал";
             this.calorificValueDataGridViewTextBoxColumn.Name = "calorificValueDataGridViewTextBoxColumn";
             this.calorificValueDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1067,14 +1202,6 @@
             this.subdivisionBindingSource.DataSource = typeof(MenuApplication.Subdivision);
             this.subdivisionBindingSource.CurrentChanged += new System.EventHandler(this.subdivisionBindingSource_CurrentChanged);
             // 
-            // cbTypeDish
-            // 
-            this.cbTypeDish.FormattingEnabled = true;
-            this.cbTypeDish.Location = new System.Drawing.Point(768, 113);
-            this.cbTypeDish.Name = "cbTypeDish";
-            this.cbTypeDish.Size = new System.Drawing.Size(173, 21);
-            this.cbTypeDish.TabIndex = 24;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1090,22 +1217,26 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tcMenu.ResumeLayout(false);
             this.tpMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dishBindingSourceForCreateMenu)).EndInit();
+            this.tpMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CalculatorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChiefCookerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesMenuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dishBindingSourceForCreateMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DishBindingSourceForMenu)).EndInit();
             this.tpCalculation.ResumeLayout(false);
             this.tpCalculation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ALLDishBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesDishBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalculation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishItemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ALLDishBindingSource)).EndInit();
             this.tpRegistry.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ingredientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypesDishBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1191,7 +1322,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource subdivisionBindingSource;
         private System.Windows.Forms.Button btBrokerashInExcel;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ingredientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbTypeDish;
+        private System.Windows.Forms.BindingSource TypesDishBindingSource;
+        private System.Windows.Forms.TextBox tbTypeDish;
         private System.Windows.Forms.DataGridViewComboBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn getNameIngredientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricePerOneKgDataGridViewTextBoxColumn1;
@@ -1201,8 +1334,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fatOn100PortionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn carbohydrateOn100PortionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn calorificValueOn100PortionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox cbTypeDish;
-        private System.Windows.Forms.BindingSource TypesDishBindingSource;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbCalculator;
+        private System.Windows.Forms.TextBox tbChiefCooker;
+        private System.Windows.Forms.TextBox tbTypeMenu;
+        private System.Windows.Forms.ComboBox cbTypeMenu;
+        private System.Windows.Forms.BindingSource TypesMenuBindingSource;
+        private System.Windows.Forms.ComboBox cbChiefCooker;
+        private System.Windows.Forms.BindingSource ChiefCookerBindingSource;
+        private System.Windows.Forms.BindingSource CalculatorBindingSource;
+        private System.Windows.Forms.ComboBox cbCalculator;
     }
 }
 

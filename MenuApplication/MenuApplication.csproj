@@ -91,6 +91,7 @@
     <Compile Include="Domain\Ingredient.cs" />
     <Compile Include="Domain\Menu.cs" />
     <Compile Include="ModelDB\Dish.Part.cs" />
+    <Compile Include="ModelDB\Employee.Part.cs" />
     <Compile Include="ModelDB\Menu.Part.cs" />
     <Compile Include="ModelDB\Product.Part.cs" />
     <Compile Include="Form1.cs">
@@ -174,6 +175,7 @@
     <Compile Include="ModelDB\TypeDish.cs">
       <DependentUpon>MenuDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelDB\TypeDish.Part.cs" />
     <Compile Include="ModelDB\TypeIngredient.cs">
       <DependentUpon>MenuDB.tt</DependentUpon>
     </Compile>
@@ -181,6 +183,7 @@
     <Compile Include="ModelDB\TypeMenu.cs">
       <DependentUpon>MenuDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelDB\TypeMenu.Part.cs" />
     <Compile Include="ModelDB\VIEW_EmployeePosition.cs">
       <DependentUpon>MenuDB.tt</DependentUpon>
     </Compile>
@@ -235,8 +238,11 @@
     <None Include="Properties\DataSources\MenuApplication.Domain.IIngredient.datasource" />
     <None Include="Properties\DataSources\MenuApplication.Domain.Ingredient.datasource" />
     <None Include="Properties\DataSources\MenuApplication.Domain.Menu.datasource" />
+    <None Include="Properties\DataSources\MenuApplication.ModelDB.Employee.datasource" />
     <None Include="Properties\DataSources\MenuApplication.ModelDB.Product.datasource" />
+    <None Include="Properties\DataSources\MenuApplication.ModelDB.TypeDish.datasource" />
     <None Include="Properties\DataSources\MenuApplication.ModelDB.TypeIngredient.datasource" />
+    <None Include="Properties\DataSources\MenuApplication.ModelDB.TypeMenu.datasource" />
     <None Include="Properties\DataSources\Subdivision.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

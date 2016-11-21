@@ -449,7 +449,13 @@ namespace MenuApplication
         }
 
         //-------------работа с справочниками-------------
-        public IEnumerable<TypeDish> GetTypeDishtAsBindingList() => _DirectoryController.TypeDishFetch();
+        public IEnumerable<ModelDB.TypeDish> GetTypeDishtAsBindingList() => _DirectoryController.TypeDishFetch();
+
+        public IEnumerable<ModelDB.TypeMenu> GetTypeMenuAsBindingList() => _DirectoryController.TypeMenuFetch();
+
+        public IEnumerable<ModelDB.Employee> GetCalculatorAsBindingList() => _DirectoryController.CalculatorFetch();
+
+        public IEnumerable<ModelDB.Employee> GetChiefCookerAsBindingList() => _DirectoryController.ChiefCookerFetch();
 
     }
 }

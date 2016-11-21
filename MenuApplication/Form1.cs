@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenuApplication.Domain;
 using MenuApplication.DataAccess;
+//using MenuApplication.ModelDB;
 
 namespace MenuApplication
 {
@@ -49,10 +50,14 @@ namespace MenuApplication
             if (mode)
             {
                 ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList().OrderBy(x=>x.NameIngredient);               
-            } else
+            }
+            else
             {
                 ingredientBindingSource1.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x=>x.NameIngredient);
             }
+            tbTypeDish.Visible = mode;
+            cbTypeDish.Visible = !mode;
+
             btRefreshDish.Visible = mode;
             btEndRefreshDish.Visible = false;
 
@@ -91,20 +96,15 @@ namespace MenuApplication
 
             //_controller.ChangeSubdivisionInReport(subdivisionBindingSource.Current as Subdivision)
 
+            TypesDishBindingSource.DataSource = _controller.GetTypeDishtAsBindingList();
+            TypesMenuBindingSource.DataSource = _controller.GetTypeMenuAsBindingList();
+            CalculatorBindingSource.DataSource = _controller.GetCalculatorAsBindingList();
+            ChiefCookerBindingSource.DataSource = _controller.GetChiefCookerAsBindingList();
+
             subdivisionBindingSource.DataSource = _controller.GetSubdivisionAsBindingList();
 
             ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x => x.NameIngredient);
             ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList().OrderBy(x => x.NameIngredient);
-
-
-            //CalculationChangeMode(true);
-            //ALLDishBindingSource.DataSource = _controller.GetFreshDish();
-            //dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
-            //dishItemBindingSource.DataSource = (ALLDishBindingSource.Current as IDish).DishItems;
-            //CalculationChangeMode(true);
-            //ALLDishBindingSource.DataSource = _controller.GetFreshDish();
-            //dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
-            //dishItemBindingSource.DataSource = (ALLDishBindingSource.Current as IDish).DishItems;
 
             ALLDishBindingSource.DataSource = _controller.GetFreshDish();
             dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
@@ -118,8 +118,6 @@ namespace MenuApplication
         private void dishBindingSource_PositionChanged(object sender, EventArgs e)
         {
             dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;//мб
-
-            var x = 4;
 
             //if (dishBindingSource.Count != 0)
             //{
@@ -172,7 +170,6 @@ namespace MenuApplication
             }
             _controller.EndEditingRegistryIngredients((IEnumerable<IIngredient>)ingredientBindingSource.List);
             ingredientBindingSource.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x=>x.NameIngredient);
-
 
             ingredientBindingSource1.DataSource = _controller.GetALLIngredientAsBindingList();//.OrderBy(x => x.NameIngredient);
 
@@ -262,7 +259,8 @@ namespace MenuApplication
             try
             { 
              dish.DateCreate = dtpRecord.Value;
-             dish.NumberDoc = _controller.NextNumberDocDish();
+                //dish.NumberDoc = _controller.NextNumberDocDish();
+                dish.TypeDish = TypesDishBindingSource.Current as ModelDB.TypeDish;
             _controller.AddDishInRepository(dish);//(dishBindingSource.Current as IDish);
             }
             catch
@@ -340,6 +338,8 @@ namespace MenuApplication
             dishBindingSource.DataSource = _controller.GetHistoryDish((ALLDishBindingSource.Current as IDish).ExpandedNameDish);
             dishItemBindingSource.DataSource = (dishBindingSource.Current as IDish).DishItems;
             PositionDish = ALLDishBindingSource.Position;
+
+            //TypesDishBindingSource.Position = 
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -355,6 +355,17 @@ namespace MenuApplication
         private void MenuChangeMode(bool modeMenu)
         {
             //tcMenu.Enabled = modeMenu;
+
+            tbTypeMenu.Visible = modeMenu;
+            cbTypeMenu.Visible = !modeMenu;
+
+            tbChiefCooker.Visible = modeMenu;
+            cbChiefCooker.Visible = !modeMenu;
+
+            tbCalculator.Visible = modeMenu;
+            cbCalculator.Visible = !modeMenu;
+
+
             btBrokerashInExcel.Visible = modeMenu;
             btMenuInExcel.Visible = modeMenu;
 
@@ -517,6 +528,11 @@ namespace MenuApplication
         }
 
         private void dgvCalculation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

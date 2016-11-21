@@ -25,7 +25,7 @@ namespace MenuApplication.DataAccess.DB
                 ExpandedNameDish = newDish.ExpandedNameDish,
                 WeightDish = newDish.WeightDish,
                 NumberInCollectionOfRecipes = newDish.NumberInCollectionOfRecipes,
-                TypeDish = newDish.TypeDish//надо добавить в IDish поле TypeDish
+                IDTypeDish = newDish.TypeDish.IDTypeDish//надо добавить в IDish поле TypeDish
             });
 
             context.ItemDishes.AddRange(newDish.DishItems.Select(x => new ModelDB.ItemDish()
@@ -190,7 +190,7 @@ namespace MenuApplication.DataAccess.DB
         /// Возвращает список в котором находятся все блюда в единственном самом новом экземпляре
         /// </summary>
         /// <returns>Список самых новых блюд</returns>
-        public IEnumerable<IDish> LatestDish()
+        public IEnumerable<IDish> LatestDish()//надо переделать!!!!!
         {
             return SubdivisionController.CurrentSubdivision.Menus.SelectMany(Menu => Menu.Dishes)
                 .Distinct().Select(Dish => FillingDish(Dish, CalculationDishDate(Dish, DateTime.Now)))
