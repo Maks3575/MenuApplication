@@ -38,6 +38,10 @@ namespace MenuApplication
             btStopEditing.Visible = !IngMode;
             btAddIngredient.Visible = IngMode;
 
+            tcMenu.TabPages[0].Enabled = IngMode;
+            tcMenu.TabPages[1].Enabled = IngMode;
+            tcMenu.TabPages[2].Enabled = true;
+
             dgvRegistry.Columns[0].ReadOnly = IngMode;
             dgvRegistry.Columns[4].ReadOnly = IngMode;
 
@@ -56,6 +60,11 @@ namespace MenuApplication
             {
                 ingredientBindingSource1.DataSource = _controller.GetRegistryAsBindingList().OrderBy(x=>x.NameIngredient);
             }
+
+            tcMenu.TabPages[0].Enabled = mode;
+            tcMenu.TabPages[1].Enabled = true;
+            tcMenu.TabPages[2].Enabled = mode;
+
             cbSubdivision.Enabled = mode;
 
             tbTypeDish.Visible = mode;
@@ -367,6 +376,10 @@ namespace MenuApplication
         {
             //tcMenu.Enabled = modeMenu;
             cbSubdivision.Enabled = modeMenu;
+
+            tcMenu.TabPages[0].Enabled = true;
+            tcMenu.TabPages[1].Enabled = modeMenu;
+            tcMenu.TabPages[2].Enabled = modeMenu;
 
             tbTypeMenu.Visible = modeMenu;
             cbTypeMenu.Visible = !modeMenu;

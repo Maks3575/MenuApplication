@@ -1177,7 +1177,7 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Структурное подразделение";
             // 
-            // comboBox1
+            // cbSubdivision
             // 
             this.cbSubdivision.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSubdivision.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -1185,7 +1185,7 @@
             this.cbSubdivision.DataSource = this.subdivisionBindingSource;
             this.cbSubdivision.DisplayMember = "NameSubdivision";
             this.cbSubdivision.Location = new System.Drawing.Point(730, 7);
-            this.cbSubdivision.Name = "comboBox1";
+            this.cbSubdivision.Name = "cbSubdivision";
             this.cbSubdivision.Size = new System.Drawing.Size(219, 21);
             this.cbSubdivision.TabIndex = 3;
             this.cbSubdivision.ValueMember = "GetThis";
