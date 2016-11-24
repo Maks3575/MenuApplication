@@ -108,7 +108,6 @@ namespace MenuApplication
                 IList<IIngredient> Ingredients = _IngredientController.GetRegistry().ToList();
                 IList<IDish> menu = new List<IDish>();
 
-
                 for (int j = 0; j < rand.Next(3, 10); j++)//
                     DishI.Add(new DishItem(Ingredients[rand.Next(1, Ingredients.Count - 1)], (double)(rand.Next(1, 120) / 10)));
                 //DishI1.Add(new DishItem(Ingredients[rand.Next(1, Ingredients.Count - 1)], (double)(rand.Next(1, 120) / 10)));
@@ -117,60 +116,8 @@ namespace MenuApplication
                                                 , $"Расширенное наименование блюда {i}", rand.Next(100, 9999).ToString()
                                                 , (rand.Next(10, 30) * 10).ToString(), DishI);
                 L.Add(d);
-
-
                 AddDishInRepository(d);
             }
-
-
-            //L.AddRange(_DishRepository.Fetch());// as IList<Dish>);
-            ///AddMenuInRepository(new Domain.Menu(L, DateTime.Now.AddMinutes(-5), 1));
-            //AddMenuInRepository(new Domain.Menu(L2, DateTime.Now, 2));
-
-
-
-            /*
-           IList<Dish> L = new List<Dish>();
-            IList<Dish> L2 = new List<Dish>();
-            Random rand = new Random();
-            for (int i = 0; i < 10; i++)
-            {
-                List<DishItem> DishI = new List<DishItem>();
-                List<DishItem> DishI1 = new List<DishItem>();
-                IList<IIngredient> Ingredients = _IngredientRepository.GetRegistry().ToList();
-                IList<IDish> menu = new List<IDish>();
-
-
-                for (int j = 0; j < rand.Next(3, 10); j++)//
-                    DishI.Add(new DishItem(Ingredients[rand.Next(1, Ingredients.Count - 1)], (double)(rand.Next(1, 120) / 10)));
-                //DishI1.Add(new DishItem(Ingredients[rand.Next(1, Ingredients.Count - 1)], (double)(rand.Next(1, 120) / 10)));
-
-                Dish d = new Dish(_DishRepository.NumberDocNext(), DateTime.Now.AddHours(-rand.Next(6000)), $"Наименование блюда {i}"
-                                                , $"Расширенное наименование блюда {i}", rand.Next(100, 9999).ToString()
-                                                , (rand.Next(10, 30) * 10).ToString(), DishI);
-                L.Add(d);
-
-
-                AddDishInRepository(d);
-            }
-
-
-            //L.AddRange(_DishRepository.Fetch());// as IList<Dish>);
-
-            for (int j = 0; j < rand.Next(3, 7); j++)
-            {
-                L2.Clear();
-                L2.Add(L[0]);
-                for (int i = 1; i < L.Count; i++)
-                {
-                    if (rand.Next(1, 100) < 50) { L2.Add(L[i]); }
-                }
-                AddMenuInRepository(new Domain.Menu(L2, DateTime.Now.AddMinutes(-rand.Next(2, 100)), 1));
-            }
-            //AddMenuInRepository(new Domain.Menu(L,DateTime.))
-            //AddMenuInRepository(new Domain.Menu(L2, DateTime.Now, 2));
-            //AddMenuInRepository(new Domain.Menu(L, DateTime.Now.AddMinutes(-rand.Next(2, 100)), 1));
-            */
         }
 
         public int NextNumberDocDish() => _DishController.NumberDocNext();
@@ -352,7 +299,6 @@ namespace MenuApplication
             return Dish.DishItems.All(x => _IngredientController.TestOnChangeIngredient(x.Ingredient));
         }
 
-
         /// <summary>
         /// Возвращает обновленное блюдо
         /// </summary>
@@ -381,6 +327,7 @@ namespace MenuApplication
                 return (new Domain.Dish(dish,dt,NewListDI));
             }
         }
+
         /// <summary>
         /// Проверка на уникальность расширенного названия блюда
         /// </summary>
@@ -407,14 +354,6 @@ namespace MenuApplication
             if (menu==null)
                 throw new ArgumentNullException("NewMenu");
             _MenuController.Add(menu);
-            //foreach (Domain.Dish dish in menu.Dishs)
-            //{
-            //    if (!_DishController.CheckOnContain(dish))
-            //    {
-            //        _DishController.Add(dish);
-
-            //    }
-            //}
         }
 
         /// <summary>

@@ -16,7 +16,10 @@ namespace MenuApplication.DataAccess.DB
         {
             
         }
-
+        /// <summary>
+        /// Добавление блюда
+        /// </summary>
+        /// <param name="newDish">Добавляемое блюдо</param>
         public void Add(IDish newDish)
         {
             var Dish = Context.context.Dishes.Add(new ModelDB.Dish()
@@ -37,12 +40,16 @@ namespace MenuApplication.DataAccess.DB
             Context.context.SaveChanges();
             Context.context.Dispose();
             Context.context = new DB_MenuEntities();
-
         }
 
         public bool CheckOnContain(IDish dish) => Context.context.Dishes
             .Select(x => x.ExpandedNameDish).Contains(dish.ExpandedNameDish);
-
+        
+        /// <summary>
+        /// Проверка на уникальность расширенного названия блюда TRUE если не уникально
+        /// </summary>
+        /// <param name="ExpandedNameDish">Проверяемое расширенное наименование блюда</param>
+        /// <returns>TRUE если не уникально</returns>
         public bool CheckOnExpandedNameDish(string ExpandedNameDish)=> Context.context.Dishes
             .Select(x => x.ExpandedNameDish).Contains(ExpandedNameDish);
 
@@ -80,7 +87,9 @@ namespace MenuApplication.DataAccess.DB
             DateTime CreateDate;
 
             //находим все даты использования данного блюда
-            List<DateTime> CreateDates = SubdivisionController.CurrentSubdivision.Menus
+            List<DateTime> CreateDates = Context.context.Subdivisions
+                .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+                .Menus
                 .Where(Menu => Menu.UseDate <= DT && Menu.Dishes.Any(dish => dish.ExpandedNameDish == DishDB.ExpandedNameDish))
                 .OrderByDescending(x => x.UseDate).Select(x => x.UseDate).ToList();
 
@@ -142,7 +151,6 @@ namespace MenuApplication.DataAccess.DB
             {
                 return new Domain.Dish()
                 {
-                    //DateCreate = CalculationDishDate(DishDB, DT), //заменил так как перед ее вызовом дата всегда уже найдена
                     DateCreate = DT,
                     NumberDish = DishDB.IDDish,
                     NameDish = DishDB.NameDish,
@@ -166,7 +174,9 @@ namespace MenuApplication.DataAccess.DB
             ModelDB.Dish dish = Context.context.Dishes.FirstOrDefault(x => x.ExpandedNameDish == ExpandedNamedish);
 
             //находим все даты его калькуляции
-            List<DateTime> HistoryDates = SubdivisionController.CurrentSubdivision.Menus
+            List<DateTime> HistoryDates = Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+                .Menus
                 .Where(x => x.Dishes.Any(y => y.ExpandedNameDish == ExpandedNamedish))
                 .Select(x => CalculationDishDate(dish, x.UseDate)).Distinct().ToList();
             

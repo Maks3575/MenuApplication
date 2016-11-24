@@ -15,7 +15,10 @@ namespace MenuApplication.DataAccess.DB
         public MenuController()
         {
         }
-
+        /// <summary>
+        /// Добавление меню
+        /// </summary>
+        /// <param name="NewMenu">Добавляемое меню</param>
         public void Add(IMenu NewMenu)
         {
             List<ModelDB.Dish> dishes = new List<ModelDB.Dish>();
@@ -37,9 +40,15 @@ namespace MenuApplication.DataAccess.DB
             Context.context = new DB_MenuEntities();
         }
 
+        /// <summary>
+        /// Получение списка всех меню в подразделении
+        /// </summary>
+        /// <returns>Список меню</returns>
         public IEnumerable<IMenu> Fetch()
         {
-            var menus = SubdivisionController.CurrentSubdivision.Menus.ToList();
+            var menus = Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+            .Menus.OrderBy(menu=>menu.DateCreateMenu).ToList();
             foreach (var menu in menus)
             {
                 menu.Dishs = menu.Dishes.Select(dish => DishController.FillingDish(dish, menu.UseDate)).ToList();

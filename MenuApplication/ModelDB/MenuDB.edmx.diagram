@@ -4,20 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="69d5c3cbf71c4fa78bb8a0a520ecbd64" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="DB_MenuModel.Dish" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Employee" Width="1.5" PointX="7.875" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Ingredient" Width="1.5" PointX="3.875" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.ItemDish" Width="1.5" PointX="6.125" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Menu" Width="1.5" PointX="5.875" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Organization" Width="1.5" PointX="4.125" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Position" Width="1.5" PointX="7.875" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Product" Width="1.5" PointX="3.875" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.Subdivision" Width="1.5" PointX="4" PointY="4.5" IsExpanded="true" />
+      <Diagram DiagramId="69d5c3cbf71c4fa78bb8a0a520ecbd64" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="DB_MenuModel.Dish" Width="1.5" PointX="5.875" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Employee" Width="1.5" PointX="7.875" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Ingredient" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.ItemDish" Width="1.5" PointX="9.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Menu" Width="1.5" PointX="5.875" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Organization" Width="1.5" PointX="4.125" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Position" Width="1.5" PointX="9.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Product" Width="1.5" PointX="4" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.Subdivision" Width="1.5" PointX="4" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_MenuModel.sysdiagram" Width="1.5" PointX="22.875" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.TypeDish" Width="1.5" PointX="8" PointY="12.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.TypeIngredient" Width="1.5" PointX="6.125" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_MenuModel.TypeMenu" Width="1.5" PointX="7.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.TypeDish" Width="1.5" PointX="9.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.TypeIngredient" Width="1.5" PointX="5.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MenuModel.TypeMenu" Width="1.5" PointX="7.75" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_MenuModel.VIEW_EmployeePosition" Width="1.5" PointX="22.875" PointY="13.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_MenuModel.VIEW_IngredientProduct" Width="1.5" PointX="17.625" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_MenuModel.VIEW_ListDishes" Width="1.5" PointX="17.625" PointY="8.875" IsExpanded="true" />

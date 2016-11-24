@@ -36,11 +36,13 @@ namespace MenuApplication.DataAccess.DB
             Context.context.SaveChanges();
             Context.context.Dispose();
             Context.context = new DB_MenuEntities();
-
-            //context.Dispose();
-            //context = new DB_MenuEntities();
         }
 
+        /// <summary>
+        /// Добавление нового ингредиента
+        /// </summary>
+        /// <param name="newIngredient"> Новый ингредиент</param>
+        /// <returns>Возвращает  true, если добавление прошло успешно</returns>
         public bool AddNewIngredient(IIngredient newIngredient)
         {
             if (Context.context.Ingredients.Select(x => x.NameIngredient).Contains(newIngredient.NameIngredient))
@@ -57,15 +59,11 @@ namespace MenuApplication.DataAccess.DB
                     Fat = (float)newIngredient.Fat,
                     Carbohydrate = (float)newIngredient.Carbohydrate
                 } );
-                //Context.context.SaveChanges();
-
-                //ModelDB.Ingredient ing = context.Ingredients.FirstOrDefault(x => x.NameIngredient == newIngredient.NameIngredient);
                 Context.context.Products.Add(new Product()
                 {
                     Price = newIngredient.StartingPrice,
                     Mass = (float)newIngredient.MassInKg,
                     BeginDate = newIngredient.RecordDate,
-                    //Ingredient = ing,
                     IDIngredient =ing.IDIngredient,
                     IDSubdivision = newIngredient.Subdivision.IDSubdivision
                 });
@@ -76,22 +74,41 @@ namespace MenuApplication.DataAccess.DB
             }
         }
 
-        public IEnumerable<IIngredient> Fetch() => SubdivisionController.CurrentSubdivision.Products.ToList();
+        /// <summary>
+        /// Получение всех ингредиентов в подразделении
+        /// </summary>
+        /// <returns>Список продуктов</returns>
+        public IEnumerable<IIngredient> Fetch() => Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+            .Products.ToList();
 
-
-        public IIngredient GetIngrByName(string Object) => SubdivisionController.CurrentSubdivision.Products
+        /// <summary>
+        /// Находит ингредиент по имени
+        /// </summary>
+        /// <param name="Object">Имя ингредиента</param>
+        /// <returns>Найденный ингредиент</returns>
+        public IIngredient GetIngrByName(string Object) => Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+            .Products
             .FirstOrDefault(x => x.Ingredient.NameIngredient == Object);
 
-        public IEnumerable<IIngredient> GetRegistry() => SubdivisionController.CurrentSubdivision.Products
-            //context.Products.Where(p => p.IDSubdivision == SubdivisionController.CurrentSubdivision.IDSubdivision)
-            .Where(x => x.RecordDate == Fetch().Where(y => y.NameIngredient == x.NameIngredient).Max(z => z.RecordDate))
+        /// <summary>
+        /// Получение всех списка ингредиентов с самыми новыми экземплярами
+        /// </summary>
+        /// <returns> Реестр цен</returns>
+        public IEnumerable<IIngredient> GetRegistry() => Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+            .Products.Where(x => x.RecordDate == Fetch().Where(y => y.NameIngredient == x.NameIngredient).Max(z => z.RecordDate))
             .Distinct()
-            .OrderByDescending(x => x.NameIngredient).ToList();
-
-        public bool TestOnChangeIngredient(IIngredient ingr)=> SubdivisionController.CurrentSubdivision.Products
-            .Where(x => x.NameIngredient == ingr.NameIngredient)
+            .OrderBy(x => x.NameIngredient).ToList();
+        /// <summary>
+        /// Проверка на актуальностьингредиента
+        /// </summary>
+        /// <param name="ingr">Проверяемый ингредиент</param>
+        /// <returns>True если актуален</returns>
+        public bool TestOnChangeIngredient(IIngredient ingr)=> Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+            .Products.Where(x => x.NameIngredient == ingr.NameIngredient)
             .All(x => x.RecordDate <= ingr.RecordDate);
-
-
     }
 }
