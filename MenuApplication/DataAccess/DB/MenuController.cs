@@ -15,6 +15,17 @@ namespace MenuApplication.DataAccess.DB
         public MenuController()
         {
         }
+
+        /// <summary>
+        /// Проверяет существует ли меню на заданную дату такого же типа
+        /// </summary>
+        /// <param name="DT">Дата</param>
+        /// <param name="TM">Тип Меню</param>
+        /// <returns>true если такое уже существует</returns>
+        public bool CheckOnTypeMenu(DateTime DT, string TM) => Context.context.Subdivisions
+            .FirstOrDefault(subdiv => subdiv.NameSubdivision == SubdivisionController.CurrentSubdivision.NameSubdivision)
+            .Menus.Any(menu => menu.UseDate.Date == DT.Date && menu.TypeMenu.NameTypeMenu == TM);
+
         /// <summary>
         /// Добавление меню
         /// </summary>
@@ -26,6 +37,7 @@ namespace MenuApplication.DataAccess.DB
             {
                 dishes.Add(Context.context.Dishes.FirstOrDefault(dish => dish.ExpandedNameDish == i.ExpandedNameDish));
             }
+
             Context.context.Menus.Add(new ModelDB.Menu()
             {
                 UseDate = NewMenu.DateCreateMenu,

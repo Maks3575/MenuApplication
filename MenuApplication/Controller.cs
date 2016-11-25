@@ -344,7 +344,9 @@ namespace MenuApplication
         {
             return new ModelDB.Menu() { Dishs = new List<IDish>()};
         }
-        
+
+        public bool CheckOnTypeMenu(DateTime DT, string TM) => _MenuController.CheckOnTypeMenu(DT, TM);
+
         /// <summary>
         /// Добавить меню в репозиторий
         /// </summary>

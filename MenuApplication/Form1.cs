@@ -431,6 +431,12 @@ namespace MenuApplication
                 return;
             }
 
+            if (_controller.CheckOnTypeMenu(dtpMenu.Value, (TypesMenuBindingSource.Current as ModelDB.TypeMenu).NameTypeMenu))
+            {
+                MessageBox.Show("На выбранную дату уже есть меню с таким типом");
+                return;
+            }
+
             MenuChangeMode(true);
             var menu = menuBindingSource.Current as IMenu;
             menu.DateCreateMenu = dtpMenu.Value;

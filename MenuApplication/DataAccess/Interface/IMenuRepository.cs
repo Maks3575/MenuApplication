@@ -18,6 +18,14 @@ namespace MenuApplication.DataAccess
         /// <returns></returns>
         IEnumerable<IMenu> Fetch();
 
+        /// <summary>
+        /// Проверяет существует ли меню на заданную дату такого же типа
+        /// </summary>
+        /// <param name="DT">Дата</param>
+        /// <param name="TM">Тип Меню</param>
+        /// <returns>true если такое уже существует</returns>
+        bool CheckOnTypeMenu(DateTime DT, string TM);
+
         int idMenuNext();
 
         /// <summary>

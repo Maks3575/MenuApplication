@@ -55,5 +55,10 @@ namespace MenuApplication.DataAccess
         {
             return new MenuRepositoryPlug(new List<IMenu>());
         }
+
+        public bool CheckOnTypeMenu(DateTime DT, string TM)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
